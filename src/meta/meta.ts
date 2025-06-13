@@ -30,11 +30,11 @@ export const meta = {
     url: 'https://poietic.site/bot',
     image: 'https://poietic.site/og.png',
   },
-  project: {
+  projects: {
     title: 'Projects – co.poiesis',
     description:
-      'Initiatives and collaborations inspired by poetic syntax and dialogic design.',
-    url: 'https://poietic.site/project',
+      'Initiatives shaped through poetic syntax and dialogic co-creation.',
+    url: 'https://poietic.site/projects',
     image: 'https://poietic.site/og.png',
   },
   '404': {
