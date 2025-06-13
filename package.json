@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap",
-    "vercel-build": "next build"
+    "vercel-build": "next build",
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,json,css,md}": "prettier --write"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
@@ -22,8 +25,15 @@
     "@tailwindcss/postcss": "^4.1.10",
     "@types/node": "^24.0.1",
     "@types/react": "^19.1.8",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
     "autoprefixer": "^10.4.21",
+    "eslint": "^9.28.0",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
     "postcss": "^8.5.5",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3"
   },
