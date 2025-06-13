@@ -1,28 +1,25 @@
-// hooks/useDarkMode.ts
 import { useEffect, useState } from 'react';
 
-export default function useDarkMode(): [boolean, () => void] {
-  const [isDark, setIsDark] = useState(false);
+export default function useDarkMode() {
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ? 'dark'
+        : 'light';
+    }
+    return 'light';
+  });
 
   useEffect(() => {
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (saved === 'dark' || (!saved && prefersDark)) {
-      document.documentElement.classList.add('dark');
-      setIsDark(true);
+    const root = window.document.documentElement;
+    if (theme === 'dark') {
+      root.classList.add('dark');
     } else {
-      document.documentElement.classList.remove('dark');
-      setIsDark(false);
+      root.classList.remove('dark');
     }
-  }, []);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
-  const toggleDarkMode = () => {
-    const html = document.documentElement;
-    const currentlyDark = html.classList.toggle('dark');
-    localStorage.setItem('theme', currentlyDark ? 'dark' : 'light');
-    setIsDark(currentlyDark);
-  };
-
-  return [isDark, toggleDarkMode];
+  return [theme, setTheme] as const;
 }

@@ -5,94 +5,93 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import Logo from './Logo';
-import useDarkMode from '@/hooks/useDarkMode';
+import useDarkMode from '../lib/useDarkMode';
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Fragment', href: '/fragment' },
+];
 
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isDark, toggleDarkMode] = useDarkMode();
+  const [theme, setTheme] = useDarkMode();
 
-  const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/zine', label: 'ZINE' },
-    { href: '/bot', label: 'Bot' },
-  ];
+  const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
+  // Close menu when route changes
   useEffect(() => {
-    setMenuOpen(false); // ページ移動時にメニューを閉じる
+    setMenuOpen(false);
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/70 dark:bg-black/70 backdrop-blur border-b border-gray-200 dark:border-gray-700">
+    <header className="border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 bg-white dark:bg-black">
       <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo & Title */}
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="w-6 h-6" />
           <span className="font-semibold text-lg">co.poiesis</span>
         </Link>
 
-        {/* PC Nav */}
-        <nav className="hidden md:flex items-center space-x-6">
-          {navLinks.map(({ href, label }) => (
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex space-x-6 items-center">
+          {navItems.map(({ label, href }) => (
             <Link
               key={href}
               href={href}
-              className={`text-sm ${
-                pathname === href
-                  ? 'text-black dark:text-white font-bold'
-                  : 'text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white'
+              className={`text-sm hover:underline transition ${
+                pathname === href ? 'underline font-medium' : 'text-gray-600 dark:text-gray-300'
               }`}
             >
               {label}
             </Link>
           ))}
           <button
-            onClick={toggleDarkMode}
-            className="ml-2 p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
-            aria-label="Toggle dark mode"
+            onClick={toggleTheme}
+            className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+            aria-label="Toggle Dark Mode"
           >
-            {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
         </nav>
 
-        {/* Mobile Toggle */}
-        <div className="md:hidden">
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-800"
-            aria-label="Toggle menu"
+            className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Toggle Menu"
           >
             {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-700 px-4 py-2">
-          <div className="flex flex-col space-y-2">
-            {navLinks.map(({ href, label }) => (
+        <div className="md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-black px-4 pb-4">
+          <nav className="flex flex-col space-y-3 mt-3">
+            {navItems.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
-                className={`text-sm ${
-                  pathname === href
-                    ? 'text-black dark:text-white font-bold'
-                    : 'text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white'
+                className={`text-sm hover:underline transition ${
+                  pathname === href ? 'underline font-medium' : 'text-gray-600 dark:text-gray-300'
                 }`}
               >
                 {label}
               </Link>
             ))}
             <button
-              onClick={toggleDarkMode}
-              className="flex items-center space-x-2 text-sm mt-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white"
+              onClick={toggleTheme}
+              className="mt-2 p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 w-fit"
+              aria-label="Toggle Dark Mode"
             >
-              {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-              <span>Toggle Dark Mode</span>
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
-          </div>
-        </nav>
+          </nav>
+        </div>
       )}
     </header>
   );
