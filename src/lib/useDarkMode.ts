@@ -1,25 +1,33 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react"
 
-export default function useDarkMode() {
-  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-        ? 'dark'
-        : 'light';
-    }
-    return 'light';
-  });
+type Theme = "light" | "dark"
+
+export default function useDarkMode(): [Theme, () => void] {
+  const [theme, setTheme] = useState<Theme>("light")
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    // 初期テーマを localStorage または OS 設定から取得
+    const stored = localStorage.getItem("theme") as Theme | null
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    const initialTheme = stored ?? (prefersDark ? "dark" : "light")
+    setTheme(initialTheme)
+  }, [])
 
-  return [theme, setTheme] as const;
+  useEffect(() => {
+    const root = window.document.documentElement
+
+    if (theme === "dark") {
+      root.classList.add("dark")
+    } else {
+      root.classList.remove("dark")
+    }
+
+    localStorage.setItem("theme", theme)
+  }, [theme])
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === "dark" ? "light" : "dark"))
+  }
+
+  return [theme, toggleTheme]
 }
