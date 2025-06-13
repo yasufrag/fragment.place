@@ -12,7 +12,7 @@ const navItems = [
   { label: 'Fragment', href: '/fragment' },
   { label: 'Zine', href: '/zine' },
   { label: 'Bot', href: '/bot' },
-  { label: 'Projects', href: '/projects' },
+  { label: 'Security', href: '/security' },
 ]
 
 export default function Header() {

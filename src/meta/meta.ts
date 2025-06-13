@@ -30,11 +30,11 @@ export const meta = {
     url: 'https://poietic.site/bot',
     image: 'https://poietic.site/og.png',
   },
-  projects: {
-    title: 'Projects – co.poiesis',
+  security: {
+    title: 'Security – co.poiesis',
     description:
-      'Initiatives shaped through poetic syntax and dialogic co-creation.',
-    url: 'https://poietic.site/projects',
+      'Approach to security, privacy, and data ethics at co.poiesis.',
+    url: 'https://poietic.site/security',
     image: 'https://poietic.site/og.png',
   },
   '404': {
