@@ -49,7 +49,7 @@ export default function Header() {
           </nav>
           {isMounted && (
             <button
-              onClick={toggleDarkMode}
+              onClick={() => toggleDarkMode()}
               className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
               aria-label="Toggle dark mode"
             >
