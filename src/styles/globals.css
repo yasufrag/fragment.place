@@ -2,16 +2,16 @@
 
 /* ====== Base Layer ====== */
 html, body {
-  @apply bg-white text-gray-800 dark:bg-black dark:text-gray-100 font-sans antialiased transition-colors duration-300 text-lg;
+  @apply bg-white text-gray-800 dark:bg-black dark:text-white font-sans antialiased transition-colors duration-300 text-lg;
   scroll-behavior: smooth;
 }
 
 /* ====== Links ====== */
 a {
-  @apply text-gray-400 hover:text-white transition-colors duration-200 no-underline;
+  @apply text-gray-800 dark:text-white hover:text-white transition-colors duration-200 no-underline;
 }
 .dark a {
-  @apply text-gray-400 hover:text-white;
+  @apply text-white hover:text-white;
 }
 
 /* ====== Headings ====== */
@@ -30,11 +30,11 @@ h4 {
 
 /* ====== Text Elements ====== */
 p {
-  @apply leading-relaxed text-gray-700 dark:text-gray-300 text-lg;
+  @apply leading-relaxed text-gray-800 dark:text-white text-lg;
 }
 
 strong {
-  @apply font-semibold text-black dark:text-white;
+  @apply font-semibold text-gray-800 dark:text-white;
 }
 
 em {
@@ -73,7 +73,7 @@ ol {
   @apply list-decimal pl-6 space-y-3;
 }
 li {
-  @apply text-gray-700 dark:text-gray-300 leading-relaxed text-lg;
+  @apply text-gray-800 dark:text-white leading-relaxed text-lg;
 }
 
 /* ====== Tables ====== */
@@ -87,8 +87,8 @@ th, td {
   @apply border px-5 py-3 text-left;
 }
 th {
-  @apply font-medium text-gray-800 dark:text-gray-200;
+  @apply font-medium text-gray-800 dark:text-white;
 }
 td {
-  @apply text-gray-700 dark:text-gray-300;
+  @apply text-gray-800 dark:text-white;
 }
