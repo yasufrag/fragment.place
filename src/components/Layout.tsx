@@ -1,13 +1,10 @@
-import { ReactNode } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+// src/components/Layout.tsx
+import { ReactNode } from 'react'
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <Header />
-      <main className="flex-grow px-6 py-10">{children}</main>
-      <Footer />
+    <div className="min-h-screen px-4 py-8">
+      {children}
     </div>
-  );
+  )
 }
