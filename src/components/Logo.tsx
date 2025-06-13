@@ -15,10 +15,10 @@ const Logo: FC<LogoProps> = ({ className = "w-6 h-6" }) => (
     <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="4" fill="none" />
     <text
       x="50%"
-      y="56%"
+      y="50%"
       textAnchor="middle"
       alignmentBaseline="middle"
-      fontSize="36"
+      fontSize="38"
       fontWeight="bold"
       fontFamily="sans-serif"
     >
