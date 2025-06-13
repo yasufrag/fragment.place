@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import Logo from "./Logo";
+import useDarkMode from "../lib/useDarkMode";
 
 const navItems = [
   { label: "About", href: "/about" },
@@ -17,6 +18,7 @@ export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [darkMode, toggleDarkMode] = useDarkMode();
 
   useEffect(() => {
     setIsMounted(true);
@@ -24,13 +26,13 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-black/70 backdrop-blur-md">
-      <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <Logo className="w-6 h-6" />
-          <span className="font-semibold text-lg">co.poiesis</span>
+      <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+        <Link href="/" className="flex items-center space-x-3">
+          <Logo className="w-7 h-7" />
+          <span className="font-semibold text-2xl tracking-tight">co.poiesis</span>
         </Link>
         <div className="flex items-center space-x-4">
-          <nav className="hidden md:flex space-x-3">
+          <nav className="hidden md:flex space-x-4">
             {navItems.map(({ label, href }) => {
               const isActive = pathname === href;
               return (
@@ -38,12 +40,10 @@ export default function Header() {
                   key={href}
                   href={href}
                   className={`
-                    relative px-3 py-1 text-sm font-medium rounded-md transition-all
+                    text-base font-medium transition-all duration-200 underline-offset-4
                     ${isActive
-                      ? "bg-neutral-900 text-white dark:bg-white dark:text-black"
-                      : "text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white"
-                    }
-                    hover:underline underline-offset-4
+                      ? "text-white underline"
+                      : "text-gray-400 hover:text-white"}
                   `}
                 >
                   {label}
@@ -51,12 +51,21 @@ export default function Header() {
               );
             })}
           </nav>
+          {isMounted && (
+            <button
+              onClick={() => toggleDarkMode()}
+              className="text-gray-400 hover:text-white transition-colors duration-200"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode === "dark" ? <Sun size={22} /> : <Moon size={22} />}
+            </button>
+          )}
           <button
-            className="md:hidden text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+            className="md:hidden text-gray-400 hover:text-white"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
@@ -66,10 +75,10 @@ export default function Header() {
             <Link
               key={href}
               href={href}
-              className={`block text-sm font-medium transition-colors hover:underline underline-offset-4 ${
+              className={`block text-base font-medium transition-colors duration-200 underline-offset-4 ${
                 pathname === href
-                  ? "text-black dark:text-white"
-                  : "text-neutral-600 dark:text-neutral-400"
+                  ? "text-white underline"
+                  : "text-gray-400 hover:text-white"
               }`}
             >
               {label}

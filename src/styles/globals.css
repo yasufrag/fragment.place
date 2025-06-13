@@ -8,24 +8,24 @@ html, body {
 
 /* ====== Links ====== */
 a {
-  @apply text-gray-700 hover:text-black transition-colors duration-200 no-underline;
+  @apply text-gray-400 hover:text-white transition-colors duration-200 no-underline;
 }
 .dark a {
-  @apply text-gray-300 hover:text-white;
+  @apply text-gray-400 hover:text-white;
 }
 
 /* ====== Headings ====== */
 h1 {
-  @apply text-4xl sm:text-5xl font-bold tracking-tight mt-10 mb-6;
+  @apply text-5xl sm:text-6xl font-bold tracking-tight mt-10 mb-6;
 }
 h2 {
-  @apply text-3xl sm:text-4xl font-semibold tracking-tight mt-8 mb-5;
+  @apply text-4xl sm:text-5xl font-semibold tracking-tight mt-8 mb-5;
 }
 h3 {
-  @apply text-2xl font-medium mt-6 mb-3;
+  @apply text-3xl font-medium mt-6 mb-3;
 }
 h4 {
-  @apply text-xl font-medium mt-5 mb-2;
+  @apply text-2xl font-medium mt-5 mb-2;
 }
 
 /* ====== Text Elements ====== */
