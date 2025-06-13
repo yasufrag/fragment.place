@@ -1,10 +1,9 @@
 import { MetaTag } from '@/components/MetaTag';
 import { meta } from '@/meta/meta';
-import Layout from '@/components/Layout';
 
 export default function FragmentPage() {
   return (
-    <Layout>
+    <>
       <MetaTag {...meta.fragment} />
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Fragments</h1>
@@ -15,6 +14,6 @@ export default function FragmentPage() {
           This space is reserved for pieces of syntax, sketches of poiesis, and emergent thoughts — small signals from a co-poietic process.
         </p>
       </main>
-    </Layout>
+    </>
   );
 }

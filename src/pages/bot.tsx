@@ -1,10 +1,9 @@
 import { MetaTag } from '@/components/MetaTag';
 import { meta } from '@/meta/meta';
-import Layout from '@/components/Layout';
 
 export default function BotPage() {
   return (
-    <Layout>
+    <>
       <MetaTag {...meta.bot} />
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">PoieticBot</h1>
@@ -15,6 +14,6 @@ export default function BotPage() {
           Designed to assist with async.presence and dialogic resonance across the PoieticOS.
         </p>
       </main>
-    </Layout>
+    </>
   );
 }

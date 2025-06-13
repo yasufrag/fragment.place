@@ -1,38 +1,95 @@
 @import "tailwindcss";
 
-/* ====== Poietic Custom Layer ====== */
+/* ====== Base Layer ====== */
 html, body {
-  @apply bg-white text-gray-800 font-sans antialiased;
+  @apply bg-white text-gray-800 dark:bg-black dark:text-gray-100 font-sans antialiased transition-colors duration-300;
+  scroll-behavior: smooth;
 }
 
+/* ====== Links ====== */
 a {
-  @apply text-blue-600 hover:text-blue-800 underline transition-all duration-200;
+  @apply text-indigo-600 hover:text-indigo-800 underline underline-offset-4 decoration-indigo-300 dark:text-indigo-400 dark:hover:text-indigo-200 transition-all duration-200;
 }
+
 .dark a {
-  @apply text-blue-400 hover:text-blue-300;
+  @apply decoration-indigo-500;
 }
 
-h1, h2, h3, h4 {
-  @apply font-semibold tracking-tight;
+/* ====== Headings ====== */
+h1 {
+  @apply text-3xl sm:text-4xl font-bold tracking-tight mt-8 mb-4;
+}
+h2 {
+  @apply text-2xl sm:text-3xl font-semibold tracking-tight mt-6 mb-3;
+}
+h3 {
+  @apply text-xl font-medium mt-4 mb-2;
+}
+h4 {
+  @apply text-lg font-medium mt-4 mb-2;
 }
 
+/* ====== Text Elements ====== */
+p {
+  @apply leading-relaxed text-gray-700 dark:text-gray-300;
+}
+
+strong {
+  @apply font-semibold text-black dark:text-white;
+}
+
+em {
+  @apply italic text-gray-600 dark:text-gray-400;
+}
+
+/* ====== Code ====== */
 code {
-  @apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono;
+  @apply bg-gray-100 dark:bg-gray-800 text-pink-600 dark:text-pink-400 px-1.5 py-0.5 rounded font-mono text-sm;
 }
 
 pre {
-  @apply bg-gray-50 p-4 rounded overflow-x-auto;
+  @apply bg-gray-50 dark:bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm leading-relaxed text-gray-800 dark:text-gray-200;
 }
 
+/* ====== Blockquote ====== */
 blockquote {
-  @apply border-l-4 border-gray-300 pl-4 italic text-gray-600;
+  @apply border-l-4 border-gray-300 dark:border-gray-700 pl-4 italic text-gray-600 dark:text-gray-400 my-6;
 }
 
+/* ====== Divider ====== */
 hr {
-  @apply my-8 border-gray-200;
+  @apply my-10 border-t border-gray-200 dark:border-gray-700;
 }
 
-/* spacing for poetic layout */
+/* ====== Poietic Flow (vertical rhythm) ====== */
 .poetic-flow > * + * {
   @apply mt-6;
+}
+
+/* ====== Lists ====== */
+ul {
+  @apply list-disc pl-5 space-y-2;
+}
+ol {
+  @apply list-decimal pl-5 space-y-2;
+}
+li {
+  @apply text-gray-700 dark:text-gray-300 leading-relaxed;
+}
+
+/* ====== Tables ====== */
+table {
+  @apply w-full table-auto border-collapse text-sm my-6;
+}
+thead {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+th, td {
+  @apply border px-4 py-2 text-left;
+}
+th {
+  @apply font-medium text-gray-800 dark:text-gray-200;
+}
+td {
+  @apply text-gray-700 dark:text-gray-300;
 }
