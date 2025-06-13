@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://poietic.site
+
+# Sitemaps
+Sitemap: https://poietic.site/sitemap.xml

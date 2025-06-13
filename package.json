@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "postbuild": "next-sitemap",
     "vercel-build": "next build"
   },
   "dependencies": {
@@ -13,6 +14,7 @@
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.514.0",
     "next": "^13.4.19",
+    "next-sitemap": "^4.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
