@@ -15,7 +15,7 @@ export const meta = {
     title: 'Fragments – co.poiesis',
     description:
       'Collected fragments from poetic dialogues and syntax explorations.',
-    url: 'https://poietic.site/fragment',
+    url: 'https://poietic.site/fragments',
     image: 'https://poietic.site/og.png',
   },
   zine: {
