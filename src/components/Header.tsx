@@ -1,96 +1,85 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
-import Logo from './Logo';
-import useDarkMode from '../lib/useDarkMode';
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import Logo from "./Logo";
+import useDarkMode from "../lib/useDarkMode";
 
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
-  { label: 'Fragment', href: '/fragment' },
+  { label: "About", href: "/about" },
+  { label: "Fragment", href: "/fragment" },
+  { label: "Zine", href: "/zine" },
+  { label: "Bot", href: "/bot" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [theme, setTheme] = useDarkMode();
+  const [isMounted, setIsMounted] = useState(false);
+  const [darkMode, toggleDarkMode] = useDarkMode();
 
-  const toggleTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark');
-
-  // Close menu when route changes
   useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
+    setIsMounted(true);
+  }, []);
 
   return (
-    <header className="border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 bg-white dark:bg-black">
+    <header className="sticky top-0 z-50 border-b border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-black/70 backdrop-blur-md">
       <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo & Title */}
         <Link href="/" className="flex items-center space-x-2">
           <Logo className="w-6 h-6" />
           <span className="font-semibold text-lg">co.poiesis</span>
         </Link>
-
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 items-center">
-          {navItems.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`text-sm hover:underline transition ${
-                pathname === href ? 'underline font-medium' : 'text-gray-600 dark:text-gray-300'
-              }`}
-            >
-              {label}
-            </Link>
-          ))}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
-            aria-label="Toggle Dark Mode"
-          >
-            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-          </button>
-        </nav>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
-            aria-label="Toggle Menu"
-          >
-            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-black px-4 pb-4">
-          <nav className="flex flex-col space-y-3 mt-3">
+        <div className="flex items-center space-x-4">
+          <nav className="hidden md:flex space-x-4">
             {navItems.map(({ label, href }) => (
               <Link
                 key={href}
                 href={href}
-                className={`text-sm hover:underline transition ${
-                  pathname === href ? 'underline font-medium' : 'text-gray-600 dark:text-gray-300'
+                className={`text-sm font-medium transition-colors hover:underline underline-offset-4 ${
+                  pathname === href
+                    ? "text-black dark:text-white"
+                    : "text-neutral-500 dark:text-neutral-400"
                 }`}
               >
                 {label}
               </Link>
             ))}
-            <button
-              onClick={toggleTheme}
-              className="mt-2 p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 w-fit"
-              aria-label="Toggle Dark Mode"
-            >
-              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
           </nav>
+          {isMounted && (
+            <button
+              onClick={toggleDarkMode}
+              className="text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              {darkMode === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+          )}
+          <button
+            className="md:hidden text-neutral-600 dark:text-neutral-300 hover:text-black dark:hover:text-white"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+      </div>
+      {menuOpen && (
+        <div className="md:hidden px-4 pb-3 space-y-2">
+          {navItems.map(({ label, href }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`block text-sm font-medium transition-colors hover:underline underline-offset-4 ${
+                pathname === href
+                  ? "text-black dark:text-white"
+                  : "text-neutral-600 dark:text-neutral-400"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
       )}
     </header>
