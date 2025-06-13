@@ -1,3 +1,1 @@
 # poietic.site
-
-poietic.site
