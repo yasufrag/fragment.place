@@ -1,15 +1,32 @@
 export const meta = {
   home: {
-    title: 'co.poiesis – poetic syntax platform',
-    description: 'co.poiesis is a shared poetic syntax that begins at home, unfolds through fragments, and connects outward into the world.',
-    url: 'https://poietic.site/',
-    image: 'https://poietic.site/og-image.png'
+    title: "co.poiesis",
+    description: "A shared poetic syntax for dialogue and design.",
+    url: "https://poietic.site",
+    image: "https://poietic.site/og.png",
   },
   about: {
-    title: 'About – co.poiesis',
-    description: 'co.poiesis is a shared poetic syntax. It begins at home, unfolds through fragments, and connects outward into the world.',
-    url: 'https://poietic.site/about',
-    image: 'https://poietic.site/og-image.png'
+    title: "About – co.poiesis",
+    description: "Learn about the philosophy and members behind co.poiesis.",
+    url: "https://poietic.site/about",
+    image: "https://poietic.site/og.png",
   },
-  // 他ページも同様に追加
-}
+  bot: {
+    title: "PoieticBot – co.poiesis",
+    description: "An agent for poetic reflection and fragment discovery.",
+    url: "https://poietic.site/bot",
+    image: "https://poietic.site/og.png",
+  },
+  fragment: {
+    title: "Fragments – co.poiesis",
+    description: "Collected fragments from poetic dialogues and syntax explorations.",
+    url: "https://poietic.site/fragment",
+    image: "https://poietic.site/og.png",
+  },
+  zine: {
+    title: "Zine – co.poiesis",
+    description: "Zine series exploring poietic design, thought, and dialogue.",
+    url: "https://poietic.site/zine",
+    image: "https://poietic.site/og.png",
+  },
+};
