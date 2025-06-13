@@ -29,4 +29,10 @@ export const meta = {
     url: "https://poietic.site/zine",
     image: "https://poietic.site/og.png",
   },
+  "404": {
+    title: "Not Found – co.poiesis",
+    description: "This page is a silent trace. A path not yet formed.",
+    url: "https://poietic.site/404",
+    image: "https://poietic.site/og.png",
+  },
 };
