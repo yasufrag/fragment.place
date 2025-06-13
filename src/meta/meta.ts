@@ -1,39 +1,43 @@
 export const meta = {
   home: {
     title: 'co.poiesis',
-    description: 'A shared poetic syntax for dialogue and design.',
+    description:
+      'A shared poetic syntax for dialogue, design, and lived practice.',
     url: 'https://poietic.site',
     image: 'https://poietic.site/og.png',
   },
   about: {
     title: 'About – co.poiesis',
-    description: 'Learn about the philosophy and members behind co.poiesis.',
+    description:
+      'Introduction to the philosophy, people, and process of co.poiesis.',
     url: 'https://poietic.site/about',
     image: 'https://poietic.site/og.png',
   },
   fragment: {
     title: 'Fragments – co.poiesis',
     description:
-      'Collected fragments from poetic dialogues and syntax explorations.',
-    url: 'https://poietic.site/fragments',
+      'Syntax pieces, poetic sketches, and emergent signals from a co-poietic process.',
+    url: 'https://poietic.site/fragment',
     image: 'https://poietic.site/og.png',
   },
   zine: {
-    title: 'Zine – co.poiesis',
-    description: 'Zine series exploring poietic design, thought, and dialogue.',
+    title: 'ZINE – co.poiesis',
+    description:
+      'Entries from an ongoing journal of poietic design, thought, and dialogue.',
     url: 'https://poietic.site/zine',
     image: 'https://poietic.site/og.png',
   },
   bot: {
     title: 'PoieticBot – co.poiesis',
-    description: 'An agent for poetic reflection and fragment discovery.',
+    description:
+      'An agent for poetic reflection, fragment discovery, and dialogic exploration.',
     url: 'https://poietic.site/bot',
     image: 'https://poietic.site/og.png',
   },
   security: {
     title: 'Security – co.poiesis',
     description:
-      'Our commitment to ethical technology, safety, and co-creative trust.',
+      'Our approach to ethical technology, data care, and co-creative safety.',
     url: 'https://poietic.site/security',
     image: 'https://poietic.site/og.png',
   },
