@@ -9,6 +9,7 @@
     "vercel-build": "next build"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "gray-matter": "^4.0.3",
     "next": "13.4.19",
     "react": "18.2.0",
@@ -17,6 +18,9 @@
   "devDependencies": {
     "@types/node": "^24.0.1",
     "@types/react": "^19.1.8",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.5",
+    "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3"
   }
 }
