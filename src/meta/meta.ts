@@ -33,7 +33,7 @@ export const meta = {
   security: {
     title: 'Security – co.poiesis',
     description:
-      'Approach to security, privacy, and data ethics at co.poiesis.',
+      'Our commitment to ethical technology, safety, and co-creative trust.',
     url: 'https://poietic.site/security',
     image: 'https://poietic.site/og.png',
   },

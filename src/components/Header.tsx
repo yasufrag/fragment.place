@@ -9,7 +9,7 @@ import Logo from './Logo' // ← この中で size 調整可能にしておく
 
 const navItems = [
   { label: 'About', href: '/about' },
-  { label: 'Fragment', href: '/fragment' },
+  { label: 'Fragments', href: '/fragments' },
   { label: 'Zine', href: '/zine' },
   { label: 'Bot', href: '/bot' },
   { label: 'Security', href: '/security' },

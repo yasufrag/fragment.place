@@ -1,5 +1,5 @@
-import { MetaTag } from '@/components/MetaTag';
-import { meta } from '@/meta/meta';
+import { MetaTag } from '@/components/MetaTag'
+import { meta } from '@/meta/meta'
 
 export default function FragmentPage() {
   return (
@@ -11,9 +11,10 @@ export default function FragmentPage() {
           Fragments will appear here in the future.
         </p>
         <p className="text-gray-700 dark:text-gray-300">
-          This space is reserved for pieces of syntax, sketches of poiesis, and emergent thoughts — small signals from a co-poietic process.
+          This space is reserved for pieces of syntax, sketches of poiesis, and
+          emergent thoughts — small signals from a co-poietic process.
         </p>
       </main>
     </>
-  );
+  )
 }
