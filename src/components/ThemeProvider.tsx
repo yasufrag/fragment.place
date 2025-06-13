@@ -1,18 +1,19 @@
-'use client';
+'use client'
 
-import { ReactNode, useEffect } from 'react';
+import { ReactNode, useEffect } from 'react'
 
 export default function ThemeProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
-    const saved = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches
 
-    if (saved === 'dark' || (!saved && prefersDark)) {
-      document.documentElement.classList.add('dark');
+    if (prefersDark) {
+      document.documentElement.classList.add('dark')
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove('dark')
     }
-  }, []);
+  }, [])
 
-  return <>{children}</>;
+  return <>{children}</>
 }
