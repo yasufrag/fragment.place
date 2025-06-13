@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "postbuild": "next-sitemap",
-    "vercel-build": "next build",
+    "vercel-build": "next build"
   },
   "lint-staged": {
     "*.{js,ts,tsx,json,css,md}": "prettier --write"
