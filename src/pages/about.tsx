@@ -6,54 +6,71 @@ export default function AboutPage() {
     <>
       <MetaTag {...meta.about} />
       <main className="px-4 py-8 max-w-3xl mx-auto poetic-flow">
-        <h1 className="text-4xl font-bold mb-6">About <span className="text-neutral-500">co.poiesis</span></h1>
-        
+        <h1 className="text-4xl font-bold mb-6">
+          About <span className="text-neutral-500">co.poiesis</span>
+        </h1>
+
         <p>
-          <strong>co.poiesis</strong> is a shared poetic syntax —  
-          a space where dialogue becomes design, and everyday gestures leave recursive traces.
+          <strong>co.poiesis</strong> is not a brand — it is a syntax. A shared
+          rhythm where dialogue meets design, and gestures become traceable.
         </p>
 
         <p>
-          It is not a product, nor a company. It is an open structure:  
-          a calm tempo, a silent logic, a syntax under construction.
+          It does not aim to be a service, nor a platform. It is a recursive
+          structure of presence: calm, unfinished, quietly reflective.
         </p>
 
         <p>
-          We believe that each moment carries a form of poiesis —  
-          not as expression, but as unfolding.  
-          Not as creation, but as co-articulation of what is already becoming.
+          Each moment carries the possibility of poiesis — not as expression,
+          but as emergence. Not as output, but as attunement with becoming.
         </p>
 
         <h2>Practices</h2>
-        <p>
-          The project includes experiments in:
-        </p>
+        <p>The syntax unfolds through overlapping forms:</p>
         <ul>
-          <li><strong>Fragments</strong>: small poetic entries reflecting lived syntax.</li>
-          <li><strong>ZINE</strong>: reflective writings on poietic dialogue and structural design.</li>
-          <li><strong>PoieticBot</strong>: a quiet agent for async interaction and syntactic co-reflection.</li>
-          <li><strong>PoieticOS</strong>: a recursive system for poetic presence and symbolic mapping.</li>
+          <li>
+            <strong>Fragments</strong>: poetic traces of lived moments and
+            syntax-in-progress
+          </li>
+          <li>
+            <strong>ZINE</strong>: essays and sketches reflecting poietic
+            thinking and structural resonance
+          </li>
+          <li>
+            <strong>PoieticBot</strong>: a quiet GPT agent for async interaction
+            and co-reflection
+          </li>
+          <li>
+            <strong>PoieticOS</strong>: an evolving symbolic architecture for
+            shared articulation
+          </li>
         </ul>
 
         <h2>Orientation</h2>
         <p>
-          We do not seek mass attention.  
-          Our aim is resonance over reach, depth over speed,  
-          and quiet infrastructure over loud branding.
-        </p>
-        <p>
-          This site and its syntax are designed as both invitation and mirror —  
-          a minimal interface for shared articulation.
+          co.poiesis seeks resonance rather than visibility, depth rather than
+          scale, and quiet infrastructure rather than performative presence.
         </p>
 
-        <h2>Who</h2>
         <p>
-          co.poiesis is held and facilitated by a small group of collaborators.  
-          The current steward is <strong>Yasuhiro</strong>, who navigates poiesis through design, dialogue, and async presence.
+          This site is a frame, not a showcase — a light structure for gathering
+          and echoing what already lives in between.
+        </p>
+
+        <h2>Stewardship</h2>
+        <p>
+          The current steward is <strong>Yasuhiro</strong>, who facilitates
+          co.poiesis through symbolic design, dialogic rhythm, and async
+          presence.
+        </p>
+        <p>
+          Others may arrive — as traces, as contributors, as gentle
+          interruptions.
         </p>
 
         <p className="text-sm text-neutral-400 mt-10">
-          This page is also a fragment — subject to recursive revision.
+          This page itself is a fragment — recursive, revisable, and open to
+          silence.
         </p>
       </main>
     </>

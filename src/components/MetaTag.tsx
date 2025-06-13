@@ -1,4 +1,3 @@
-// src/components/MetaTag.tsx
 import Head from 'next/head'
 
 type MetaTagProps = {
