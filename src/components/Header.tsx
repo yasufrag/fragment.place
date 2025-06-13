@@ -24,16 +24,15 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-black/70 backdrop-blur-md">
-      <div className="max-w-4xl mx-auto px-4 py-5 flex items-center justify-between">
+    <header className="sticky top-0 z-50 border-b-[0.5px] border-neutral-700 bg-black/70 backdrop-blur-md">
+      {' '}
+      <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-5">
         <Link href="/" className="flex items-center space-x-3">
-          <Logo className="w-9 h-9" />
-          <span className="font-semibold text-3xl tracking-tight">
-            co.poiesis
-          </span>
+          <Logo className="h-9 w-9" />
+          <span className="text-3xl font-semibold tracking-tight">co.poiesis</span>
         </Link>
         <div className="flex items-center space-x-6">
-          <nav className="hidden md:flex space-x-5">
+          <nav className="hidden space-x-5 md:flex">
             {navItems.map(({ label, href }) => {
               const isActive = pathname === href
               return (
@@ -41,14 +40,11 @@ export default function Header() {
                   key={href}
                   href={href}
                   aria-current={isActive ? 'page' : undefined}
-                  className={`
-                    text-lg font-medium transition-colors duration-200 underline-offset-4
-                    ${
-                      isActive
-                        ? 'text-white underline'
-                        : 'text-gray-400 hover:text-white hover:underline'
-                    }
-                  `}
+                  className={`text-lg font-medium underline-offset-4 transition-colors duration-200 ${
+                    isActive
+                      ? 'text-white underline'
+                      : 'text-gray-400 hover:text-white hover:underline'
+                  } `}
                 >
                   {label}
                 </Link>
@@ -56,7 +52,7 @@ export default function Header() {
             })}
           </nav>
           <button
-            className="md:hidden text-gray-400 hover:text-white"
+            className="text-gray-400 hover:text-white md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -65,7 +61,7 @@ export default function Header() {
         </div>
       </div>
       {menuOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
+        <div className="space-y-2 px-4 pb-4 md:hidden">
           {navItems.map(({ label, href }) => {
             const isActive = pathname === href
             return (
@@ -73,14 +69,11 @@ export default function Header() {
                 key={href}
                 href={href}
                 aria-current={isActive ? 'page' : undefined}
-                className={`
-                  block text-lg font-medium transition-colors duration-200 underline-offset-4
-                  ${
-                    isActive
-                      ? 'text-white underline'
-                      : 'text-gray-400 hover:text-white hover:underline'
-                  }
-                `}
+                className={`block text-lg font-medium underline-offset-4 transition-colors duration-200 ${
+                  isActive
+                    ? 'text-white underline'
+                    : 'text-gray-400 hover:text-white hover:underline'
+                } `}
               >
                 {label}
               </Link>

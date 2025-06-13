@@ -1,1 +1,3 @@
-module.exports = { pageExtensions: ['tsx', 'ts'] };
+module.exports = {
+  pageExtensions: ['tsx', 'ts'],
+}

@@ -1,63 +1,65 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* ====== Base Layer ====== */
-html, body {
-  @apply bg-white text-gray-800 dark:bg-black dark:text-white font-sans antialiased transition-colors duration-300 text-lg;
-  scroll-behavior: smooth;
+html,
+body {
+  @apply bg-white font-sans text-lg text-gray-800 antialiased transition-colors duration-300 dark:bg-black dark:text-white;
+  scrollbar-gutter: stable;
 }
 
 /* ====== Links ====== */
 a {
-  @apply text-gray-800 dark:text-white hover:text-white transition-colors duration-200 no-underline;
+  @apply text-gray-300 no-underline transition-colors duration-200 hover:text-white dark:text-white;
 }
 .dark a {
-  @apply text-white hover:text-white;
+  @apply text-white no-underline hover:text-white;
 }
 
 /* ====== Headings ====== */
 h1 {
-  @apply text-5xl sm:text-6xl font-bold tracking-tight mt-10 mb-6;
+  @apply mb-6 mt-10 text-5xl font-bold tracking-tight sm:text-6xl;
 }
+
 h2 {
-  @apply text-4xl sm:text-5xl font-semibold tracking-tight mt-8 mb-5;
+  @apply mb-5 mt-8 text-4xl font-semibold tracking-tight sm:text-5xl;
 }
+
 h3 {
-  @apply text-3xl font-medium mt-6 mb-3;
+  @apply mb-3 mt-6 text-3xl font-medium;
 }
+
 h4 {
-  @apply text-2xl font-medium mt-5 mb-2;
+  @apply mb-2 mt-5 text-2xl font-medium;
 }
 
 /* ====== Text Elements ====== */
 p {
-  @apply leading-relaxed text-gray-800 dark:text-white text-lg;
+  @apply mb-4 text-lg leading-relaxed text-gray-100 dark:text-white;
 }
 
 strong {
-  @apply font-semibold text-gray-800 dark:text-white;
-}
-
-em {
-  @apply italic text-gray-600 dark:text-gray-400;
+  @apply font-bold text-gray-400 dark:text-white;
 }
 
 /* ====== Code ====== */
 code {
-  @apply bg-gray-100 dark:bg-gray-800 text-pink-600 dark:text-pink-400 px-1.5 py-0.5 rounded font-mono text-base;
+  @apply rounded bg-gray-100 px-1.5 py-0.5 font-mono text-base text-pink-600 dark:bg-gray-800 dark:text-pink-400;
 }
 
 pre {
-  @apply bg-gray-50 dark:bg-gray-900 p-6 rounded-lg overflow-x-auto text-base leading-relaxed text-gray-800 dark:text-gray-200;
+  @apply overflow-x-auto rounded-lg bg-gray-50 p-6 text-base leading-relaxed text-gray-800 dark:bg-gray-900 dark:text-gray-200;
 }
 
 /* ====== Blockquote ====== */
 blockquote {
-  @apply border-l-4 border-gray-300 dark:border-gray-700 pl-5 italic text-gray-600 dark:text-gray-400 my-8;
+  @apply my-8 border-l-4 border-gray-300 pl-5 italic text-gray-600 dark:border-gray-700 dark:text-gray-400;
 }
 
 /* ====== Divider ====== */
 hr {
-  @apply my-12 border-t border-gray-200 dark:border-gray-700;
+  @apply my-12 border-t border-gray-200 dark:border-gray-800;
 }
 
 /* ====== Poietic Flow (vertical rhythm) ====== */
@@ -67,28 +69,35 @@ hr {
 
 /* ====== Lists ====== */
 ul {
-  @apply list-disc pl-6 space-y-3;
+  @apply mb-4 list-disc space-y-3 pl-6;
 }
+
 ol {
-  @apply list-decimal pl-6 space-y-3;
+  @apply list-decimal space-y-3 pl-6;
 }
+
 li {
-  @apply text-gray-800 dark:text-white leading-relaxed text-lg;
+  @apply text-lg leading-relaxed text-gray-100 dark:text-white;
 }
 
 /* ====== Tables ====== */
 table {
-  @apply w-full table-auto border-collapse text-base my-8;
+  @apply my-8 w-full table-auto border-collapse text-base;
 }
+
 thead {
-  @apply bg-gray-100 dark:bg-gray-800;
+  @apply bg-gray-100 dark:bg-gray-100;
 }
-th, td {
+
+th,
+td {
   @apply border px-5 py-3 text-left;
 }
+
 th {
-  @apply font-medium text-gray-800 dark:text-white;
+  @apply font-medium text-gray-100 dark:text-white;
 }
+
 td {
-  @apply text-gray-800 dark:text-white;
+  @apply text-gray-100 dark:text-white;
 }
