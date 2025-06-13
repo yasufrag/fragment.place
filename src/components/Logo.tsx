@@ -1,31 +1,30 @@
-import * as React from 'react';
+// Logo.tsx（例）
+import { FC } from "react";
 
-type LogoProps = {
+interface LogoProps {
   className?: string;
-};
-
-export default function Logo({ className = '' }: LogoProps) {
-  return (
-    <svg
-      className={className}
-      width="32"
-      height="32"
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* あなたのSVGパス・形状はこちらに挿入 */}
-      <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="4" />
-      <text
-        x="50%"
-        y="54%"
-        dominantBaseline="middle"
-        textAnchor="middle"
-        fontSize="24"
-        fill="currentColor"
-      >
-        c·p
-      </text>
-    </svg>
-  );
 }
+
+const Logo: FC<LogoProps> = ({ className = "w-6 h-6" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 100 100"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="50" cy="50" r="48" stroke="currentColor" strokeWidth="4" fill="none" />
+    <text
+      x="50%"
+      y="56%"
+      textAnchor="middle"
+      alignmentBaseline="middle"
+      fontSize="36"
+      fontWeight="bold"
+      fontFamily="sans-serif"
+    >
+      cp
+    </text>
+  </svg>
+);
+
+export default Logo;

@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Moon, Sun, Menu, X } from "lucide-react";
-import Logo from "./Logo";
-import useDarkMode from "../lib/useDarkMode";
+import { Menu, X } from "lucide-react";
+import Logo from "./Logo"; // ← この中で size 調整可能にしておく
+// useDarkMode は削除
 
 const navItems = [
   { label: "About", href: "/about" },
@@ -18,7 +18,6 @@ export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const [darkMode, toggleDarkMode] = useDarkMode();
 
   useEffect(() => {
     setIsMounted(true);
@@ -28,7 +27,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-neutral-200 dark:border-neutral-700 bg-white/70 dark:bg-black/70 backdrop-blur-md">
       <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-3">
-          <Logo className="w-7 h-7" />
+          <Logo className="w-9 h-9" /> {/* サイズアップ */}
           <span className="font-semibold text-2xl tracking-tight">co.poiesis</span>
         </Link>
         <div className="flex items-center space-x-4">
@@ -51,15 +50,6 @@ export default function Header() {
               );
             })}
           </nav>
-          {isMounted && (
-            <button
-              onClick={() => toggleDarkMode()}
-              className="text-gray-400 hover:text-white transition-colors duration-200"
-              aria-label="Toggle dark mode"
-            >
-              {darkMode === "dark" ? <Sun size={22} /> : <Moon size={22} />}
-            </button>
-          )}
           <button
             className="md:hidden text-gray-400 hover:text-white"
             onClick={() => setMenuOpen(!menuOpen)}
