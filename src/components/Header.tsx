@@ -54,7 +54,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="space-y-2 px-4 pb-4 md:hidden">
+        <nav className="flex flex-col space-y-2 px-4 pb-4 md:hidden">
           {navItems.map(({ label, href }) => (
             <Link
               key={href}
