@@ -2,102 +2,121 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ====== Base Layer ====== */
+/* ====== Base ====== */
 html,
 body {
-  @apply bg-white font-sans text-lg text-gray-800 antialiased transition-colors duration-300 dark:bg-black dark:text-white;
+  @apply bg-black font-sans text-lg text-white antialiased transition-colors duration-300;
   scrollbar-gutter: stable;
 }
 
-/* ====== Links ====== */
+/* ====== Typography: Links ====== */
 a {
-  @apply text-gray-300 no-underline transition-colors duration-200 hover:text-white dark:text-white;
-}
-.dark a {
-  @apply text-white no-underline hover:text-white;
+  @apply font-semibold text-gray-300 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out hover:text-white hover:underline;
 }
 
-/* ====== Headings ====== */
+/* ====== Typography: Headings ====== */
 h1 {
   @apply mb-6 mt-10 text-5xl font-bold tracking-tight sm:text-6xl;
 }
-
 h2 {
-  @apply mb-5 mt-8 text-4xl font-semibold tracking-tight sm:text-5xl;
+  @apply mb-5 mt-12 text-4xl font-semibold tracking-tight sm:text-5xl;
 }
-
 h3 {
-  @apply mb-3 mt-6 text-3xl font-medium;
+  @apply mb-3 mt-10 text-3xl font-medium;
 }
-
 h4 {
-  @apply mb-2 mt-5 text-2xl font-medium;
+  @apply mb-2 mt-8 text-2xl font-medium;
 }
 
-/* ====== Text Elements ====== */
+/* ====== Typography: Paragraphs & Emphasis ====== */
 p {
-  @apply mb-4 text-lg leading-relaxed text-gray-100 dark:text-white;
+  @apply mb-8 text-lg leading-relaxed text-white;
 }
-
 strong {
-  @apply font-bold text-gray-400 dark:text-white;
+  @apply font-semibold text-neutral-400;
+}
+em {
+  @apply italic text-gray-400;
 }
 
-/* ====== Code ====== */
+/* ====== Code & Preformatted ====== */
 code {
-  @apply rounded bg-gray-100 px-1.5 py-0.5 font-mono text-base text-pink-600 dark:bg-gray-800 dark:text-pink-400;
+  @apply rounded bg-gray-800 px-1.5 py-0.5 font-mono text-pink-400;
 }
-
 pre {
-  @apply overflow-x-auto rounded-lg bg-gray-50 p-6 text-base leading-relaxed text-gray-800 dark:bg-gray-900 dark:text-gray-200;
+  @apply overflow-x-auto rounded-lg bg-gray-900 p-6 leading-relaxed text-gray-200;
 }
 
-/* ====== Blockquote ====== */
+/* ====== Blockquote & Divider ====== */
 blockquote {
-  @apply my-8 border-l-4 border-gray-300 pl-5 italic text-gray-600 dark:border-gray-700 dark:text-gray-400;
+  @apply my-8 border-l-4 border-gray-700 pl-5 italic text-gray-400;
 }
-
-/* ====== Divider ====== */
 hr {
-  @apply my-12 border-t border-gray-200 dark:border-gray-800;
-}
-
-/* ====== Poietic Flow (vertical rhythm) ====== */
-.poetic-flow > * + * {
-  @apply mt-8;
+  @apply my-12 border-t border-gray-800;
 }
 
 /* ====== Lists ====== */
-ul {
-  @apply mb-4 list-disc space-y-3 pl-6;
-}
-
+ul,
 ol {
-  @apply list-decimal space-y-3 pl-6;
+  @apply mb-6 space-y-3 pl-6;
 }
-
+ul {
+  @apply list-disc;
+}
+ol {
+  @apply list-decimal;
+}
 li {
-  @apply text-lg leading-relaxed text-gray-100 dark:text-white;
+  @apply text-lg leading-relaxed text-white;
 }
 
 /* ====== Tables ====== */
 table {
   @apply my-8 w-full table-auto border-collapse text-base;
 }
-
 thead {
-  @apply bg-gray-100 dark:bg-gray-100;
+  @apply bg-gray-800;
 }
-
 th,
 td {
   @apply border px-5 py-3 text-left;
 }
-
 th {
-  @apply font-medium text-gray-100 dark:text-white;
+  @apply font-medium text-white;
+}
+td {
+  @apply text-white;
 }
 
-td {
-  @apply text-gray-100 dark:text-white;
+/* ====== Poietic Flow Rhythm ====== */
+.poetic-flow > * + * {
+  @apply mt-8;
+}
+.poetic-flow h2,
+.poetic-flow h3,
+.poetic-flow h4 {
+  @apply scroll-mt-16;
+}
+.poetic-flow h2 + *,
+.poetic-flow h3 + *,
+.poetic-flow h4 + * {
+  @apply mt-4;
+}
+.poetic-flow * + h2,
+.poetic-flow * + h3,
+.poetic-flow * + h4 {
+  @apply mt-12;
+}
+.poetic-flow p + *,
+.poetic-flow ul + *,
+.poetic-flow ol + *,
+.poetic-flow blockquote + * {
+  @apply mt-8;
+}
+.poetic-flow p + ul,
+.poetic-flow p + ol {
+  @apply mt-10;
+}
+.poetic-flow li + p {
+  @apply mt-6;
 }
