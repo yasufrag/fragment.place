@@ -7,6 +7,12 @@ html,
 body {
   @apply bg-black font-sans text-lg text-white antialiased transition-colors duration-300;
   scrollbar-gutter: stable;
+
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: manipulation;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* ====== Typography: Links ====== */

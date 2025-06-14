@@ -40,6 +40,7 @@ export const MetaTag = ({ title, description, url, image, robots }: MetaTagProps
       {/* Optional */}
       <meta name="robots" content={robotsTag} />
       <meta name="author" content="co.poiesis" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     </Head>
   )
 }
