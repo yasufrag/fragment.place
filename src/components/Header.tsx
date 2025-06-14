@@ -24,7 +24,7 @@ export default function Header() {
   }, [])
 
   return (
-    <header className="sticky top-0 z-50 border-b-[0.5px] border-neutral-700 bg-black/70 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b-[0.5px] border-neutral-700 bg-black/60 backdrop-blur-md">
       {' '}
       <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-5">
         <Link href="/" className="flex items-center space-x-3">
