@@ -1,12 +1,12 @@
 import { MetaTag } from '@/components/MetaTag'
 import { meta } from '@/meta/meta'
 
-export default function Home() {
+export default function Index() {
   return (
     <>
-      <MetaTag {...meta.index} />
+      <MetaTag {...meta.home} />
       <h1>co.poiesis</h1>
-      <p>a place for living syntax and poetic fragments</p>
+      <p>a frame for poetic fragments and living syntax</p>
     </>
   )
 }

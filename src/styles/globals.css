@@ -11,19 +11,23 @@ body {
 
 /* ====== Typography: Links ====== */
 a {
-  @apply font-semibold text-gray-300 underline decoration-2 underline-offset-4 transition-all duration-300 ease-in-out hover:text-white hover:underline;
+  @apply font-semibold text-gray-300 transition-all duration-300 ease-in-out hover:text-white;
+  text-decoration: none; /* ← underline 無効化 */
 }
 
 /* ====== Typography: Headings ====== */
 h1 {
   @apply mb-6 mt-10 text-5xl font-bold tracking-tight sm:text-6xl;
 }
+
 h2 {
   @apply mb-5 mt-12 text-4xl font-semibold tracking-tight sm:text-5xl;
 }
+
 h3 {
   @apply mb-3 mt-10 text-3xl font-medium;
 }
+
 h4 {
   @apply mb-2 mt-8 text-2xl font-medium;
 }
@@ -32,9 +36,11 @@ h4 {
 p {
   @apply mb-8 text-lg leading-relaxed text-white;
 }
+
 strong {
   @apply font-semibold text-neutral-400;
 }
+
 em {
   @apply italic text-gray-400;
 }
@@ -51,6 +57,7 @@ pre {
 blockquote {
   @apply my-8 border-l-4 border-gray-700 pl-5 italic text-gray-400;
 }
+
 hr {
   @apply my-12 border-t border-gray-800;
 }
@@ -60,9 +67,11 @@ ul,
 ol {
   @apply mb-6 space-y-3 pl-6;
 }
+
 ul {
   @apply list-disc;
 }
+
 ol {
   @apply list-decimal;
 }
@@ -74,16 +83,20 @@ li {
 table {
   @apply my-8 w-full table-auto border-collapse text-base;
 }
+
 thead {
   @apply bg-gray-800;
 }
+
 th,
 td {
   @apply border px-5 py-3 text-left;
 }
+
 th {
   @apply font-medium text-white;
 }
+
 td {
   @apply text-white;
 }

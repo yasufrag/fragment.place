@@ -1,4 +1,3 @@
-// components/MetaTag.tsx
 import Head from 'next/head'
 
 type MetaTagProps = {
@@ -6,15 +5,16 @@ type MetaTagProps = {
   description?: string
   url?: string
   image?: string
+  robots?: string
 }
 
-export const MetaTag = ({ title, description, url, image }: MetaTagProps) => {
+export const MetaTag = ({ title, description, url, image, robots }: MetaTagProps) => {
   const siteName = 'co.poiesis'
   const fullTitle = `${title} | ${siteName}`
-  const metaDescription =
-    description || 'co.poiesis is a poetic syntax unfolding in fragments.'
+  const metaDescription = description || 'co.poiesis is a poetic syntax unfolding in fragments.'
   const canonicalURL = url || 'https://poietic.site'
-  const ogImage = image || 'https://poietic.site/og-default.png'
+  const ogImage = image || 'https://poietic.site/og.png'
+  const robotsTag = robots || 'index,follow'
 
   return (
     <Head>
@@ -32,13 +32,13 @@ export const MetaTag = ({ title, description, url, image }: MetaTagProps) => {
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@poietic_site" />
+      <meta name="twitter:site" content="@poieticid" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={ogImage} />
 
       {/* Optional */}
-      <meta name="robots" content="index,follow" />
+      <meta name="robots" content={robotsTag} />
       <meta name="author" content="co.poiesis" />
     </Head>
   )
