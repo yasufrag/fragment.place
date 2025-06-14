@@ -6,11 +6,12 @@
 html,
 body {
   @apply bg-black font-sans text-lg text-white antialiased transition-colors duration-300;
-  scrollbar-gutter: stable;
 
-  overscroll-behavior: none;
+  overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
   touch-action: manipulation;
+  scrollbar-gutter: stable;
+
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }
