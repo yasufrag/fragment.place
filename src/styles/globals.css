@@ -56,8 +56,9 @@ em {
 code {
   @apply rounded bg-gray-800 px-1.5 py-0.5 font-mono text-pink-400;
 }
+
 pre {
-  @apply overflow-x-auto rounded-lg bg-gray-900 p-6 leading-relaxed text-gray-200;
+  @apply overflow-x-auto rounded-lg bg-gray-900 p-6 leading-relaxed text-gray-200 font-mono text-sm whitespace-pre-wrap;
 }
 
 /* ====== Blockquote & Divider ====== */
