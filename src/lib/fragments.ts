@@ -12,7 +12,7 @@ export type FragmentMeta = {
     src: string
     alt?: string
     caption?: string
-  }
+  } | null
 }
 
 const fragmentsDir = path.join(process.cwd(), 'src/data/fragments')
