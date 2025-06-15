@@ -8,27 +8,58 @@ import { meta } from '@/meta/meta'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 
-type FragmentPageProps = {
+export type FragmentMeta = {
   title: string
   date: string
-  content: MDXRemoteSerializeResult
+  tags?: string[]
+  excerpt?: string
+  image?: {
+    src: string
+    alt?: string
+    caption?: string
+  }
 }
 
-export default function FragmentPage({ title, date, content }: FragmentPageProps) {
+type FragmentPageProps = {
+  meta: FragmentMeta
+  mdxSource: MDXRemoteSerializeResult
+}
+
+export default function FragmentPage({ meta, mdxSource }: FragmentPageProps) {
   return (
     <>
-      <MetaTag {...meta.fragments} />
-      <h1>{title}</h1>
-      <p className="text-sm text-neutral-500 mb-6">
-        {new Date(date).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        })}
-      </p>
-      <div className="prose prose-invert">
-        <MDXRemote {...content} />
-      </div>
+      <MetaTag title={meta.title} description={meta.excerpt || ''} />
+      <article className="max-w-3xl mx-auto px-6 py-12 text-white">
+        <h1 className="text-3xl font-bold mb-2">{meta.title}</h1>
+        <p className="text-sm text-gray-400 mb-6">
+          {new Date(meta.date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}
+        </p>
+
+        {/* Optional image display */}
+        {meta.image?.src && (
+          <div className="mb-6">
+            <img
+              src={meta.image.src}
+              alt={meta.image.alt || ''}
+              className="rounded-xl object-cover w-full h-auto"
+              loading="lazy"
+            />
+            {meta.image.caption && (
+              <p className="text-xs text-gray-400 mt-2 italic">
+                {meta.image.caption}
+              </p>
+            )}
+          </div>
+        )}
+
+        <div className="prose prose-invert">
+          <MDXRemote {...mdxSource} />
+        </div>
+      </article>
     </>
   )
 }
@@ -45,14 +76,20 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   const filePath = path.join(process.cwd(), 'src/data/fragments', `${slug}.mdx`)
-  const source = fs.readFileSync(filePath, 'utf8')
-  const { content, data } = matter(source)
+  const fileContent = fs.readFileSync(filePath, 'utf8')
+  const { data, content } = matter(fileContent)
   const mdxSource = await serialize(content)
+
   return {
     props: {
-      title: data.title || slug,
-      date: data.date || '',
-      content: mdxSource,
+      meta: {
+        title: data.title || 'Untitled',
+        date: data.date || '',
+        tags: data.tags || [],
+        excerpt: data.excerpt || '',
+        image: data.image || null,
+      },
+      mdxSource,
     },
   }
 }

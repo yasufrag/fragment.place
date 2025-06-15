@@ -1,6 +1,6 @@
 module.exports = {
   pageExtensions: ['tsx', 'ts'],
-    images: {
-    unoptimized: true,
+  images: {
+      unoptimized: true,
   },
 }
