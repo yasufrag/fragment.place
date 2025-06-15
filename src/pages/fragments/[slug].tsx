@@ -4,7 +4,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { meta as globalMeta } from '@/meta/meta'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 
@@ -17,7 +17,7 @@ export type FragmentMeta = {
     src: string
     alt?: string
     caption?: string
-  }
+  } | null
 }
 
 type FragmentPageProps = {
@@ -39,7 +39,6 @@ export default function FragmentPage({ meta, mdxSource }: FragmentPageProps) {
           })}
         </p>
 
-        {/* Optional image display */}
         {meta.image?.src && (
           <div className="mb-6">
             <img
@@ -73,21 +72,30 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: false }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps<FragmentPageProps> = async ({ params }) => {
   const slug = params?.slug as string
   const filePath = path.join(process.cwd(), 'src/data/fragments', `${slug}.mdx`)
   const fileContent = fs.readFileSync(filePath, 'utf8')
   const { data, content } = matter(fileContent)
   const mdxSource = await serialize(content)
 
+  const image =
+    typeof data.image === 'object' && data.image?.src
+      ? {
+          src: data.image.src,
+          alt: data.image.alt || '',
+          caption: data.image.caption || '',
+        }
+      : null
+
   return {
     props: {
       meta: {
         title: data.title || 'Untitled',
         date: data.date || '',
-        tags: data.tags || [],
+        tags: Array.isArray(data.tags) ? data.tags : [],
         excerpt: data.excerpt || '',
-        image: data.image || null,
+        image,
       },
       mdxSource,
     },

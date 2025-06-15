@@ -23,23 +23,30 @@ function extractExcerpt(content: string): string {
 }
 
 export function getAllFragments(): FragmentMeta[] {
-  const fileNames = fs.readdirSync(fragmentsDir)
+  const fragmentDir = path.join(process.cwd(), 'src/data/fragments')
+  const filenames = fs.readdirSync(fragmentDir)
 
-  return fileNames
-    .filter((file) => file.endsWith('.mdx'))
-    .map((fileName) => {
-      const fullPath = path.join(fragmentsDir, fileName)
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const { data, content } = matter(fileContents)
+  return filenames
+    .filter((name) => name.endsWith('.mdx'))
+    .map((filename) => {
+      const slug = filename.replace(/\.mdx$/, '')
+      const filePath = path.join(fragmentDir, filename)
+      const fileContent = fs.readFileSync(filePath, 'utf8')
+      const { data } = matter(fileContent)
 
       return {
         title: data.title || 'Untitled',
-        date: data.date ? new Date(data.date).toISOString() : '',
-        tags: data.tags || [],
-        slug: fileName.replace(/\.mdx$/, ''),
-        excerpt: extractExcerpt(content),
-        image: data.image || undefined, // image フィールドを追加
+        date: data.date || '',
+        tags: Array.isArray(data.tags) ? data.tags : [],
+        excerpt: data.excerpt || '',
+        image: (typeof data.image === 'object' && data.image?.src)
+          ? {
+              src: data.image.src,
+              alt: data.image.alt || '',
+              caption: data.image.caption || '',
+            }
+          : null,
+        slug,
       }
     })
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
 }
