@@ -1,11 +1,17 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 type FragmentProps = {
   title: string
   date?: string
-　tags?: string[]
+  tags?: string[]
   excerpt?: string
   slug: string
+  image?: {
+    src: string
+    alt?: string
+    caption?: string
+  }
 }
 
 export const FragmentCard: React.FC<FragmentProps> = ({
@@ -14,10 +20,29 @@ export const FragmentCard: React.FC<FragmentProps> = ({
   tags,
   excerpt,
   slug,
+  image,
 }) => {
   return (
     <Link href={`/fragments/${slug}`} className="group block">
       <div className="rounded-2xl border border-gray-700 bg-neutral-900 p-6 transition-colors duration-300 hover:bg-neutral-800">
+        
+        {image?.src && (
+          <div className="mb-4">
+            <Image
+              src={image.src}
+              alt={image.alt || ''}
+              width={800}
+              height={450}
+              className="rounded-xl object-cover w-full h-auto"
+            />
+            {image.caption && (
+              <p className="text-xs text-gray-400 mt-2 italic">
+                {image.caption}
+              </p>
+            )}
+          </div>
+        )}
+
         <h2 className="text-xl font-semibold text-white mb-2 underline-offset-[6px] decoration-[1.5px] group-hover:underline">
           {title}
         </h2>
