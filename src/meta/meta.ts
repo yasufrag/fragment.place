@@ -46,7 +46,6 @@ export const meta = {
       robots: 'index,follow',
     },
   },
-
   bot: {
     title: 'PoieticBot',
     description: 'An agent for poetic reflection, fragment discovery, and dialogic exploration.',

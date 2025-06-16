@@ -1,4 +1,3 @@
-// pages/fragments/[slug].tsx
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -11,6 +10,7 @@ import { serialize } from 'next-mdx-remote/serialize'
 export type FragmentMeta = {
   title: string
   date: string
+  slug: string
   tags?: string[]
   excerpt?: string
   image?: {
@@ -26,9 +26,19 @@ type FragmentPageProps = {
 }
 
 export default function FragmentPage({ meta, mdxSource }: FragmentPageProps) {
+  const fullUrl = `https://poietic.site/fragments/${meta.title
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')}`
+
   return (
     <>
-      <MetaTag title={meta.title} description={meta.excerpt || ''} />
+      <MetaTag
+        title={meta.title}
+        description={meta.excerpt}
+        url={fullUrl}
+        image={meta.image?.src ? `https://poietic.site${meta.image.src}` : undefined}
+      />
       <article className="max-w-3xl mx-auto px-6 py-12 text-white">
         <h1 className="text-3xl font-bold mb-2">{meta.title}</h1>
         <p className="text-sm text-gray-400 mb-6">
@@ -48,9 +58,7 @@ export default function FragmentPage({ meta, mdxSource }: FragmentPageProps) {
               loading="lazy"
             />
             {meta.image.caption && (
-              <p className="text-xs text-gray-400 mt-2 italic">
-                {meta.image.caption}
-              </p>
+              <p className="text-xs text-gray-400 mt-2 italic">{meta.image.caption}</p>
             )}
           </div>
         )}
@@ -88,16 +96,17 @@ export const getStaticProps: GetStaticProps<FragmentPageProps> = async ({ params
         }
       : null
 
-  return {
-    props: {
-      meta: {
-        title: data.title || 'Untitled',
-        date: data.date || '',
-        tags: Array.isArray(data.tags) ? data.tags : [],
-        excerpt: data.excerpt || '',
-        image,
+    return {
+      props: {
+        meta: {
+          title: data.title || 'Untitled',
+          date: data.date || '',
+          slug,
+          tags: Array.isArray(data.tags) ? data.tags : [],
+          excerpt: data.excerpt || '',
+          image,
+        },
+        mdxSource,
       },
-      mdxSource,
-    },
-  }
+    }
 }
