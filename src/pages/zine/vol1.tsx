@@ -1,8 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { MetaTag } from '@/components/MetaTag'
+import { meta } from '@/meta/meta'
 
 export default function ZineVol1() {
   return (
+    <>
+    <MetaTag {...meta.zine.poieticZineVol1} />
     <article className="max-w-2xl mx-auto px-4 py-12 text-white">
       <h1 className="text-3xl font-bold mb-2">PoieticZINE vol.1</h1>
       <p className="text-sm text-gray-400 mb-8">
@@ -146,5 +150,6 @@ export default function ZineVol1() {
         </Link>
       </section>
     </article>
+    </>
   )
 }

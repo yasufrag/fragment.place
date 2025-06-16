@@ -5,10 +5,13 @@ import DayLayout from '@/components/zine/DayLayout'
 import SyntaxMap from '@/components/zine/SyntaxMap'
 import TagBox from '@/components/zine/TagBox'
 import YourSyntax from '@/components/zine/YourSyntax'
+import { MetaTag } from '@/components/MetaTag'
+import { meta } from '@/meta/meta'
 
 export default function RefrigeratorSyntaxZine() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-12 text-white">
+      <MetaTag {...meta.zine.refrigeratorSyntax} />
       <ZineCover
         title="Refrigerator Syntax ZINE"
         subtitle="Tracing the Poetics of Everyday Life in the Early Days of Living Alone"

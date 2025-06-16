@@ -27,7 +27,26 @@ export const meta = {
     url: 'https://poietic.site/zine',
     image: 'https://poietic.site/og.png',
     robots: 'index,follow',
+
+    poieticZineVol1: {
+      title: 'PoieticZINE vol.1',
+      description:
+        'A quiet collection of fragments and syntax, passed through rainy days, departures, and beginnings.',
+      url: 'https://poietic.site/zine/vol1',
+      image: 'https://poietic.site/images/zine/vol1-cover.png',
+      robots: 'index,follow',
+    },
+
+    refrigeratorSyntax: {
+      title: 'Refrigerator Syntax ZINE',
+      description:
+        'A quiet exploration of food, memory, and poietic living — written from the threshold of solo life.',
+      url: 'https://poietic.site/zine/refrigerator-syntax',
+      image: 'https://poietic.site/images/zine/refrigerator-cover.png',
+      robots: 'index,follow',
+    },
   },
+
   bot: {
     title: 'PoieticBot',
     description: 'An agent for poetic reflection, fragment discovery, and dialogic exploration.',
