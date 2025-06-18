@@ -40,8 +40,8 @@ export const meta = {
     refrigeratorSyntax: {
       title: 'Refrigerator Syntax ZINE',
       description: 'Tracing the poetics of everyday life in the early days of living alone.',
-      url: '/zine/refrigerator-syntax',
-      image: '/images/refrigerator.syntax.cover.jpeg',
+      url: 'https://poietic.site/zine/refrigerator-syntax',
+      image: 'https://poietic.site/images/zine/refrigerator.syntax.cover.jpeg',
       robots: 'index,follow',
     },
   },
