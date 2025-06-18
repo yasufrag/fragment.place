@@ -28,8 +28,8 @@ export default function RefrigeratorSyntaxZine() {
 
       <PoeticBlock title="Prologue｜Waking at 4:30 AM">
         <img
-          src="/images/zine/morning.jpeg"
-          alt="Breakfast with banana and yogurt"
+          src="/images/zine/refrigerator.breakfast.jpeg"
+          alt="June 19, 2025 breakfast: toast, yogurt, banana, and oligosaccharide drink"
           className="my-4 rounded"
         />
         <blockquote>
@@ -87,7 +87,7 @@ export default function RefrigeratorSyntaxZine() {
 
       <PoeticBlock title="Fragment 2｜Dialogue with the Past Through Leftovers">
         <img
-          src="/images/zine/dinner.jpeg"
+          src="/images/zine/refrigerator.dinner.jpeg"
           alt="Dinner plate with vegetables and chicken"
           className="my-4 rounded"
         />

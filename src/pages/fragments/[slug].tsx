@@ -3,7 +3,6 @@ import path from 'path'
 import matter from 'gray-matter'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { MetaTag } from '@/components/MetaTag'
-import { meta as globalMeta } from '@/meta/meta'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 
