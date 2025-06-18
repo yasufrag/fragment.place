@@ -39,10 +39,9 @@ export const meta = {
 
     refrigeratorSyntax: {
       title: 'Refrigerator Syntax ZINE',
-      description:
-        'A quiet exploration of food, memory, and poietic living — written from the threshold of solo life.',
-      url: 'https://poietic.site/zine/refrigerator-syntax',
-      image: 'https://poietic.site/images/zine/refrigerator-cover.png',
+      description: 'Tracing the poetics of everyday life in the early days of living alone.',
+      url: '/zine/refrigerator-syntax',
+      image: '/images/refrigerator.syntax.cover.jpeg',
       robots: 'index,follow',
     },
   },

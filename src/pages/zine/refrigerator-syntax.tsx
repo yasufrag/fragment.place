@@ -12,12 +12,15 @@ export default function RefrigeratorSyntaxZine() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-12 text-white">
       <MetaTag {...meta.zine.refrigeratorSyntax} />
+
       <ZineCover
         title="Refrigerator Syntax ZINE"
         subtitle="Tracing the Poetics of Everyday Life in the Early Days of Living Alone"
+        image="/images/refrigerator.syntax.cover.jpeg"
       />
 
       <PoeticBlock title="Prologue｜Waking at 4:30 AM">
+        <img src="/images/zine/morning.jpeg" alt="Breakfast with banana and yogurt" className="my-4 rounded" />
         <blockquote>
           The world was still asleep.  <br />
           A cold draft, and a faint irritation on the left corner of my lips.  <br />
@@ -27,6 +30,8 @@ export default function RefrigeratorSyntaxZine() {
           My stomach and the fridge door calmed down at the same time.
         </blockquote>
       </PoeticBlock>
+
+      <img src="/images/zine/refrigerator.inside.jpeg" alt="Inside the refrigerator" className="my-6 rounded" />
 
       <InventoryList
         frozen={[
@@ -57,15 +62,16 @@ export default function RefrigeratorSyntaxZine() {
         <pre>
           {`[Oyster Mushroom and Onion Miso Soup Syntax]
 
-          - The broth came from memories in the freezer.
-          - Onion, cut into half-moons. Let the sweetness read itself over time.
-          - Mushrooms, torn by hand—syntax seeps better than with a knife.
-          - Miso, added in just the amount of “that silence.”
-          - When the steam rises, the answer has arrived.`}
+- The broth came from memories in the freezer.
+- Onion, cut into half-moons. Let the sweetness read itself over time.
+- Mushrooms, torn by hand—syntax seeps better than with a knife.
+- Miso, added in just the amount of “that silence.”
+- When the steam rises, the answer has arrived.`}
         </pre>
       </PoeticBlock>
 
       <PoeticBlock title="Fragment 2｜Dialogue with the Past Through Leftovers">
+        <img src="/images/zine/dinner.jpeg" alt="Dinner plate with vegetables and chicken" className="my-4 rounded" />
         <blockquote>
           The broccoli was still there.  <br />
           Spinach, frozen in time.  <br />
@@ -80,6 +86,7 @@ export default function RefrigeratorSyntaxZine() {
       </PoeticBlock>
 
       <PoeticBlock title="Fragment 3｜Naan, Candy, and Onion">
+        <img src="/images/zine/curry.base.memory.jpeg" alt="Curry base ingredients: onion, carrot, potato" className="my-4 rounded" />
         <blockquote>
           Onion, carrot, potato—  <br />
           the essential trio for curry.  <br /><br />
@@ -113,7 +120,21 @@ export default function RefrigeratorSyntaxZine() {
         ]}
       />
 
-      <SyntaxMap />
+      <PoeticBlock title="Banana Syntax Box">
+        <img src="/images/zine/banana.syntax.box.jpeg" alt="Banana syntax box" className="my-4 rounded" />
+        <blockquote>
+          A leftover box on the street.  <br />
+          “Kindness Banana,” it says.  <br /><br />
+          My K2 Pro has a banana switch.  <br />
+          My breakfast often includes a banana.  <br /><br />
+          There’s something about this quiet, comedic poetry  <br />
+          that aligns with how I work.
+        </blockquote>
+      </PoeticBlock>
+
+      <SyntaxMap>
+        <img src="/images/zine/syntaxmap.obsidian.png" alt="Obsidian screen showing refrigerator syntax map" className="my-4 rounded" />
+      </SyntaxMap>
 
       <PoeticBlock title="Epilogue｜Where Life and Kitchen Begin to Blur">
         <blockquote>
