@@ -35,7 +35,7 @@ export default function ZinePage() {
                 alt="PoieticZINE vol.1 cover"
                 width={600}
                 height={340}
-                className="rounded-xl mb-4 object-cover w-full h-auto"
+                className="rounded-xl mb-4 object-cover w-full h-[280px]"
               />
               <h2 className="text-lg font-semibold group-hover:underline mb-1">PoieticZINE vol.1</h2>
               <p className="text-sm text-gray-400">
@@ -45,22 +45,22 @@ export default function ZinePage() {
             </div>
           </Link>
 
-            {/* Refrigerator Syntax ZINE */}
-            <Link href="/zine/refrigerator-syntax" className="group block">
-              <div className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 hover:bg-neutral-800 transition">
-                <Image
-                  src="/images/zine/refrigerator-cover.png" // ← カバー画像のパス
-                  alt="Refrigerator Syntax ZINE cover"
-                  width={600}
-                  height={340}
-                  className="rounded-xl mb-4 object-cover w-full h-auto"
-                />
-                <h2 className="text-lg font-semibold group-hover:underline mb-1">Refrigerator Syntax ZINE</h2>
-                <p className="text-sm text-gray-400">
-                  A quiet exploration of food, memory, and poietic living — written from the threshold of solo life.
-                </p>
-              </div>
-            </Link>
+          {/* Refrigerator Syntax ZINE */}
+          <Link href="/zine/refrigerator-syntax" className="group block">
+            <div className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 hover:bg-neutral-800 transition">
+              <Image
+                src="/images/zine/refrigerator.syntax.cover.jpeg"
+                alt="Refrigerator Syntax ZINE cover"
+                width={600}
+                height={340}
+                className="rounded-xl mb-4 object-cover w-full h-[280px]"
+              />
+              <h2 className="text-lg font-semibold group-hover:underline mb-1">Refrigerator Syntax ZINE</h2>
+              <p className="text-sm text-gray-400">
+                A quiet exploration of food, memory, and poietic living — written from the threshold of solo life.
+              </p>
+            </div>
+          </Link>
         </section>
       </main>
     </>

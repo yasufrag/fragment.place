@@ -13,14 +13,25 @@ export default function RefrigeratorSyntaxZine() {
     <main className="max-w-3xl mx-auto px-6 py-12 text-white">
       <MetaTag {...meta.zine.refrigeratorSyntax} />
 
-      <ZineCover
-        title="Refrigerator Syntax ZINE"
-        subtitle="Tracing the Poetics of Everyday Life in the Early Days of Living Alone"
-        image="/images/refrigerator.syntax.cover.jpeg"
+      <header className="text-center my-12">
+        <h1 className="text-3xl font-bold tracking-tight">Refrigerator Syntax ZINE</h1>
+        <p className="mt-2 text-lg text-muted-foreground">
+          Tracing the Poetics of Everyday Life in the Early Days of Living Alone
+        </p>
+      </header>
+
+      <img
+        src="/images/zine/refrigerator.syntax.cover.jpeg"
+        alt="Refrigerator Syntax ZINE cover"
+        className="my-6 rounded"
       />
 
       <PoeticBlock title="Prologue｜Waking at 4:30 AM">
-        <img src="/images/zine/morning.jpeg" alt="Breakfast with banana and yogurt" className="my-4 rounded" />
+        <img
+          src="/images/zine/morning.jpeg"
+          alt="Breakfast with banana and yogurt"
+          className="my-4 rounded"
+        />
         <blockquote>
           The world was still asleep.  <br />
           A cold draft, and a faint irritation on the left corner of my lips.  <br />
@@ -31,7 +42,11 @@ export default function RefrigeratorSyntaxZine() {
         </blockquote>
       </PoeticBlock>
 
-      <img src="/images/zine/refrigerator.inside.jpeg" alt="Inside the refrigerator" className="my-6 rounded" />
+      <img
+        src="/images/zine/refrigerator.inside.jpeg"
+        alt="Inside the refrigerator"
+        className="my-4 rounded"
+      />
 
       <InventoryList
         frozen={[
@@ -60,7 +75,7 @@ export default function RefrigeratorSyntaxZine() {
 
       <PoeticBlock title="Fragment 1｜The Syntax of Miso Soup">
         <pre>
-          {`[Oyster Mushroom and Onion Miso Soup Syntax]
+{`[Oyster Mushroom and Onion Miso Soup Syntax]
 
 - The broth came from memories in the freezer.
 - Onion, cut into half-moons. Let the sweetness read itself over time.
@@ -71,7 +86,11 @@ export default function RefrigeratorSyntaxZine() {
       </PoeticBlock>
 
       <PoeticBlock title="Fragment 2｜Dialogue with the Past Through Leftovers">
-        <img src="/images/zine/dinner.jpeg" alt="Dinner plate with vegetables and chicken" className="my-4 rounded" />
+        <img
+          src="/images/zine/dinner.jpeg"
+          alt="Dinner plate with vegetables and chicken"
+          className="my-4 rounded"
+        />
         <blockquote>
           The broccoli was still there.  <br />
           Spinach, frozen in time.  <br />
@@ -86,7 +105,11 @@ export default function RefrigeratorSyntaxZine() {
       </PoeticBlock>
 
       <PoeticBlock title="Fragment 3｜Naan, Candy, and Onion">
-        <img src="/images/zine/curry.base.memory.jpeg" alt="Curry base ingredients: onion, carrot, potato" className="my-4 rounded" />
+        <img
+          src="/images/zine/curry.base.memory.jpeg"
+          alt="Curry base ingredients: onion, carrot, potato"
+          className="my-4 rounded"
+        />
         <blockquote>
           Onion, carrot, potato—  <br />
           the essential trio for curry.  <br /><br />
@@ -121,7 +144,11 @@ export default function RefrigeratorSyntaxZine() {
       />
 
       <PoeticBlock title="Banana Syntax Box">
-        <img src="/images/zine/banana.syntax.box.jpeg" alt="Banana syntax box" className="my-4 rounded" />
+        <img
+          src="/images/zine/banana.syntax.box.jpeg"
+          alt="Banana syntax box"
+          className="my-4 rounded"
+        />
         <blockquote>
           A leftover box on the street.  <br />
           “Kindness Banana,” it says.  <br /><br />
@@ -133,7 +160,11 @@ export default function RefrigeratorSyntaxZine() {
       </PoeticBlock>
 
       <SyntaxMap>
-        <img src="/images/zine/syntaxmap.obsidian.png" alt="Obsidian screen showing refrigerator syntax map" className="my-4 rounded" />
+        <img
+          src="/images/zine/syntaxmap.obsidian.png"
+          alt="Obsidian screen showing refrigerator syntax map"
+          className="my-4 rounded"
+        />
       </SyntaxMap>
 
       <PoeticBlock title="Epilogue｜Where Life and Kitchen Begin to Blur">
