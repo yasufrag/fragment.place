@@ -10,7 +10,7 @@ type MetaTagProps = {
 
 export const MetaTag = ({ title, description, url, image, robots }: MetaTagProps) => {
   const siteName = 'co.poiesis'
-  const fullTitle = `${title} | ${siteName}`
+  const fullTitle = `${title} | co.poiesis – living syntax, shared in silence`
   const metaDescription = description || 'co.poiesis is a poetic syntax unfolding in fragments.'
   const canonicalURL = url || 'https://poietic.site'
   const ogImage = image || 'https://poietic.site/og.png'

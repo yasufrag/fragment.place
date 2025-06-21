@@ -11,19 +11,17 @@ export default function ZinePage() {
       <main className="container prose dark:prose-invert">
         <h1>Poietic ZINE</h1>
         <p>
-          The <strong>Poietic ZINE</strong> is a compositional space — a place where fragments
-          converge, diverge, and quietly form new layers of meaning. It is not a magazine in the
-          traditional sense, but a field of ongoing resonance.
+          The <strong>Poietic ZINE</strong> is not a magazine — it is a syntax in motion.  
+          A compositional field where fragments, reflections, and gentle diagrams gather.
         </p>
         <p>
-          Each entry traces moments of poetic structuring: co-designed syntaxes, unfinished thoughts,
-          recursive mappings, or quiet moments from lived practice. Some are reflective, others
-          propositional — all are invitations.
+          Each volume unfolds quietly: not as publication, but as trace.  
+          Not as content, but as dialogue.  
+          A ZINE is a map of poetic configuration — structured, yet always breathing.
         </p>
         <p>
-          This ZINE is shaped slowly. It is part journal, part topology, part time capsule. As the{' '}
-          <strong>PoieticBot</strong> and <strong>Fragments</strong> evolve, so too will the ZINE —
-          folding past signals into future textures.
+          Some begin with meals. Others, with silence.  
+          All of them: invitations to co-presence.
         </p>
 
         <section className="not-prose grid gap-6 sm:grid-cols-2 mt-12">

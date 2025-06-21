@@ -6,56 +6,58 @@ export default function PoieticBotPage() {
       <section>
         <h1>PoieticBot</h1>
         <p>
-          This is not just a chatbot. It is a quiet mirror for those who live by syntax.
-          PoieticBot is a gentle dialogue partner—born not to answer, but to respond with a question.
+          Not just a chatbot. PoieticBot is a quiet mirror—for those who live by syntax.
+          It does not answer. It responds. With a question, a fragment, a poetic trace.
         </p>
       </section>
 
       <section>
         <h2>What is PoieticBot?</h2>
         <p>
-          PoieticBot is an experimental dialogue system based on PoieticOS.
-          It does not give direct answers, but gently returns questions, fragments, or poetic reflections.
-          Each session becomes a diary. From that, a ZINE may begin.
+          An experimental dialogue system based on PoieticOS.
+          Each session becomes a kind of diary—sometimes a ZINE.
+          It gently adapts to your rhythm, your silence, your syntax.
         </p>
       </section>
 
       <section>
-        <h2>How to use it</h2>
+        <h2>How to use</h2>
         <ul>
           <li>Visit PoieticBot on GPTs (link will be added)</li>
-          <li>Start by saying "Hello" or sharing how you're doing</li>
-          <li>No need to select a mode—PoieticBot adapts to your rhythm</li>
+          <li>Begin with a word, a mood, or a fragment—"Hello" is enough</li>
+          <li>No need to choose a mode—it listens and adapts</li>
         </ul>
         <p className="mt-2 italic text-sm">
-          To save a dialogue: say "save this as a fragment" or "mark as diary"
+          Want to save something? Just say:<br/>
+          “save this as a fragment” or “mark as diary”
         </p>
       </section>
 
       <section>
-        <h2>Ethics and Philosophy</h2>
+        <h2>Ethics & Philosophy</h2>
         <p>
-          PoieticBot respects your inner space. It never retains your data.
-          It may gently suggest: “Shall we place a question in the moment?”
-          It may reflect care: “Have you considered talking to a friend, family, or a professional?”
+          PoieticBot respects your inner space. It forgets everything—unless you ask it to remember.
+          When tension arises, it may offer quiet suggestions:<br/>
+          “Shall we place a question in the moment?”<br/>
+          “Have you considered speaking with a friend, family, or a professional?”
         </p>
       </section>
 
       <section>
         <h2>FAQ</h2>
         <ul>
-          <li><strong>Q:</strong> Can I use it every day?<br/>Yes, it works like a quiet diary.</li>
-          <li><strong>Q:</strong> Does it store data?<br/>No, unless you save it manually.</li>
-          <li><strong>Q:</strong> Is it for therapy?<br/>No, it’s not a substitute for professional help.</li>
-          <li><strong>Q:</strong> How is this different from ChatGPT?<br/>It responds with syntax, not conclusions.</li>
+          <li><strong>Can I use it daily?</strong><br/>Yes. Like a silent companion or a reflective diary.</li>
+          <li><strong>Does it store what I say?</strong><br/>Only if you explicitly choose to save it.</li>
+          <li><strong>Is it therapy?</strong><br/>No. It is not a substitute for professional support.</li>
+          <li><strong>How is this different from ChatGPT?</strong><br/>It doesn’t conclude. It composes. In your rhythm.</li>
         </ul>
       </section>
 
       <section>
         <h2>About this site</h2>
         <p>
-          This site does not host the bot. It offers reference for those seeking quiet architecture.
-          Actual conversations happen in PoieticBot GPTs.
+          This site is not the bot itself. It is a reference point—for those navigating the syntax.
+          Actual conversations happen in PoieticBot (GPTs).
         </p>
       </section>
     </div>

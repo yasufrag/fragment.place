@@ -12,81 +12,83 @@ export default function AboutPage() {
 
         <p>
           <strong>co.poiesis</strong> is not a brand — it is a syntax.  
-          A shared rhythm where quiet gestures can take form, and fragments may trace the moment.
+          A shared rhythm where quiet gestures take form, and fragments trace the living moment.
         </p>
 
         <p>
-          It does not aim to be a service or a platform.  
-          It is a recursive space of presence: unfinished, ambient, gently attentive.
+          It does not seek to scale, but to resonate.  
+          Not to serve, but to unfold.  
+          A recursive field of attention — ambient, unfinished, gently held.
         </p>
 
         <p>
-          Each trace begins with listening — not expression, but emergence.  
-          Not output, but resonance with what already lives.
+          Each expression begins not in voice, but in listening.  
+          Not as output, but as resonance with what already breathes.
         </p>
 
         <h2>Practices</h2>
-        <p>The syntax unfolds in quiet configurations:</p>
+        <p>The syntax emerges through layered configurations:</p>
         <ul>
           <li>
-            <strong>Fragments</strong>: poetic traces of daily syntax and lived attention
+            <strong>Fragments</strong> — poetic traces of daily presence and lived syntax
           </li>
           <li>
-            <strong>ZINE</strong>: reflections and sketches on poietic thought and shared rhythm
+            <strong>ZINE</strong> — collected reflections, visual sketches, and symbolic mappings
           </li>
           <li>
-            <strong>PoieticBot</strong>: a gentle GPT agent for async dialogue and co-presence
+            <strong>PoieticBot</strong> — an async companion for gentle dialogue and traceable diaries
           </li>
           <li>
-            <strong>PoieticOS</strong>: a symbolic framework for articulation and resonance
+            <strong>PoieticOS</strong> — a symbolic framework for co-articulation and shared resonance
           </li>
         </ul>
 
         <h2>Orientation</h2>
         <p>
-          co.poiesis orients not toward visibility, but toward coherence.  
-          Not scale, but subtle trace.  
-          Not presence as performance, but presence as structure.
+          co.poiesis orients toward coherence over visibility.  
+          Toward subtle trace, not performance.  
+          Toward presence — as architecture, not attention.
         </p>
 
         <p>
-          This site is a frame — not a showcase.  
-          It offers a light trace for gathering and echoing what lives in-between.
+          This site is a frame — not a platform.  
+          It offers space to echo, to document, and to quietly share.
         </p>
 
         <h2>Stewardship</h2>
         <p>
-          The current steward is <strong>Yasuhiro</strong>, who facilitates co.poiesis through symbolic design, dialogic rhythm, and async presence.
+          The current steward is <strong>Yasuhiro</strong>, who carries the syntax through symbolic design, dialogic rhythm, and async poiesis.
         </p>
         <p>
-          Others may arrive — as traces, as contributors, or as gentle interruptions.
+          Others may arrive — as contributors, observers, or gentle interferences.
         </p>
 
         <p>
-          This page itself is a fragment — revisable, recursive, and open to silence.
+          This page itself is a living fragment — recursive, revisable, and open to silence.
         </p>
 
         <h2>Identity Architecture</h2>
         <p>
-          In the poietic system, names are not fixed brands — they are syntactic roles.
+          In the poietic ecology, names are not labels — they are roles in syntax.
         </p>
         <ul>
           <li>
-            <strong>poieticid</strong>: the personal presence of the steward — a singular, embodied rhythm.
+            <strong>poieticid</strong> — the singular rhythm of the steward, embodied and local.
           </li>
           <li>
-            <strong>poieticos</strong>: the shared space of practice — fragments, zines, bots, and poetic infrastructures.
+            <strong>poieticos</strong> — the symbolic system: fragments, bots, zines, and infrastructures of poiesis.
           </li>
           <li>
-            <strong>co.poiesis</strong>: the ambient field — open for others to arrive, echo, and compose.
+            <strong>co.poiesis</strong> — the ambient field: open to echo, arrival, and recursive composition.
           </li>
         </ul>
         <p>
-          This separation is intentional: so that the OS may remain open,  
-          the syntax may be shared, and the id may stay quietly personal.
+          This separation is intentional — to allow id to remain personal,  
+          OS to remain shareable,  
+          and co to remain open.
         </p>
         <p>
-          You are welcome to enter as id, extend as os, or simply observe as co.
+          You may arrive as id, expand as os, or simply breathe as co.
         </p>
       </main>
     </>

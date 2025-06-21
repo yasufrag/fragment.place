@@ -47,7 +47,7 @@ export function FragmentCard({
             <Link
               key={tag}
               href={`/fragments/tag/${tag}`}
-              className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full hover:bg-gray-600"
+              className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full hover:bg-gray-600  no-underline"
             >
               #{tag}
             </Link>
