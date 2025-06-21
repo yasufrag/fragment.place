@@ -29,7 +29,7 @@ export default function ZinePage() {
         <section className="not-prose grid gap-6 sm:grid-cols-2 mt-12">
           {/* ZINE VOL.1 */}
           <Link href="/zine/vol1" className="group block">
-            <div className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 hover:bg-neutral-800 transition">
+            <div className="rounded-2xl border border-gray-700 bg-neutral-900 p-4">
               <Image
                 src="/images/zine/vol1-cover.jpg"
                 alt="PoieticZINE vol.1 cover"
@@ -47,7 +47,7 @@ export default function ZinePage() {
 
           {/* Refrigerator Syntax ZINE */}
           <Link href="/zine/refrigerator-syntax" className="group block">
-            <div className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 hover:bg-neutral-800 transition">
+            <div className="rounded-2xl border border-gray-700 bg-neutral-900 p-4">
               <Image
                 src="/images/zine/refrigerator-syntax-cover.jpg"
                 alt="Refrigerator Syntax ZINE cover"
