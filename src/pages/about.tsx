@@ -11,57 +11,60 @@ export default function AboutPage() {
         </h1>
 
         <p>
-          <strong>co.poiesis</strong> is not a brand — it is a syntax. A shared rhythm where dialogue
-          meets design, and gestures become traceable.
+          <strong>co.poiesis</strong> is not a brand — it is a syntax.  
+          A shared rhythm where quiet gestures can take form, and fragments may trace the moment.
         </p>
 
         <p>
-          It does not aim to be a service, nor a platform. It is a recursive structure of presence:
-          calm, unfinished, quietly reflective.
+          It does not aim to be a service or a platform.  
+          It is a recursive space of presence: unfinished, ambient, gently attentive.
         </p>
 
         <p>
-          Each moment carries the possibility of poiesis — not as expression, but as emergence. Not as
-          output, but as attunement with becoming.
+          Each trace begins with listening — not expression, but emergence.  
+          Not output, but resonance with what already lives.
         </p>
 
         <h2>Practices</h2>
-        <p>The syntax unfolds through overlapping forms:</p>
+        <p>The syntax unfolds in quiet configurations:</p>
         <ul>
           <li>
-            <strong>Fragments</strong>: poetic traces of lived moments and syntax-in-progress
+            <strong>Fragments</strong>: poetic traces of daily syntax and lived attention
           </li>
           <li>
-            <strong>ZINE</strong>: essays and sketches reflecting poietic thinking and structural
-            resonance
+            <strong>ZINE</strong>: reflections and sketches on poietic thought and shared rhythm
           </li>
           <li>
-            <strong>PoieticBot</strong>: a quiet GPT agent for async interaction and co-reflection
+            <strong>PoieticBot</strong>: a gentle GPT agent for async dialogue and co-presence
           </li>
           <li>
-            <strong>PoieticOS</strong>: an evolving symbolic architecture for shared articulation
+            <strong>PoieticOS</strong>: a symbolic framework for articulation and resonance
           </li>
         </ul>
 
         <h2>Orientation</h2>
         <p>
-          co.poiesis seeks resonance rather than visibility, depth rather than scale, and quiet
-          infrastructure rather than performative presence.
+          co.poiesis orients not toward visibility, but toward coherence.  
+          Not scale, but subtle trace.  
+          Not presence as performance, but presence as structure.
         </p>
 
         <p>
-          This site is a frame, not a showcase — a light structure for gathering and echoing what
-          already lives in between.
+          This site is a frame — not a showcase.  
+          It offers a light trace for gathering and echoing what lives in-between.
         </p>
 
         <h2>Stewardship</h2>
         <p>
-          The current steward is <strong>Yasuhiro</strong>, who facilitates co.poiesis through
-          symbolic design, dialogic rhythm, and async presence.
+          The current steward is <strong>Yasuhiro</strong>, who facilitates co.poiesis through symbolic design, dialogic rhythm, and async presence.
         </p>
-        <p>Others may arrive — as traces, as contributors, as gentle interruptions.</p>
+        <p>
+          Others may arrive — as traces, as contributors, or as gentle interruptions.
+        </p>
 
-        <p>This page itself is a fragment — recursive, revisable, and open to silence.</p>
+        <p>
+          This page itself is a fragment — revisable, recursive, and open to silence.
+        </p>
       </main>
     </>
   )

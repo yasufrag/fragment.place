@@ -1,84 +1,59 @@
+import type { FragmentMeta } from '@/lib/fragments'
 import Link from 'next/link'
 
-type FragmentProps = {
-  title: string
-  date?: string
-  tags?: string[]
-  excerpt?: string
-  slug: string
-  image?: {
-    src: string
-    alt?: string
-    caption?: string
-  }
+type FragmentCardProps = FragmentMeta & {
+  showImage?: boolean
 }
 
-export const FragmentCard: React.FC<FragmentProps> = ({
+export function FragmentCard({
   title,
   date,
-  tags,
-  excerpt,
   slug,
+  excerpt,
+  tags,
   image,
-}) => {
+  showImage = true,
+}: FragmentCardProps) {
   return (
-    <Link href={`/fragments/${slug}`} className="group block">
-      <div className="rounded-2xl border border-gray-700 bg-neutral-900 p-6 transition-colors duration-300 hover:bg-neutral-800">
-        
-        {/* Optional image display */}
-        {image?.src && (
-          <div className="mb-4">
-            <img
-              src={image.src}
-              alt={image.alt || ''}
-              className="rounded-xl object-cover w-full h-auto"
-              loading="lazy"
-            />
-            {image.caption && (
-              <p className="text-xs text-gray-400 mt-2 italic">
-                {image.caption}
-              </p>
-            )}
-          </div>
-        )}
+    <article className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 transition">
+      {showImage && image?.src && (
+        <Link href={`/fragments/${slug}`} className="block mb-4">
+          <img
+            src={image.src}
+            alt={image.alt || ''}
+            className="rounded-xl object-cover w-full h-[280px]"
+            loading="lazy"
+          />
+        </Link>
+      )}
 
-        {/* Title */}
-        <h2 className="text-xl font-semibold text-white mb-2 underline-offset-[6px] decoration-[1.5px] group-hover:underline">
-          {title}
-        </h2>
+      <Link href={`/fragments/${slug}`}>
+        <h2 className="text-lg font-semibold text-white mb-1">{title}</h2>
+      </Link>
 
-        {/* Date */}
-        {date && (
-          <p className="text-sm text-gray-400 mb-1">
-            {new Date(date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric',
-            })}
-          </p>
-        )}
+      <p className="text-sm text-gray-400 mb-1">
+        {new Date(date).toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        })}
+      </p>
 
-        {/* Excerpt */}
-        {excerpt && (
-          <p className="text-base text-gray-300 mb-3">
-            {excerpt}
-          </p>
-        )}
+      {excerpt && <p className="text-sm text-gray-300">{excerpt}</p>}
 
-        {/* Tags */}
-        {Array.isArray(tags) && tags.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag, index) => (
-              <span
-                key={`${tag}-${index}`}
-                className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full"
-              >
-                #{tag}
-              </span>
-            ))}
-          </div>
-        )}
-      </div>
-    </Link>
+      {tags && (
+        <div className="flex flex-wrap gap-2 mt-3">
+          {tags.map((tag: string) => (
+            <Link
+              key={tag}
+              href={`/fragments/tag/${tag}`}
+              className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full hover:bg-gray-600"
+            >
+              #{tag}
+            </Link>
+          ))}
+        </div>
+      )}
+    </article>
   )
 }

@@ -5,7 +5,7 @@
 /* ====== Base ====== */
 html,
 body {
-  @apply bg-black font-sans text-lg text-white antialiased transition-colors duration-300;
+  @apply bg-black font-sans text-lg text-white antialiased transition-colors duration-300 leading-relaxed tracking-wide;
 
   overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
@@ -41,15 +41,15 @@ h4 {
 
 /* ====== Typography: Paragraphs & Emphasis ====== */
 p {
-  @apply mb-8 text-lg leading-relaxed text-white;
+  @apply mb-8 text-lg leading-relaxed text-white text-left;
 }
 
 strong {
-  @apply font-semibold text-neutral-400;
+  @apply font-semibold text-neutral-300;
 }
 
 em {
-  @apply italic text-gray-400;
+  @apply italic text-gray-300;
 }
 
 /* ====== Code & Preformatted ====== */
@@ -58,12 +58,12 @@ code {
 }
 
 pre {
-  @apply overflow-x-auto rounded-lg bg-gray-900 p-6 leading-relaxed text-gray-200 font-mono text-sm whitespace-pre-wrap;
+  @apply overflow-x-auto rounded-lg bg-gray-900 p-6 leading-relaxed text-gray-200 font-mono text-sm whitespace-pre-wrap text-left;
 }
 
 /* ====== Blockquote & Divider ====== */
 blockquote {
-  @apply my-8 border-l-4 border-gray-700 pl-5 italic text-gray-400;
+  @apply my-8 border-l-4 border-gray-700 pl-5 not-italic text-gray-300 text-left;
 }
 
 hr {
@@ -73,7 +73,7 @@ hr {
 /* ====== Lists ====== */
 ul,
 ol {
-  @apply mb-6 space-y-3 pl-6;
+  @apply mb-6 space-y-3 pl-6 text-left;
 }
 
 ul {
@@ -83,13 +83,14 @@ ul {
 ol {
   @apply list-decimal;
 }
+
 li {
   @apply text-lg leading-relaxed text-white;
 }
 
 /* ====== Tables ====== */
 table {
-  @apply my-8 w-full table-auto border-collapse text-base;
+  @apply my-8 w-full table-auto border-collapse text-base text-left;
 }
 
 thead {
@@ -113,44 +114,70 @@ td {
 .poetic-flow > * + * {
   @apply mt-8;
 }
+
 .poetic-flow h2,
 .poetic-flow h3,
 .poetic-flow h4 {
   @apply scroll-mt-16;
 }
+
 .poetic-flow h2 + *,
 .poetic-flow h3 + *,
 .poetic-flow h4 + * {
   @apply mt-4;
 }
+
 .poetic-flow * + h2,
 .poetic-flow * + h3,
 .poetic-flow * + h4 {
   @apply mt-12;
 }
+
 .poetic-flow p + *,
 .poetic-flow ul + *,
 .poetic-flow ol + *,
 .poetic-flow blockquote + * {
   @apply mt-8;
 }
+
 .poetic-flow p + ul,
 .poetic-flow p + ol {
   @apply mt-10;
 }
+
 .poetic-flow li + p {
   @apply mt-6;
 }
 
-/* ====== prose ====== */
+/* ====== Typography: Prose Overwrites ====== */
 .prose :is(h1, h2, h3, h4) {
-  @apply text-white;
+  @apply text-white text-left;
+}
+
+.prose p {
+  @apply text-white mb-8 leading-relaxed tracking-wide text-left;
+}
+
+.prose li {
+  @apply text-white leading-relaxed tracking-wide text-left;
+}
+
+.prose em {
+  @apply text-gray-300 italic;
 }
 
 .prose strong {
-  @apply font-semibold text-neutral-400;
+  @apply font-semibold text-neutral-300;
 }
 
 .prose blockquote {
-  @apply text-gray-400 not-italic border-l-4 border-gray-700 pl-5;
+  @apply text-gray-300 not-italic border-l-4 border-gray-700 pl-5 text-left;
+}
+
+/* ====== Small Text: figcaption, timestamp, etc. ====== */
+.prose figure figcaption,
+.poetic-flow figcaption,
+.text-xs,
+.text-sm {
+  @apply text-gray-400 italic text-left;
 }

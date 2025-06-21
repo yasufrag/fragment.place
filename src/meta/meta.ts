@@ -8,7 +8,7 @@ export const meta = {
   },
   about: {
     title: 'About',
-    description: 'Introduction to the philosophy, people, and process of co.poiesis.',
+    description: 'A gentle outline of the philosophy, rhythm, and stewardship behind co.poiesis.',
     url: 'https://poietic.site/about',
     image: 'https://poietic.site/og.png',
     robots: 'index,follow',
@@ -39,7 +39,7 @@ export const meta = {
 
     refrigeratorSyntax: {
       title: 'Refrigerator Syntax ZINE',
-      description: 'Tracing the poetics of everyday life in the early days of living alone.',
+      description: 'A ZINE of gentle syntax and daily poetics—written with a refrigerator and quiet mornings.',
       url: 'https://poietic.site/zine/refrigerator-syntax',
       image: 'https://poietic.site/images/zine/refrigerator.syntax.cover.jpeg',
       robots: 'index,follow',
@@ -47,9 +47,10 @@ export const meta = {
   },
   bot: {
     title: 'PoieticBot',
-    description: 'A gentle partner for poetic dialogue, syntax-first.',
+    description: 'A gentle GPT partner for quiet dialogue and living syntax.',
     url: 'https://poietic.site/bot',
     image: '/images/og/poieticbot.png',
+    robots: 'index,follow',
   },
   security: {
     title: 'Security',
@@ -60,7 +61,7 @@ export const meta = {
   },
   '404': {
     title: 'Not Found',
-    description: 'This page is a silent trace. A path not yet formed.',
+    description: 'This page is a silent trace — a path not yet formed.',
     url: 'https://poietic.site/404',
     image: 'https://poietic.site/og.png',
     robots: 'noindex,nofollow',

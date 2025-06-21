@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import Link from 'next/link'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { MetaTag } from '@/components/MetaTag'
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
@@ -62,6 +63,10 @@ export default function FragmentPage({ meta, mdxSource }: FragmentPageProps) {
         <div className="prose prose-invert">
           <MDXRemote {...mdxSource} />
         </div>
+
+        <Link href="/fragments" className="no-underline hover:underline text-gray-300 hover:text-white">
+          ← Back to Fragments
+        </Link>
       </article>
     </>
   )

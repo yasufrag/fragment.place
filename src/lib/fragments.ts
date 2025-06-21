@@ -23,23 +23,22 @@ function extractExcerpt(content: string): string {
 }
 
 export function getAllFragments(): FragmentMeta[] {
-  const fragmentDir = path.join(process.cwd(), 'src/data/fragments')
-  const filenames = fs.readdirSync(fragmentDir)
+  const filenames = fs.readdirSync(fragmentsDir)
 
   return filenames
     .filter((name) => name.endsWith('.mdx'))
     .map((filename) => {
       const slug = filename.replace(/\.mdx$/, '')
-      const filePath = path.join(fragmentDir, filename)
+      const filePath = path.join(fragmentsDir, filename)
       const fileContent = fs.readFileSync(filePath, 'utf8')
-      const { data } = matter(fileContent)
+      const { data, content } = matter(fileContent)
 
       return {
         title: data.title || 'Untitled',
         date: data.date || '',
         tags: Array.isArray(data.tags) ? data.tags : [],
-        excerpt: data.excerpt || '',
-        image: (typeof data.image === 'object' && data.image?.src)
+        excerpt: data.excerpt || extractExcerpt(content),
+        image: typeof data.image === 'object' && data.image?.src
           ? {
               src: data.image.src,
               alt: data.image.alt || '',
