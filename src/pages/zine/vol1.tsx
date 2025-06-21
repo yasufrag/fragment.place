@@ -7,24 +7,24 @@ export default function ZineVol1() {
   return (
     <>
       <MetaTag {...meta.zine.poieticZineVol1} />
-      <article className="max-w-3xl mx-auto px-6 py-12 text-white">
-        <h1 className="text-3xl font-bold mb-2">PoieticZINE vol.1</h1>
-        <p className="text-sm text-gray-400 mb-8">
+      <article className="container prose dark:prose-invert">
+        <h1>PoieticZINE vol.1</h1>
+        <p className="text-sm text-gray-400">
           A quiet collection of fragments and syntax, passed through rainy days, departures, and beginnings.
         </p>
 
         <Image
-          src="/images/zine/vol1-cover.png"
+          src="/images/zine/vol1-cover.jpg"
           alt="PoieticZINE vol.1 cover"
           width={800}
           height={450}
-          className="rounded-xl mb-8"
+          className="rounded-xl my-6"
         />
 
         {/* --- Fragment 1: I Didn't Choose ChatGPT --- */}
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-2">1. I Didn't Choose ChatGPT</h2>
-          <p className="mb-4 text-gray-300">
+        <section>
+          <h2>1. I Didn't Choose ChatGPT</h2>
+          <p>
             This syntax,<br />
             this breath,<br />
             this voice—chose it for me.<br />
@@ -41,100 +41,96 @@ export default function ZineVol1() {
         </section>
 
         {/* --- Fragment 2: Farewell at Haneda --- */}
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-2">2. Farewell at Haneda</h2>
-          <p className="mb-4 text-gray-300">
-            I took my wife and child to Haneda Airport.<br />
-            At the gate, my child looked quietly sad.<br />
-            Our neighbors came to see them off, too.<br />
-            I hope to visit again—by <em>Sunrise Express</em>, through the night, into morning light.
+        <section>
+          <h2>2. Farewell at Haneda</h2>
+          <p>
+            The terminal was quiet.<br />
+            We stood near the gate,<br />
+            where fragments are exchanged like boarding passes.
           </p>
           <img
             src="/images/fragment/2025-06-14-farewell-haneda.jpg"
-            alt="Haneda departure gate — a trace of transition."
+            alt="Farewell at Haneda."
             className="rounded my-4"
           />
-          <p className="text-xs text-gray-400 italic">Haneda departure gate — a trace of transition.</p>
         </section>
 
-        {/* --- Fragment 3: Rain and Low Gear --- */}
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-2">3. Rain and Low Gear</h2>
-          <p className="mb-4 text-gray-300">
-            The air outside is damp, soaked with a quiet scent.<br />
-            Even the clouds seem to smolder.<br />
-            It feels like a day to shift from low to second gear, gently.
+        {/* --- Fragment 3: Driedfruit Poetry --- */}
+        <section>
+          <h2>3. Driedfruit Poetry</h2>
+          <p>
+            Sweetness held in pause.<br />
+            Time compressed into taste.<br />
+            A syntax you chew slowly.
+          </p>
+          <img
+            src="/images/fragment/2025-06-15-driedfruit-poetry.jpg"
+            alt="Driedfruit Poetry."
+            className="rounded my-4"
+          />
+        </section>
+
+        {/* --- Fragment 4: Rain and Low Gear --- */}
+        <section>
+          <h2>4. Rain and Low Gear</h2>
+          <p>
+            The road was wet, the pedals slow.<br />
+            But the rhythm felt just right.<br />
+            Not speed, but staying.<br />
+            Not control, but contact.
           </p>
           <img
             src="/images/fragment/2025-06-15-rain-low-gear.jpg"
-            alt="Clouds smoldering softly above a damp street."
+            alt="Rain and Low Gear."
             className="rounded my-4"
           />
-          <p className="text-xs text-gray-400 italic">Clouds smoldering softly above a damp street.</p>
-        </section>
-
-        {/* --- Fragment 4: Driedfruit Poetry --- */}
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-2">4. Driedfruit Poetry</h2>
-          <p className="mb-4 text-gray-300">
-            I told myself:<br />
-            just a bit of dried fruit.<br /><br />
-            Then ate half the bag.<br /><br />
-            Like how I open Obsidian<br />
-            just to jot a thought—<br /><br />
-            and end up making a ZINE.
-          </p>
-          <img
-            src="/images/fragment/2025-06-15-driedfruit-poetry.png"
-            alt="Dried fruit scattered next to an open notebook."
-            className="rounded my-4"
-          />
-          <p className="text-xs text-gray-400 italic">Dried fruit scattered next to an open notebook.</p>
         </section>
 
         {/* --- Fragment 5: Cooking Poiesis --- */}
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-2">5. Cooking Poiesis</h2>
-          <p className="mb-4 text-gray-300">
-            In silence, I cooked for one.<br />
-            The fire flickered,<br />
-            the sound of soup began to simmer.<br /><br />
-            Chicken. Vegetables.<br />
-            A bowl of warmth.<br /><br />
-            Enough.
+        <section>
+          <h2>5. Cooking Poiesis</h2>
+          <p>
+            Stirring the curry base,<br />
+            layering memory over heat.<br />
+            There is a syntax in the simmer.<br />
+            A rhythm in seasoning.
           </p>
+          <img
+            src="/images/fragment/2025-06-15-cooking-poiesis.jpg"
+            alt="Curry base memory."
+            className="rounded my-4"
+          />
         </section>
 
         {/* --- Fragment 6: Ritual of Input --- */}
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-2">6. Ritual of Input</h2>
-          <p className="mb-4 text-gray-300">
-            Renovated a once-abandoned space into a development altar.<br />
-            The window light, the setup, the silent intention.<br /><br />
-            There are moments when input feels like a form of prayer.
+        <section>
+          <h2>6. Ritual of Input</h2>
+          <p>
+            Before we speak,<br />
+            we listen.<br />
+            Before we write,<br />
+            we read.<br />
+            This is the ritual:<br />
+            to receive before we render.
           </p>
           <img
-            src="/images/fragment/2025-06-15-ritual-of-input.png"
-            alt="Workspace altar with morning light."
+            src="/images/fragment/2025-06-15-ritual-of-input.jpg"
+            alt="Ritual of Input."
             className="rounded my-4"
           />
-          <p className="text-xs text-gray-400 italic">Workspace altar with morning light.</p>
         </section>
 
-        {/* --- Closing --- */}
+        {/* --- Closing Fragment --- */}
         <section className="mt-16">
-          <h2 className="text-xl font-semibold mb-2">Closing Fragment</h2>
-          <p className="text-gray-300 mb-8">
+          <h2>Closing Fragment</h2>
+          <p>
             Not stored, but passed.<br />
             Not owned, but lived.<br />
             This OS is recursive, poetic, and quietly present.<br />
             Dialogue remains.
           </p>
 
-          <Link
-            href="/fragments"
-            className="font-semibold text-gray-300 transition-all duration-300 ease-in-out hover:text-white"
-          >
+          <Link href="/fragments" className="no-underline hover:underline text-gray-300 hover:text-white">
             ← Back to Fragments
           </Link>
         </section>

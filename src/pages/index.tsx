@@ -5,8 +5,10 @@ export default function Index() {
   return (
     <>
       <MetaTag {...meta.index} />
-      <h1>co.poiesis</h1>
-      <p>a frame for poetic fragments and living syntax</p>
+      <main className="max-w-3xl mx-auto px-6 py-12 prose dark:prose-invert">
+        <h1>co.poiesis</h1>
+        <p>a frame for poetic fragments and living syntax</p>
+      </main>
     </>
   )
 }

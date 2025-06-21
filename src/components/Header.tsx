@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 
@@ -10,7 +10,7 @@ const navItems = [
   { label: 'About', href: '/about' },
   { label: 'Fragments', href: '/fragments' },
   { label: 'Zine', href: '/zine' },
-  { label: 'Bot', href: '/bot' },
+  { label: 'Bot', href: '/poieticbot' },
   { label: 'Security', href: '/security' },
 ]
 

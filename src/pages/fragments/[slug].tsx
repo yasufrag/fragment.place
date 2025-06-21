@@ -25,10 +25,7 @@ type FragmentPageProps = {
 }
 
 export default function FragmentPage({ meta, mdxSource }: FragmentPageProps) {
-  const fullUrl = `https://poietic.site/fragments/${meta.title
-    .toLowerCase()
-    .replace(/\s+/g, '-')
-    .replace(/[^\w\-]+/g, '')}`
+  const fullUrl = `https://poietic.site/fragments/${meta.slug}`
 
   return (
     <>

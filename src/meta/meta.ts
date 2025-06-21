@@ -47,10 +47,9 @@ export const meta = {
   },
   bot: {
     title: 'PoieticBot',
-    description: 'An agent for poetic reflection, fragment discovery, and dialogic exploration.',
+    description: 'A gentle partner for poetic dialogue, syntax-first.',
     url: 'https://poietic.site/bot',
-    image: 'https://poietic.site/og.png',
-    robots: 'index,follow',
+    image: '/images/og/poieticbot.png',
   },
   security: {
     title: 'Security',
