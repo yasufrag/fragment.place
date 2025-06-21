@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { MetaTag } from '@/components/MetaTag'
 import { meta } from '@/meta/meta'
@@ -6,21 +7,26 @@ import type { FragmentMeta } from '@/lib/fragments'
 
 export async function getStaticProps() {
   const fragments = await getAllFragments()
-  const randomIndex = Math.floor(Math.random() * fragments.length)
-  const randomFragment = fragments[randomIndex]
 
   return {
     props: {
-      randomFragment,
+      fragments,
     },
   }
 }
 
 type Props = {
-  randomFragment: FragmentMeta
+  fragments: FragmentMeta[]
 }
 
-export default function Index({ randomFragment }: Props) {
+export default function Index({ fragments }: Props) {
+  const [randomFragment, setRandomFragment] = useState<FragmentMeta | null>(null)
+
+  useEffect(() => {
+    const index = Math.floor(Math.random() * fragments.length)
+    setRandomFragment(fragments[index])
+  }, [fragments])
+
   return (
     <>
       <MetaTag {...meta.index} />
@@ -33,16 +39,20 @@ export default function Index({ randomFragment }: Props) {
         <p className="text-sm text-gray-400 uppercase tracking-wide mb-2">
           A Present Fragment
         </p>
-        <Link
-          href={`/fragments/${randomFragment.slug}`}
-          className="no-underline hover:underline text-gray-300 hover:text-white"
-        >
-          <strong>{randomFragment.title}</strong>
-        </Link>
-        <br />
-        <span className="text-sm text-gray-500">
-          {randomFragment.excerpt}
-        </span>
+        {randomFragment && (
+          <>
+            <Link
+              href={`/fragments/${randomFragment.slug}`}
+              className="no-underline hover:underline text-gray-300 hover:text-white"
+            >
+              <strong>{randomFragment.title}</strong>
+            </Link>
+            <br />
+            <span className="text-sm text-gray-500">
+              {randomFragment.excerpt}
+            </span>
+          </>
+        )}
       </section>
 
       <section className="mb-14 space-y-3">
