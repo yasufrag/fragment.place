@@ -65,6 +65,29 @@ export default function AboutPage() {
         <p>
           This page itself is a fragment — revisable, recursive, and open to silence.
         </p>
+
+        <h2>Identity Architecture</h2>
+        <p>
+          In the poietic system, names are not fixed brands — they are syntactic roles.
+        </p>
+        <ul>
+          <li>
+            <strong>poieticid</strong>: the personal presence of the steward — a singular, embodied rhythm.
+          </li>
+          <li>
+            <strong>poieticos</strong>: the shared space of practice — fragments, zines, bots, and poetic infrastructures.
+          </li>
+          <li>
+            <strong>co.poiesis</strong>: the ambient field — open for others to arrive, echo, and compose.
+          </li>
+        </ul>
+        <p>
+          This separation is intentional: so that the OS may remain open,  
+          the syntax may be shared, and the id may stay quietly personal.
+        </p>
+        <p>
+          You are welcome to enter as id, extend as os, or simply observe as co.
+        </p>
       </main>
     </>
   )
