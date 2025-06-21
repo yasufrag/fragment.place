@@ -52,19 +52,17 @@ export default function TagPage({ tag, fragments }: Props) {
         description={`A collection of fragments tagged with "${tag}".`}
         url={`https://poietic.site/fragments/tag/${tag}`}
       />
-      <main className="max-w-3xl mx-auto px-6 py-12">
-        <h1 className="text-3xl font-bold mb-8">#{tag}</h1>
-        <div className="grid gap-6">
-          {fragments.map((fragment) => (
-            <FragmentCard key={fragment.slug} {...fragment} showImage={false} />
-          ))}
-        </div>
-        <div className="mt-12">
-          <Link href="/fragments" className="no-underline hover:underline text-gray-300 hover:text-white">
-            ← Back to Fragments
-          </Link>
-        </div>
-      </main>
+      <h1 className="text-3xl font-bold mb-8">#{tag}</h1>
+      <div className="grid gap-6">
+        {fragments.map((fragment) => (
+          <FragmentCard key={fragment.slug} {...fragment} showImage={false} />
+        ))}
+      </div>
+      <div className="mt-12">
+        <Link href="/fragments" className="no-underline hover:underline text-gray-300 hover:text-white">
+          ← Back to Fragments
+        </Link>
+      </div>
     </>
   )
 }
