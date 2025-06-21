@@ -5,13 +5,11 @@ export default function NotFoundPage() {
   return (
     <>
       <MetaTag {...meta['404']} />
-      <main className="container prose dark:prose-invert prose-a:text-gray-300 hover:prose-a:text-white text-center">
-        <h1>404 – Not Found</h1>
-        <p>This path has not yet been formed.</p>
-        <p>
-          You may return to <a href="/">co.poiesis</a>.
-        </p>
-      </main>
+      <h1>404 – Not Found</h1>
+      <p>This path has not yet been formed.</p>
+      <p>
+        You may return to <a href="/">co.poiesis</a>.
+      </p>
     </>
   )
 }

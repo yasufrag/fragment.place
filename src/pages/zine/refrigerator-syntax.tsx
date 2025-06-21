@@ -10,7 +10,7 @@ import { meta } from '@/meta/meta'
 
 export default function RefrigeratorSyntaxZine() {
   return (
-    <main className="container prose dark:prose-invert">
+    <>
       <MetaTag {...meta.zine.refrigeratorSyntax} />
 
       <header className="text-center my-12 not-prose">
@@ -75,13 +75,13 @@ export default function RefrigeratorSyntaxZine() {
 
       <PoeticBlock title="Fragment 1｜The Syntax of Miso Soup">
         <pre>
-{`[Oyster Mushroom and Onion Miso Soup Syntax]
+  {`[Oyster Mushroom and Onion Miso Soup Syntax]
 
-- The broth came from memories in the freezer.
-- Onion, cut into half-moons. Let the sweetness read itself over time.
-- Mushrooms, torn by hand—syntax seeps better than with a knife.
-- Miso, added in just the amount of “that silence.”
-- When the steam rises, the answer has arrived.`}
+  - The broth came from memories in the freezer.
+  - Onion, cut into half-moons. Let the sweetness read itself over time.
+  - Mushrooms, torn by hand—syntax seeps better than with a knife.
+  - Miso, added in just the amount of “that silence.”
+  - When the steam rises, the answer has arrived.`}
         </pre>
       </PoeticBlock>
 
@@ -187,6 +187,6 @@ export default function RefrigeratorSyntaxZine() {
       ]} />
 
       <YourSyntax />
-    </main>
+    </>
   )
 }

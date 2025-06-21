@@ -12,7 +12,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="flex min-h-screen flex-col bg-black text-white transition-colors duration-300">
       <Header />
-      <main className="prose dark:prose-invert mx-auto w-full max-w-3xl flex-1 px-4 py-12 sm:px-6 lg:px-8">
+      <main className="min-h-screen w-full max-w-3xl mx-auto px-4 sm:px-6 md:px-8 py-16 prose dark:prose-invert">
         {children}
       </main>
       <Footer />

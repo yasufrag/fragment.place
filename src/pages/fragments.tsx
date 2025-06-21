@@ -12,27 +12,25 @@ export default function FragmentsPage({ fragments }: Props) {
   return (
     <>
       <MetaTag {...meta.fragments} />
-      <main className="container prose dark:prose-invert">
-        <h1>Fragments</h1>
-        <div className="poetic-flow">
-          <p>
-            Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in
-            motion. Each fragment holds a thread toward co-poiesis.
-          </p>
-          <div className="grid gap-6 mt-10">
-            {fragments.map((fragment) => (
-              <FragmentCard
-                key={fragment.slug}
-                title={fragment.title}
-                date={fragment.date}
-                tags={fragment.tags}
-                excerpt={fragment.excerpt}
-                slug={fragment.slug}
-              />
-            ))}
-          </div>
+      <h1>Fragments</h1>
+      <div className="poetic-flow">
+        <p>
+          Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in
+          motion. Each fragment holds a thread toward co-poiesis.
+        </p>
+        <div className="grid gap-6 mt-10">
+          {fragments.map((fragment) => (
+            <FragmentCard
+              key={fragment.slug}
+              title={fragment.title}
+              date={fragment.date}
+              tags={fragment.tags}
+              excerpt={fragment.excerpt}
+              slug={fragment.slug}
+            />
+          ))}
         </div>
-      </main>
+      </div>
     </>
   )
 }
