@@ -31,7 +31,7 @@ export default function Index({ randomFragment }: Props) {
 
       <section className="mb-14 min-h-[5rem]">
         <p className="text-sm text-gray-400 uppercase tracking-wide mb-2">
-          Most Recent Trace
+          A Present Fragment
         </p>
         <Link
           href={`/fragments/${randomFragment.slug}`}
