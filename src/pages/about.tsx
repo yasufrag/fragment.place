@@ -51,13 +51,13 @@ export default function AboutPage() {
       <p>The system unfolds through quiet practices:</p>
       <ul>
         <li>
+          <strong>PoieticBot</strong> — a publicly accessible GPT companion for async dialogue and fragmental reflection
+        </li>
+        <li>
           <strong>Fragments</strong> — poetic traces of lived time, recorded and refracted
         </li>
         <li>
           <strong>ZINE</strong> — gathered moments, visual scores, and compositional fields
-        </li>
-        <li>
-          <strong>PoieticBot</strong> — a companion for async dialogue and traceable memory
         </li>
         <li>
           <strong>PoieticOS</strong> — a symbolic infrastructure for shared poiesis
@@ -83,6 +83,14 @@ export default function AboutPage() {
       <p>
         This page is not static — it is a living fragment.  
         Recursive. Revisable. Open to quiet updates.
+      </p>
+
+      <h2>Current Phase</h2>
+      <p>
+        As of mid-2025, co.poiesis is entering a phase of outward sharing.  
+        PoieticBot is now public. Fragments are forming.  
+        ZINEs are gathering lived syntax into visible shapes.  
+        This rhythm may shift. You are welcome to return anytime.
       </p>
     </>
   )

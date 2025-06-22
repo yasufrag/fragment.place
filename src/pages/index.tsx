@@ -39,20 +39,24 @@ export default function Index({ fragments }: Props) {
         <p className="text-sm text-gray-400 uppercase tracking-wide mb-2">
           A Present Fragment
         </p>
-        {randomFragment && (
-          <>
-            <Link
-              href={`/fragments/${randomFragment.slug}`}
-              className="no-underline hover:underline text-gray-300 hover:text-white"
-            >
-              <strong>{randomFragment.title}</strong>
-            </Link>
-            <br />
-            <span className="text-sm text-gray-500">
-              {randomFragment.excerpt}
-            </span>
-          </>
-        )}
+          {randomFragment ? (
+            <>
+              <Link
+                href={`/fragments/${randomFragment.slug}`}
+                className="no-underline hover:underline text-gray-300 hover:text-white"
+              >
+                <strong>{randomFragment.title}</strong>
+              </Link>
+              <br />
+              <span className="text-sm text-gray-500">
+                {randomFragment.excerpt}
+              </span>
+            </>
+          ) : (
+            <p className="text-sm text-gray-500 italic">
+              No fragments yet — but traces are coming.
+            </p>
+          )}
       </section>
 
       <section className="mb-14 space-y-3">
@@ -65,11 +69,8 @@ export default function Index({ fragments }: Props) {
           </Link>
         </p>
         <p>
-          <Link
-            href="/zine/vol1"
-            className="text-gray-300 hover:text-white no-underline hover:underline"
-          >
-            → ZINE：PoieticZINE vol.1
+          <Link href="/zine" className="text-gray-300 hover:text-white no-underline hover:underline">
+            → ZINE：全てのZINEをみる
           </Link>
         </p>
         <p>
@@ -78,8 +79,21 @@ export default function Index({ fragments }: Props) {
             className="text-gray-300 hover:text-white no-underline hover:underline"
           >
             → PoieticBot：静かな対話のパートナー
-          </Link>
+          </Link>{' '}
+          <a
+            href="https://chatgpt.com/g/g-685756a4f67481919db2ec3a4f3d3414-poieticbot"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-blue-300 hover:underline"
+          >
+            (GPTで開く)
+          </a>
         </p>
+      </section>
+
+      <section className="mb-10 text-sm text-gray-400 italic">
+        As of June 2025, PoieticBot is now public.  
+        ZINEs are forming, and Fragments continue to arrive.  
       </section>
 
       <footer className="mt-20 text-sm text-gray-500 italic">
