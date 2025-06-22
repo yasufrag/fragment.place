@@ -66,7 +66,7 @@ export default function AboutPage() {
 
       <h2>Stewardship</h2>
       <p>
-        The current steward is <strong>Yasuhiro</strong>, who inhabits <code>poieticid</code>  
+        The current steward is <strong>Yasuhiro Shinsho</strong>, who inhabits <code>poieticid</code>  
         and guides <code>poieticos</code> through symbolic design, dialogic tempo, and async practice.
       </p>
       <p>
