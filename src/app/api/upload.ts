@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { writeFile, mkdir, unlink } from 'fs/promises'
 import path from 'path'
-import { stripExif } from '@/lib/image/stripExif'
+import { stripExifAndConvertToJpg } from '@/lib/image/stripExif'
 import { logUpload } from '@/lib/logUpload'
 
 const UPLOAD_DIR = path.join(process.cwd(), 'public/images/fragments')
@@ -42,11 +42,10 @@ export async function POST(req: NextRequest) {
     const arrayBuffer = await file.arrayBuffer()
     const buffer = Buffer.from(arrayBuffer)
 
-    const processedBuffer = await stripExif(buffer)
     const filename = `${String(i + 1).padStart(3, '0')}.jpg`
     const fullPath = path.join(uploadPath, filename)
 
-    await writeFile(fullPath, processedBuffer)
+    await stripExifAndConvertToJpg(buffer, fullPath) // ここでJPEG変換+Exif除去+保存まで実行
     savedFiles.push(`/images/fragments/${slug}/${filename}`)
 
     await logUpload(`Upload completed for slug: ${slug}, total images: ${files.length}`)
