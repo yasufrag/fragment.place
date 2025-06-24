@@ -1,0 +1,49 @@
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import { ZineMeta } from './types'
+import { extractExcerpt } from './helpers'
+
+const zineDir = path.join(process.cwd(), 'src/data/zines')
+
+export function getAllZines(): ZineMeta[] {
+  if (!fs.existsSync(zineDir)) return []
+
+  const filenames = fs.readdirSync(zineDir)
+
+  return filenames
+    .filter((file) => file.toLowerCase().endsWith('.mdx'))
+    .map((filename) => {
+      try {
+        const filePath = path.join(zineDir, filename)
+        const slug = filename.replace(/\.mdx$/, '')
+        const fileContent = fs.readFileSync(filePath, 'utf8')
+        const { data, content } = matter(fileContent)
+
+        const image =
+          typeof data.image === 'object' && data.image?.src
+            ? {
+                src: data.image.src,
+                alt: data.image.alt || '',
+                caption: data.image.caption || '',
+              }
+            : null
+
+        const meta: ZineMeta = {
+          title: data.title || 'Untitled',
+          date: data.date || '',
+          tags: Array.isArray(data.tags) ? data.tags : [],
+          excerpt: data.excerpt || extractExcerpt(content),
+          slug,
+          image,
+        }
+
+        return meta
+      } catch (err) {
+        console.error(`Failed to parse ZINE file: ${filename}`, err)
+        return null
+      }
+    })
+    .filter((zine): zine is ZineMeta => zine !== null)
+    .sort((a, b) => (a.date < b.date ? 1 : -1))
+}

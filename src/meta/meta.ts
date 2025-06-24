@@ -1,69 +1,76 @@
 export const meta = {
-  index: {
+  site: {
+    name: 'co.poiesis',
+    baseUrl: 'https://poietic.site',
+    defaultImage: 'https://poietic.site/og.png',
+  },
+
+  home: {
     title: 'Home',
     description: 'A shared poetic syntax for dialogue, design, and lived practice.',
-    url: 'https://poietic.site',
-    image: 'https://poietic.site/og.png',
+    url: '/',
+    image: '/og.png',
     robots: 'index,follow',
   },
+
   about: {
     title: 'About',
     description: 'A gentle outline of the philosophy, rhythm, and stewardship behind co.poiesis.',
-    url: 'https://poietic.site/about',
-    image: 'https://poietic.site/og.png',
+    url: '/about',
+    image: '/og.png',
     robots: 'index,follow',
   },
+
   fragments: {
     title: 'Fragments',
     description:
       'Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in motion. Each fragment holds a thread toward co-poiesis.',
-    url: 'https://poietic.site/fragments',
-    image: 'https://poietic.site/og.png',
+    url: '/fragments',
+    image: '/og.png',
     robots: 'index,follow',
   },
-  zine: {
-    title: 'ZINE',
-    description: 'Entries from an ongoing journal of poietic design, thought, and dialogue.',
-    url: 'https://poietic.site/zine',
-    image: 'https://poietic.site/og.png',
-    robots: 'index,follow',
 
-    poieticZineVol1: {
-      title: 'PoieticZINE vol.1',
-      description:
-        'A quiet collection of fragments and syntax, passed through rainy days, departures, and beginnings.',
-      url: 'https://poietic.site/zine/vol1',
-      image: 'https://poietic.site/images/zine/vol1-cover.png',
+  zines: {
+    index: {
+      title: 'ZINE',
+      description: 'Entries from an ongoing journal of poietic design, thought, and dialogue.',
+      url: '/zines',
+      image: '/og.png',
       robots: 'index,follow',
     },
-
-    refrigeratorSyntax: {
-      title: 'Refrigerator Syntax ZINE',
-      description: 'A ZINE of gentle syntax and daily poetics—written with a refrigerator and quiet mornings.',
-      url: 'https://poietic.site/zine/refrigerator-syntax',
-      image: 'https://poietic.site/images/zine/refrigerator.syntax.cover.jpeg',
-      robots: 'index,follow',
+    items: {
+      'refrigerator-syntax': {
+        title: 'Refrigerator Syntax ZINE',
+        description:
+          'A ZINE of gentle syntax and daily poetics—written with a refrigerator and quiet mornings.',
+        url: '/zine/refrigerator-syntax',
+        image: '/images/zines/2025-06-19-refrigerator-syntax/2025-06-19-refrigerator-syntax-cover.jpg',
+        robots: 'index,follow',
+      },
     },
   },
+
   bot: {
     title: 'PoieticBot',
     description: 'A gentle GPT partner for quiet dialogue and living syntax.',
-    url: 'https://poietic.site/bot',
+    url: '/bot',
     image: '/images/og/poieticbot.png',
     robots: 'index,follow',
   },
+
   security: {
     title: 'Security',
     description: 'Our approach to ethical technology, data care, and co-creative safety.',
-    url: 'https://poietic.site/security',
-    image: 'https://poietic.site/og.png',
+    url: '/security',
+    image: '/og.png',
     robots: 'index,follow',
   },
+
   '404': {
     title: 'Not Found',
     description: 'This page is a silent trace — a path not yet formed.',
-    url: 'https://poietic.site/404',
-    image: 'https://poietic.site/og.png',
+    url: '/404',
+    image: '/og.png',
     robots: 'noindex,nofollow',
   },
 }

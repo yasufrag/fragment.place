@@ -10,12 +10,13 @@ export function FragmentCard({
   date,
   slug,
   excerpt,
-  tags,
+  tags = [],
   image,
   showImage = true,
 }: FragmentCardProps) {
   return (
     <article className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 transition">
+      {/* Optional Image */}
       {showImage && image?.src && (
         <Link href={`/fragments/${slug}`} className="block mb-4">
           <img
@@ -27,25 +28,34 @@ export function FragmentCard({
         </Link>
       )}
 
+      {/* Title */}
       <Link
         href={`/fragments/${slug}`}
-        className="no-underline hover:underline text-gray-300 hover:text-white">
+        className="no-underline hover:underline text-gray-300 hover:text-white"
+      >
         <h2 className="text-lg font-semibold mb-1">{title}</h2>
       </Link>
 
-      <p className="text-sm text-gray-400 mb-1">
-        {new Date(date).toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        })}
-      </p>
+      {/* Date */}
+      {date && (
+        <p className="text-sm text-gray-400 mb-1">
+          {new Date(date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+          })}
+        </p>
+      )}
 
-      {excerpt && <p className="text-sm text-gray-300">{excerpt}</p>}
+      {/* Excerpt */}
+      {excerpt && (
+        <p className="text-sm text-gray-300">{excerpt}</p>
+      )}
 
-      {tags && (
+      {/* Tags */}
+      {tags.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-3">
-          {tags.map((tag: string) => (
+          {tags.map((tag) => (
             <Link
               key={tag}
               href={`/fragments/tag/${tag}`}
