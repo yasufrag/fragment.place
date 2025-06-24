@@ -22,14 +22,14 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-700 bg-black/60 backdrop-blur-md">
-      <div className="mx-auto max-w-4xl px-4 flex items-center justify-between py-5">
+      <div className="mx-auto max-w-5xl px-4 flex items-center justify-between py-5">
         <Link href="/" className="flex items-center space-x-3 no-underline hover:no-underline">
           <Logo className="h-9 w-9" role="presentation" />
           <span className="text-2xl sm:text-3xl font-semibold tracking-tight">co.poiesis</span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="text-2xl hidden md:flex space-x-5">
+        <nav className="text-xl hidden md:flex space-x-5">
           {navItems.map(({ label, href }) => (
             <Link key={href} href={href} aria-current={pathname === href ? 'page' : undefined} className={linkClass(href)}>
               {label}
@@ -49,7 +49,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="text-2xl flex flex-col px-4 pb-6 pt-2 space-y-3 md:hidden">
+        <nav className="text-xl flex flex-col px-4 pb-6 pt-2 space-y-3 md:hidden">
           {navItems.map(({ label, href }) => (
             <Link
               key={href}

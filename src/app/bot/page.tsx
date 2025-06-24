@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function PoieticBotPage() {
   return (
-    <>
+    <div className="article-container">
       <MetaTag {...meta.bot} />
 
       <h1>PoieticBot</h1>
@@ -73,6 +73,6 @@ export default function PoieticBotPage() {
         This site is not the bot itself. It is a reference point—for those navigating the syntax.
         Actual conversations happen in PoieticBot (GPTs).
       </p>
-    </>
+    </div>
   )
 }

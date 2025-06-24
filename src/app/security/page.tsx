@@ -3,7 +3,7 @@ import { meta } from '@/meta/meta'
 
 export default function SecurityPage() {
   return (
-    <>
+    <div className="article-container">
       <MetaTag {...meta.security} />
 
       <h1>Security &amp; Ethical Commitment</h1>
@@ -55,6 +55,6 @@ export default function SecurityPage() {
         We welcome shared inquiry into what “security” might mean in a co-poietic context —  
         where technical, social, and symbolic boundaries align with gentle intention.
       </p>
-    </>
+    </div>
   )
 }
