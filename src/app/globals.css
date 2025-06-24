@@ -175,9 +175,9 @@ li {
 
 /* ====== Card Grid ====== */
 .card-grid {
-  @apply grid gap-6 md:grid-cols-2 mt-10;
+  @apply grid gap-x-6 md:grid-cols-2;
 }
 
 .card-grid > * {
-  @apply mb-8;
+  @apply mb-6;
 }
