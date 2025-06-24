@@ -10,5 +10,6 @@ export type FragmentMeta = {
     caption?: string
   } | null
   shouldPublish?: boolean
+  hasImage?: boolean
   shouldExportMdx?: boolean
 }
