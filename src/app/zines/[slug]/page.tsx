@@ -20,7 +20,7 @@ export default async function ZineDetail({ params }: { params: { slug: string } 
     <div className="prose prose-invert mx-auto">
       <MDXContent source={content} components={zineComponents} />
 
-      {meta.tags?.length > 0 && <TagBox tags={meta.tags} />}
+      <TagBox tags={meta.tags ?? []} />
 
       <YourSyntaxShare defaultText="There was one last eggplant, waiting like a quiet punctuation mark..." />
     </div>
