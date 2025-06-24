@@ -2,8 +2,7 @@
 
 import type { FC } from 'react'
 
-interface LogoProps {
-  className?: string
+interface LogoProps extends React.SVGProps<SVGSVGElement> {
   title?: string
 }
 
