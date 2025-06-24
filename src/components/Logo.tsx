@@ -28,3 +28,5 @@ const Logo: FC<LogoProps> = ({ className = 'w-9 h-9', title = 'co.poiesis', ...p
     </text>
   </svg>
 )
+
+export default Logo
