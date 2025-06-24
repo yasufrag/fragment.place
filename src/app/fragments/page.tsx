@@ -10,19 +10,17 @@ export default async function FragmentsPage() {
     <>
       <MetaTag {...meta.fragments} />
 
-      <h1 className="text-3xl font-bold mb-4">Fragments</h1>
+      <h1>Fragments</h1>
 
-      <div className="poetic-flow">
-        <p>
-          Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in
-          motion. Each fragment holds a thread toward co-poiesis.
-        </p>
+      <p>
+        Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in
+        motion. Each fragment holds a thread toward co-poiesis.
+      </p>
 
-        <div className="grid gap-6 mt-10">
-          {fragments.map((fragment) => (
-            <FragmentCard key={fragment.slug} {...fragment} showImage={true} />
-          ))}
-        </div>
+      <div className="grid gap-6 md:grid-cols-2">
+        {fragments.map((fragment) => (
+          <FragmentCard key={fragment.slug} {...fragment} showImage={true} />
+        ))}
       </div>
     </>
   )

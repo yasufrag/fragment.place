@@ -1,3 +1,7 @@
+'use client'
+
+import React from 'react'
+
 type Props = {
   defaultText?: string
 }
@@ -9,14 +13,14 @@ export default function YourSyntaxShare({ defaultText = '' }: Props) {
 
   return (
     <section className="my-16">
-      <h3 className="text-lg font-semibold mb-2">Your Refrigerator Syntax</h3>
-      <p className="text-sm text-gray-400 mb-4">
+      <h3>Your Refrigerator Syntax</h3>
+      <p>
         Write your own fragment: what’s sleeping in your fridge?  
         What memories or rhythms do your ingredients hold?
         This is not a form. It’s a space to listen, and respond.
       </p>
 
-      <p className="text-gray-400 text-sm italic mb-4">
+      <p>
         (Tweet your fragment by editing the text below)
       </p>
 

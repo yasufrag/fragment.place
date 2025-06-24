@@ -1,8 +1,11 @@
+'use client'
+
+import React from 'react'
 import { ReactNode } from 'react'
 
 const SyntaxMap = ({ children }: { children?: ReactNode }) => (
   <section className="my-10">
-    <h3 className="font-semibold text-lg mb-4">Poietic Map</h3>
+    <h3>Poietic Map</h3>
 
     {children && (
       <div className="mb-6">

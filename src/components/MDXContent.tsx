@@ -1,15 +1,13 @@
 'use client'
 
 import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
-import type { FC } from 'react'
-import { zineComponents } from '@/components/zines'
+import type { MDXComponents } from 'mdx/types'
 
 interface Props {
   source: MDXRemoteSerializeResult
+  components?: MDXComponents
 }
 
-const MDXContent: FC<Props> = ({ source }) => {
-  return <MDXRemote {...source} components={zineComponents} />
+export default function MDXContent({ source, components }: Props) {
+  return <MDXRemote {...source} components={components} />
 }
-
-export default MDXContent

@@ -18,26 +18,24 @@ export default function TagPage({ params }: { params: { tag: string } }) {
 
   return (
     <>
-      <h1 className="text-3xl font-bold mb-4">#{params.tag}</h1>
+      <h1>#{params.tag}</h1>
 
-      <div className="poetic-flow">
-        <p className="text-sm text-gray-400 mb-6">
-          Showing all fragments tagged with <strong>#{params.tag}</strong>.
-        </p>
+      <p>
+        Showing all fragments tagged with <strong>#{params.tag}</strong>.
+      </p>
 
-        <div className="grid gap-6 mt-10">
-          {tagged.map((fragment) => (
-            <FragmentCard
-              key={fragment.slug}
-              title={fragment.title}
-              date={fragment.date}
-              tags={fragment.tags}
-              excerpt={fragment.excerpt}
-              slug={fragment.slug}
-              image={fragment.image || undefined}
-            />
-          ))}
-        </div>
+      <div className="grid gap-6 md:grid-cols-2">
+        {tagged.map((fragment) => (
+          <FragmentCard
+            key={fragment.slug}
+            title={fragment.title}
+            date={fragment.date}
+            tags={fragment.tags}
+            excerpt={fragment.excerpt}
+            slug={fragment.slug}
+            image={fragment.image || undefined}
+          />
+        ))}
       </div>
     </>
   )

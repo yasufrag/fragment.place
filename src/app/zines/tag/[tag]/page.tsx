@@ -40,14 +40,12 @@ export default function ZineTagPage({ params }: { params: { tag: string } }) {
         robots="index,follow"
       />
 
-      <section className="max-w-4xl mx-auto px-6 py-12">
-        <h1 className="text-2xl font-bold mb-6">Tag: #{decodedTag}</h1>
-        <div className="grid gap-6 md:grid-cols-2">
-          {tagged.map((zine) => (
-            <ZineCard key={zine.slug} {...zine} />
-          ))}
-        </div>
-      </section>
+      <h1>Tag: #{decodedTag}</h1>
+      <div className="grid gap-6 md:grid-cols-2">
+        {tagged.map((zine) => (
+          <ZineCard key={zine.slug} {...zine} />
+        ))}
+      </div>
     </>
   )
 }

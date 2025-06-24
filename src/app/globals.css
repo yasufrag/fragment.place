@@ -41,7 +41,7 @@ h4 {
 
 /* ====== Typography: Paragraphs & Emphasis ====== */
 p {
-  @apply mb-8 text-lg leading-relaxed text-white text-left;
+  @apply mb-8 text-lg leading-relaxed text-white;
 }
 
 strong {
@@ -58,16 +58,21 @@ code {
 }
 
 pre {
-  @apply overflow-x-auto rounded-lg bg-gray-900 p-6 leading-relaxed text-gray-200 font-mono text-sm whitespace-pre-wrap text-left;
+  @apply overflow-x-auto rounded-lg bg-gray-900 p-6 leading-relaxed text-gray-200 font-mono text-sm whitespace-pre-wrap;
 }
 
 /* ====== Blockquote & Divider ====== */
 blockquote {
-  @apply my-8 border-l-4 border-gray-700 pl-5 not-italic text-gray-300 text-left;
+  @apply my-8 border-l-4 border-gray-700 pl-5 not-italic text-gray-300;
 }
 
 hr {
   @apply my-12 border-t border-gray-800;
+}
+
+/* ====== Figcaption ====== */
+figcaption {
+  @apply text-xs text-gray-400;
 }
 
 /* ====== Description List ====== */
@@ -86,7 +91,7 @@ dd {
 /* ====== Lists ====== */
 ul,
 ol {
-  @apply mb-6 space-y-3 pl-6 text-left;
+  @apply mb-6 space-y-3 pl-6;
 }
 
 ul {
@@ -99,131 +104,4 @@ ol {
 
 li {
   @apply text-lg leading-relaxed text-white;
-}
-
-/* ====== Tables ====== */
-table {
-  @apply my-8 w-full table-auto border-collapse text-base text-left;
-}
-
-thead {
-  @apply bg-gray-800;
-}
-
-th,
-td {
-  @apply border px-5 py-3 text-left;
-}
-
-th {
-  @apply font-medium text-white;
-}
-
-td {
-  @apply text-white;
-}
-
-/* ====== Poietic Flow Rhythm ====== */
-.poetic-flow > * + * {
-  @apply mt-8;
-}
-
-.poetic-flow h2,
-.poetic-flow h3,
-.poetic-flow h4 {
-  @apply scroll-mt-16;
-}
-
-.poetic-flow h2 + *,
-.poetic-flow h3 + *,
-.poetic-flow h4 + * {
-  @apply mt-4;
-}
-
-.poetic-flow * + h2,
-.poetic-flow * + h3,
-.poetic-flow * + h4 {
-  @apply mt-12;
-}
-
-.poetic-flow p + *,
-.poetic-flow ul + *,
-.poetic-flow ol + *,
-.poetic-flow blockquote + * {
-  @apply mt-8;
-}
-
-.poetic-flow p + ul,
-.poetic-flow p + ol {
-  @apply mt-10;
-}
-
-.poetic-flow li + p {
-  @apply mt-6;
-}
-
-.poetic-flow figcaption {
-  @apply text-gray-400 italic text-left;
-}
-
-/* ====== Typography: Prose Overwrites ====== */
-.prose :is(h1, h2, h3, h4) {
-  @apply text-white text-left;
-}
-
-.prose p {
-  @apply text-white mb-8 leading-relaxed tracking-wide text-left;
-}
-
-.prose li {
-  @apply text-white leading-relaxed tracking-wide text-left;
-}
-
-.prose em {
-  @apply text-gray-300 italic;
-}
-
-.prose code {
-  @apply rounded bg-gray-800 px-1.5 py-0.5 font-mono text-white;
-}
-
-.prose strong {
-  @apply font-semibold text-neutral-300;
-}
-
-.prose blockquote {
-  @apply text-gray-300 not-italic border-l-4 border-gray-700 pl-5 text-left;
-}
-
-.prose a {
-  @apply text-gray-300 font-semibold hover:text-white transition;
-}
-
-.prose ul {
-  @apply list-disc pl-6 space-y-3 text-white;
-}
-
-.prose ol {
-  @apply list-decimal pl-6 space-y-3 text-white;
-}
-
-.prose figure figcaption {
-  @apply text-gray-400 italic text-left;
-}
-
-.prose dl {
-  @apply my-8 space-y-6 text-left;
-}
-
-.prose dt {
-  @apply font-semibold text-white text-xl;
-}
-
-.prose dd {
-  @apply text-white text-base leading-relaxed;
-}
-
-/* ====== Shared Text Utility ====== */
-.text-default {
-  @apply text-white leading-relaxed tracking-wide text-left;
 }

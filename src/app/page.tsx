@@ -38,7 +38,7 @@ export default async function Home() {
       </p>
 
       <p>
-        <Link href="/zine" className="text-gray-300 hover:text-white hover:underline">
+        <Link href="/zines" className="text-gray-300 hover:text-white hover:underline">
           → ZINE：全てのZINEをみる
         </Link>
       </p>

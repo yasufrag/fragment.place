@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export function ZineCard({ title, date, slug, excerpt, tags, image }: ZineMeta) {
   return (
-    <article className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 transition">
+    <article className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 transition pb-24">
       {image?.src && (
         <Link href={`/zines/${slug}`} className="block mb-4">
           <img

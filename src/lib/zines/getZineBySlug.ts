@@ -15,16 +15,16 @@ export async function getZineBySlug(
   const { data, content } = matter(fileContent)
 
   const meta: ZineMeta = {
-    title: data.title || 'Untitled',
-    date: data.date || '',
+    title: data.title ?? 'Untitled',
+    date: data.date ?? '',
     slug,
-    excerpt: data.excerpt || '',
+    excerpt: data.excerpt ?? '',
     tags: Array.isArray(data.tags) ? data.tags : [],
     image: data.image?.src
       ? {
           src: data.image.src,
-          alt: data.image.alt || '',
-          caption: data.image.caption || '',
+          alt: data.image.alt ?? '',
+          caption: data.image.caption ?? '',
         }
       : null,
   }

@@ -16,9 +16,9 @@ export default async function FragmentDetail({ params }: { params: { slug: strin
 
   return (
     <>
-      <h1 className="text-3xl font-bold mb-2">{meta.title}</h1>
+      <h1>{meta.title}</h1>
 
-      <p className="text-sm text-gray-400 mb-6">
+      <p>
         {new Date(meta.date).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
@@ -34,16 +34,14 @@ export default async function FragmentDetail({ params }: { params: { slug: strin
             className="rounded-xl object-cover w-full h-auto"
           />
           {meta.image.caption && (
-            <figcaption className="text-xs text-gray-400 mt-2 italic text-left">
+            <figcaption>
               {meta.image.caption}
             </figcaption>
           )}
         </figure>
       )}
 
-      <div className="prose prose-invert poetic-flow">
-        <MDXContent source={content} />
-      </div>
+      <MDXContent source={content} />
     </>
   )
 }

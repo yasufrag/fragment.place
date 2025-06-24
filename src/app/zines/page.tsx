@@ -25,17 +25,15 @@ export default function ZinesPage() {
     <>
       <MetaTag {...meta.zines.index} />
 
-      <div className="max-w-4xl mx-auto px-6 py-12 pb-24">
-        <h1 className="text-3xl font-bold mb-4">ZINEs</h1>
-        <p className="mb-8 text-muted-foreground">
-          Poetic documentation of life in serialized form.
-        </p>
+      <h1>ZINEs</h1>
+      <p>
+        Poetic documentation of life in serialized form.
+      </p>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {zines.map((zine) => (
-            <ZineCard key={zine.slug} {...zine} />
-          ))}
-        </div>
+       <div className="grid gap-6 md:grid-cols-2">
+        {zines.map((zine) => (
+          <ZineCard key={zine.slug} {...zine} />
+        ))}
       </div>
     </>
   )

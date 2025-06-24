@@ -1,8 +1,11 @@
+'use client'
+
+import React from 'react'
 import Link from 'next/link'
 
 export const TagBox = ({ tags }: { tags: string[] }) => (
   <div className="mt-12 border-t-[0.5px] border-neutral-700 pt-6 text-sm text-muted-foreground">
-    <h4 className="font-medium mb-2">Tags</h4>
+    <h4>Tags</h4>
     <div className="flex flex-wrap gap-2">
       {tags.map((tag, i) => (
         <span

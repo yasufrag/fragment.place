@@ -1,3 +1,7 @@
+'use client'
+
+import React from 'react'
+
 const ZineCover = ({
   title,
   subtitle,
@@ -10,10 +14,10 @@ const ZineCover = ({
   alt?: string
 }) => (
   <section className="text-center my-12">
-    <h1 className="text-3xl font-bold tracking-tight">{title}</h1>
+    <h1>{title}</h1>
 
     {subtitle && (
-      <p className="mt-2 text-lg text-muted-foreground">{subtitle}</p>
+      <p>{subtitle}</p>
     )}
 
     {image && (
