@@ -16,9 +16,9 @@ export default function FragmentsPage() {
         motion. Each fragment holds a thread toward co-poiesis.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2 mt-10">
+      <div className="card-grid">
         {fragments.map((fragment) => (
-          <FragmentCard key={fragment.slug} {...fragment} showImage />
+            <FragmentCard key={fragment.slug} {...fragment} showImage />
         ))}
       </div>
     </div>

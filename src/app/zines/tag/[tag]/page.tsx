@@ -45,7 +45,7 @@ export default function ZineTagPage({ params }: { params: { tag: string } }) {
         Showing all ZINEs tagged with <strong>#{tag}</strong>.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="card-grid">
         {tagged.map((zine) => (
           <ZineCard key={zine.slug} {...zine} />
         ))}

@@ -15,7 +15,7 @@ export default function ZinesPage() {
         Poetic documentation of life in serialized form.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="card-grid">
         {zines.map((zine) => (
           <ZineCard key={zine.slug} {...zine} />
         ))}

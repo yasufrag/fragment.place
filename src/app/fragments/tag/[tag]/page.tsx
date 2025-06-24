@@ -31,7 +31,7 @@ export default function FragmentTagPage({ params }: { params: { tag: string } })
         Showing all fragments tagged with <strong>#{tag}</strong>.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2 mt-10">
+      <div className="card-grid">
         {tagged.map((fragment) => (
           <FragmentCard key={fragment.slug} {...fragment} />
         ))}
