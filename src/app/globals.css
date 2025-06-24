@@ -124,6 +124,10 @@ li {
   @apply max-w-4xl mx-auto px-4;
 }
 
+.article-container > *:first-child {
+  @apply mt-12;
+}
+
 .article-title {
   @apply text-5xl font-bold tracking-tight mt-10 mb-6;
 }
