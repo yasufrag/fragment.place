@@ -29,14 +29,10 @@ export function ZineCard({ title, date, slug, excerpt, tags, image }: ZineMeta) 
 
       {excerpt && <p className="text-sm text-gray-300">{excerpt}</p>}
 
-      {tags?.length > 0 && (
+      {Array.isArray(tags) && tags.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-3">
           {tags.map((tag) => (
-            <Link
-              key={tag}
-              href={`/zines/tag/${encodeURIComponent(tag)}`}
-              className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full hover:bg-gray-600 no-underline"
-            >
+            <Link key={tag} href={`/tags/${tag}`} className="text-sm text-muted-foreground underline">
               #{tag}
             </Link>
           ))}
