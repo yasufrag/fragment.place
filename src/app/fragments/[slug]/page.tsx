@@ -15,10 +15,10 @@ export default async function FragmentDetail({ params }: { params: { slug: strin
   const { meta, content } = result
 
   return (
-    <>
-      <h1>{meta.title}</h1>
+    <article className="article-container">
+      <h1 className="article-title">{meta.title}</h1>
 
-      <p>
+      <p className="article-date">
         {new Date(meta.date).toLocaleDateString('en-US', {
           year: 'numeric',
           month: 'short',
@@ -27,14 +27,14 @@ export default async function FragmentDetail({ params }: { params: { slug: strin
       </p>
 
       {meta.image?.src && (
-        <figure className="mb-8">
+        <figure className="article-figure">
           <img
             src={meta.image.src}
             alt={meta.image.alt || ''}
-            className="rounded-xl object-cover w-full h-auto"
+            className="article-image"
           />
           {meta.image.caption && (
-            <figcaption>
+            <figcaption className="article-caption">
               {meta.image.caption}
             </figcaption>
           )}
@@ -42,6 +42,6 @@ export default async function FragmentDetail({ params }: { params: { slug: strin
       )}
 
       <MDXContent source={content} />
-    </>
+    </article>
   )
 }

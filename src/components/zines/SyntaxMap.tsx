@@ -4,16 +4,10 @@ import React from 'react'
 import { ReactNode } from 'react'
 
 const SyntaxMap = ({ children }: { children?: ReactNode }) => (
-  <section className="my-10">
+  <section className="my-12">
     <h3>Poietic Map</h3>
-
-    {children && (
-      <div className="mb-6">
-        {children}
-      </div>
-    )}
-
-    <pre className="whitespace-pre-wrap bg-muted/10 p-4 rounded text-sm leading-relaxed">
+    {children && <div className="mb-6">{children}</div>}
+    <pre className="whitespace-pre-wrap bg-neutral-800 p-4 rounded text-sm leading-relaxed text-white">
 {`┌────────────────────────────┐
 │  Main Syntax    → Chicken breast, mackerel, frozen prepared food  
 │  Side Syntax    → Eggplant, lotus root, carrot, onion  

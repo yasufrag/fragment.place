@@ -16,31 +16,28 @@ export default function Header() {
   }, [menuOpen])
 
   const linkClass = (href: string) =>
-    `text-lg font-semibold transition-all duration-300 ease-in-out underline-offset-4 decoration-2 ${
-      pathname === href ? 'text-white underline' : 'text-gray-400 hover:text-white hover:underline'
-    }`
+    pathname === href
+      ? 'text-white underline underline-offset-4 decoration-2'
+      : 'text-gray-400 hover:text-white hover:underline underline-offset-4 decoration-2'
 
   return (
-    <header className="sticky top-0 z-50 border-b-[0.5px] border-neutral-700 bg-black/60 backdrop-blur-md">
-      <div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-5">
+    <header className="sticky top-0 z-50 border-b border-neutral-700 bg-black/60 backdrop-blur-md">
+      <div className="mx-auto max-w-4xl px-4 flex items-center justify-between py-5">
         <Link href="/" className="flex items-center space-x-3 no-underline hover:no-underline">
           <Logo className="h-9 w-9" role="presentation" />
-          <span className="text-3xl font-semibold tracking-tight">co.poiesis</span>
+          <span className="text-2xl sm:text-3xl font-semibold tracking-tight">co.poiesis</span>
         </Link>
 
-        <nav className="hidden space-x-5 md:flex">
+        {/* Desktop Nav */}
+        <nav className="text-2xl hidden md:flex space-x-5">
           {navItems.map(({ label, href }) => (
-            <Link
-              key={href}
-              href={href}
-              aria-current={pathname === href ? 'page' : undefined}
-              className={linkClass(href)}
-            >
+            <Link key={href} href={href} aria-current={pathname === href ? 'page' : undefined} className={linkClass(href)}>
               {label}
             </Link>
           ))}
         </nav>
 
+        {/* Mobile Toggle */}
         <button
           className="text-gray-400 hover:text-white md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -50,13 +47,13 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="flex flex-col space-y-3 px-4 pb-6 md:hidden">
+        <nav className="text-2xl flex flex-col px-4 pb-6 pt-2 space-y-3 md:hidden">
           {navItems.map(({ label, href }) => (
             <Link
               key={href}
               href={href}
-              aria-current={pathname === href ? 'page' : undefined}
               className={linkClass(href)}
               onClick={() => setMenuOpen(false)}
             >

@@ -7,7 +7,7 @@ import { MetaTag } from '@/components/MetaTag'
 export async function generateStaticParams() {
   const zines = getAllZines()
   const tags = Array.from(new Set(zines.flatMap((zine) => zine.tags || [])))
-  return tags.map((tag) => ({ tag: encodeURIComponent(tag) }))
+  return tags.map((tag) => ({ tag }))
 }
 
 export async function generateMetadata({ params }: { params: { tag: string } }): Promise<Metadata> {
@@ -24,28 +24,32 @@ export async function generateMetadata({ params }: { params: { tag: string } }):
 }
 
 export default function ZineTagPage({ params }: { params: { tag: string } }) {
-  const decodedTag = decodeURIComponent(params.tag)
-  const allZines = getAllZines()
-  const tagged = allZines.filter((z) => z.tags?.includes(decodedTag))
+  const tag = decodeURIComponent(params.tag)
+  const zines = getAllZines()
+  const tagged = zines.filter((z) => z.tags?.includes(tag))
 
   if (!tagged.length) notFound()
 
   return (
-    <>
+    <div className="article-container">
       <MetaTag
-        title={`Tag: #${decodedTag} | ZINE`}
-        description={`ZINEs tagged with #${decodedTag} in Poietic Publishing.`}
+        title={`Tag: #${tag} | ZINE`}
+        description={`ZINEs tagged with #${tag} in Poietic Publishing.`}
         url={`/zines/tag/${params.tag}`}
         image="/og.png"
         robots="index,follow"
       />
 
-      <h1>Tag: #{decodedTag}</h1>
+      <h1 className="article-title">Tag: #{tag}</h1>
+      <p className="mb-10">
+        Showing all ZINEs tagged with <strong>#{tag}</strong>.
+      </p>
+
       <div className="grid gap-6 md:grid-cols-2">
         {tagged.map((zine) => (
           <ZineCard key={zine.slug} {...zine} />
         ))}
       </div>
-    </>
+    </div>
   )
 }

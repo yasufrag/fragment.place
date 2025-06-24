@@ -1,42 +1,41 @@
+import { notFound } from 'next/navigation'
 import { getAllFragments } from '@/lib/fragments'
 import { FragmentCard } from '@/components/FragmentCard'
-import { notFound } from 'next/navigation'
+import { MetaTag } from '@/components/MetaTag'
 
 export async function generateStaticParams() {
   const fragments = getAllFragments()
-  const tags = Array.from(
-    new Set(fragments.flatMap((frag) => frag.tags || []))
-  )
+  const tags = Array.from(new Set(fragments.flatMap((f) => f.tags || [])))
   return tags.map((tag) => ({ tag }))
 }
 
-export default function TagPage({ params }: { params: { tag: string } }) {
-  const all = getAllFragments()
-  const tagged = all.filter((frag) => frag.tags?.includes(params.tag))
+export default function FragmentTagPage({ params }: { params: { tag: string } }) {
+  const tag = decodeURIComponent(params.tag)
+  const fragments = getAllFragments()
+  const tagged = fragments.filter((f) => f.tags?.includes(tag))
 
-  if (tagged.length === 0) notFound()
+  if (!tagged.length) notFound()
 
   return (
-    <>
-      <h1>#{params.tag}</h1>
+    <div className="article-container">
+      <MetaTag
+        title={`Tag: #${tag} | Fragments`}
+        description={`Fragments tagged with #${tag} in Poietic Publishing.`}
+        url={`/fragments/tag/${params.tag}`}
+        image="/og.png"
+        robots="index,follow"
+      />
 
+      <h1 className="article-title">Tag: #{tag}</h1>
       <p>
-        Showing all fragments tagged with <strong>#{params.tag}</strong>.
+        Showing all fragments tagged with <strong>#{tag}</strong>.
       </p>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-2 mt-10">
         {tagged.map((fragment) => (
-          <FragmentCard
-            key={fragment.slug}
-            title={fragment.title}
-            date={fragment.date}
-            tags={fragment.tags}
-            excerpt={fragment.excerpt}
-            slug={fragment.slug}
-            image={fragment.image || undefined}
-          />
+          <FragmentCard key={fragment.slug} {...fragment} />
         ))}
       </div>
-    </>
+    </div>
   )
 }

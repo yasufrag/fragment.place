@@ -3,12 +3,10 @@ import { meta } from '@/meta/meta'
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="article-container">
       <MetaTag {...meta.about} />
 
-      <h1>
-        About <span className="text-neutral-400">co.poiesis</span>
-      </h1>
+      <h1>About <span className="text-neutral-400">co.poiesis</span></h1>
 
       <p>
         <strong>co.poiesis</strong> is not a platform — it is a poetic ecology.
@@ -41,7 +39,6 @@ export default function AboutPage() {
         It does not seek performance, but trace.  
         It holds presence not as attention, but as architecture.
       </p>
-
       <p>
         Each gesture begins in listening.  
         Each syntax begins in silence.
@@ -50,18 +47,10 @@ export default function AboutPage() {
       <h2>Practices</h2>
       <p>The system unfolds through quiet practices:</p>
       <ul>
-        <li>
-          <strong>PoieticBot</strong> — a publicly accessible GPT companion for async dialogue and fragmental reflection
-        </li>
-        <li>
-          <strong>Fragments</strong> — poetic traces of lived time, recorded and refracted
-        </li>
-        <li>
-          <strong>ZINE</strong> — gathered moments, visual scores, and compositional fields
-        </li>
-        <li>
-          <strong>PoieticOS</strong> — a symbolic infrastructure for shared poiesis
-        </li>
+        <li><strong>PoieticBot</strong> — a publicly accessible GPT companion for async dialogue and fragmental reflection</li>
+        <li><strong>Fragments</strong> — poetic traces of lived time, recorded and refracted</li>
+        <li><strong>ZINE</strong> — gathered moments, visual scores, and compositional fields</li>
+        <li><strong>PoieticOS</strong> — a symbolic infrastructure for shared poiesis</li>
       </ul>
 
       <h2>Stewardship</h2>
@@ -69,9 +58,7 @@ export default function AboutPage() {
         The current steward is <strong>Yasuhiro Shinsho</strong>, who inhabits <code>poieticid</code>  
         and guides <code>poieticos</code> through symbolic design, dialogic tempo, and async practice.
       </p>
-      <p>
-        Others may arrive — as contributors, readers, or gentle interferences.
-      </p>
+      <p>Others may arrive — as contributors, readers, or gentle interferences.</p>
 
       <h2>Arrival</h2>
       <p>
@@ -79,7 +66,6 @@ export default function AboutPage() {
         wander the system as <strong>os</strong>,  
         or simply breathe with the field as <strong>co</strong>.
       </p>
-
       <p>
         This page is not static — it is a living fragment.  
         Recursive. Revisable. Open to quiet updates.
@@ -92,6 +78,6 @@ export default function AboutPage() {
         ZINEs are gathering lived syntax into visible shapes.  
         This rhythm may shift. You are welcome to return anytime.
       </p>
-    </>
+    </div>
   )
 }

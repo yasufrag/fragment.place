@@ -5,7 +5,7 @@
 /* ====== Base ====== */
 html,
 body {
-  @apply bg-black font-sans text-lg text-white antialiased transition-colors duration-300 leading-relaxed tracking-wide;
+  @apply bg-black font-sans text-base text-white antialiased transition-colors duration-300 leading-relaxed tracking-wide;
 
   overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
@@ -16,6 +16,11 @@ body {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+/* ====== Global Layout Containers ====== */
+.content-container {
+  @apply w-full max-w-4xl mx-auto px-4 sm:px-6 md:px-8 py-16 mb-24 min-h-screen;
+}
+
 /* ====== Typography: Links ====== */
 a {
   @apply font-semibold text-gray-300 transition-all duration-300 ease-in-out hover:text-white;
@@ -24,24 +29,24 @@ a {
 
 /* ====== Typography: Headings ====== */
 h1 {
-  @apply mb-6 mt-10 text-5xl font-bold tracking-tight sm:text-5xl;
+  @apply mt-12 mb-6 text-4xl font-bold tracking-tight sm:text-5xl;
 }
 
 h2 {
-  @apply mb-5 mt-12 text-4xl font-semibold tracking-tight sm:text-4xl;
+  @apply mt-10 mb-5 text-3xl font-semibold tracking-tight sm:text-4xl;
 }
 
 h3 {
-  @apply mb-3 mt-10 text-3xl font-medium;
+  @apply mt-8 mb-4 text-2xl font-medium;
 }
 
 h4 {
-  @apply mb-2 mt-8 text-2xl font-medium;
+  @apply mt-6 mb-3 text-xl font-medium;
 }
 
 /* ====== Typography: Paragraphs & Emphasis ====== */
 p {
-  @apply mb-8 text-lg leading-relaxed text-white;
+  @apply mb-6 text-lg leading-relaxed text-white;
 }
 
 strong {
@@ -63,16 +68,20 @@ pre {
 
 /* ====== Blockquote & Divider ====== */
 blockquote {
-  @apply my-8 border-l-4 border-gray-700 pl-5 not-italic text-gray-300;
+  @apply my-8 border-l-4 border-gray-800 pl-5 not-italic text-gray-300;
 }
 
 hr {
   @apply my-12 border-t border-gray-800;
 }
 
-/* ====== Figcaption ====== */
+/* ====== Figures & Captions ====== */
+figure {
+  @apply mb-12;
+}
+
 figcaption {
-  @apply text-xs text-gray-400;
+  @apply mt-2 text-xs text-gray-400 text-center;
 }
 
 /* ====== Description List ====== */
@@ -104,4 +113,54 @@ ol {
 
 li {
   @apply text-lg leading-relaxed text-white;
+}
+
+/* ====== Article Layout (Used in Fragment / ZINE detail) ====== */
+.article-container {
+  @apply max-w-4xl mx-auto px-4;
+}
+
+.article-title {
+  @apply text-5xl font-bold tracking-tight mt-10 mb-6;
+}
+
+.article-date {
+  @apply text-sm text-gray-400 mb-6;
+}
+
+.article-image {
+  @apply rounded-xl object-cover w-full h-auto;
+}
+
+.article-figure {
+  @apply mb-12;
+}
+
+.article-caption {
+  @apply mt-2 text-sm text-gray-400 text-center;
+}
+
+/* ====== Cards ====== */
+.article-card {
+  @apply rounded-2xl border border-gray-700 bg-neutral-900 p-4 pb-24 transition;
+}
+
+.article-card-title {
+  @apply text-2xl font-semibold mb-1;
+}
+
+.article-card-date {
+  @apply text-sm text-gray-400 mb-2;
+}
+
+.article-card-excerpt {
+  @apply text-sm text-gray-300 mb-3;
+}
+
+.article-card-image {
+  @apply rounded-xl object-cover w-full h-[280px];
+}
+
+.article-card-tag {
+  @apply text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full hover:bg-gray-600 no-underline;
 }

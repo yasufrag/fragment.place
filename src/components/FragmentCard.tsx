@@ -15,27 +15,24 @@ export function FragmentCard({
   showImage = true,
 }: FragmentCardProps) {
   return (
-    <article className="rounded-2xl border border-gray-700 bg-neutral-900 p-4 transition pb-24">
+    <div className="article-card">
       {showImage && image?.src && (
         <Link href={`/fragments/${slug}`} className="block mb-4">
           <img
             src={image.src}
             alt={image.alt || ''}
-            className="rounded-xl object-cover w-full h-[280px]"
+            className="article-card-image"
             loading="lazy"
           />
         </Link>
       )}
 
-      <Link
-        href={`/fragments/${slug}`}
-        className="no-underline hover:underline text-gray-300 hover:text-white"
-      >
-        <h2 className="text-lg font-semibold mb-1">{title}</h2>
+      <Link href={`/fragments/${slug}`} className="no-underline hover:underline text-gray-300 hover:text-white">
+        <h2 className="article-card-title">{title}</h2>
       </Link>
 
       {date && (
-        <p className="text-sm text-gray-400 mb-1">
+        <p className="article-card-date">
           {new Date(date).toLocaleDateString('en-US', {
             year: 'numeric',
             month: 'short',
@@ -44,23 +41,21 @@ export function FragmentCard({
         </p>
       )}
 
-      {excerpt && (
-        <p className="text-sm text-gray-300">{excerpt}</p>
-      )}
+      {excerpt && <p className="article-card-excerpt">{excerpt}</p>}
 
       {tags.length > 0 && (
-        <div className="flex flex-wrap gap-2 mt-3">
+        <div className="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <Link
               key={tag}
               href={`/fragments/tag/${tag}`}
-              className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded-full hover:bg-gray-600 no-underline"
+              className="article-card-tag"
             >
               #{tag}
             </Link>
           ))}
         </div>
       )}
-    </article>
+    </div>
   )
 }

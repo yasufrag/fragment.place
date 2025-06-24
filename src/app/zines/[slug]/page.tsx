@@ -17,12 +17,16 @@ export default async function ZineDetail({ params }: { params: { slug: string } 
   const { content, meta } = result
 
   return (
-    <div className="prose prose-invert mx-auto">
+    <div className="article-container">
       <MDXContent source={content} components={zineComponents} />
 
-      <TagBox tags={meta.tags ?? []} />
+      <div className="mt-10">
+        <TagBox tags={meta.tags ?? []} />
+      </div>
 
-      <YourSyntaxShare defaultText="There was one last eggplant, waiting like a quiet punctuation mark..." />
+      <div className="mt-12">
+        <YourSyntaxShare defaultText="There was one last eggplant, waiting like a quiet punctuation mark..." />
+      </div>
     </div>
   )
 }
