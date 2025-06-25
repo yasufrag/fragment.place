@@ -1,4 +1,11 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "functions": {
+    "api/upload/route.ts": {
+      "runtime": "nodejs18.x",
+      "maxDuration": 10,
+      "memory": 512
+    }
+  }
 }
