@@ -28,6 +28,7 @@ export default function PoieticBotPage() {
             href="https://chatgpt.com/g/g-685756a4f67481919db2ec3a4f3d3414-poieticbot"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-gray-300 hover:text-white hover:underline"
           >
             PoieticBot on GPTs
           </Link>
