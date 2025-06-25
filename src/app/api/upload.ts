@@ -12,11 +12,13 @@ const AUTH_SECRET = process.env.WEBHOOK_SECRET || ''
 export async function POST(req: NextRequest) {
   const authHeader = req.headers.get('authorization') || ''
   if (!authHeader.startsWith('Bearer ') || authHeader.split(' ')[1] !== AUTH_SECRET) {
+    console.warn('[AUTH] Invalid Authorization header')
     return new NextResponse('Unauthorized', { status: 401 })
   }
 
   const contentType = req.headers.get('content-type') || ''
   if (!contentType.includes('multipart/form-data')) {
+    console.warn('[CONTENT] Unsupported Media Type:', contentType)
     return new NextResponse('Unsupported Media Type', { status: 415 })
   }
 
@@ -24,15 +26,20 @@ export async function POST(req: NextRequest) {
   const slug = formData.get('slug') as string
   const files = formData.getAll('image') as File[]
 
+  console.log(`[RECEIVED] Slug: ${slug}, Image files received: ${files.length}`)
+
   if (!slug || files.length === 0) {
+    console.warn('[VALIDATION] Missing slug or image files')
     return new NextResponse('Missing slug or image files', { status: 400 })
   }
 
   if (files.length > MAX_IMAGES) {
+    console.warn('[VALIDATION] Too many images:', files.length)
     return new NextResponse(`Max ${MAX_IMAGES} images allowed`, { status: 400 })
   }
 
   const uploadPath = path.join(UPLOAD_DIR, slug)
+  console.log(`[DIR] Creating upload directory: ${uploadPath}`)
   await mkdir(uploadPath, { recursive: true })
 
   const savedFiles: string[] = []
@@ -45,11 +52,18 @@ export async function POST(req: NextRequest) {
     const filename = `${String(i + 1).padStart(3, '0')}.jpg`
     const fullPath = path.join(uploadPath, filename)
 
-    await stripExifAndConvertToJpg(buffer, fullPath)
-    savedFiles.push(`/images/fragments/${slug}/${filename}`)
+    console.log(`[PROCESS] Saving image ${filename} to ${fullPath}`)
 
-    await logUpload(`Upload completed for slug: ${slug}, total images: ${files.length}`)
+    try {
+      await stripExifAndConvertToJpg(buffer, fullPath)
+      savedFiles.push(`/api/image/${slug}/${filename}`)
+      console.log(`[SUCCESS] Saved: ${filename}`)
+    } catch (error) {
+      console.error(`[ERROR] Failed to save ${filename}:`, error)
+    }
   }
+
+  await logUpload(`Upload completed for slug: ${slug}, total images: ${files.length}`)
 
   return NextResponse.json({ status: 'ok', files: savedFiles })
 }
