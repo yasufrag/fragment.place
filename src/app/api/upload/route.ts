@@ -17,8 +17,7 @@ export async function GET(
         'Cache-Control': 'public, max-age=31536000, immutable',
       },
     })
-  } catch (err) {
-    console.error(`[ERROR] File not found: ${imagePath}`)
+  } catch {
     return new NextResponse('Not Found', { status: 404 })
   }
 }
