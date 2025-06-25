@@ -19,14 +19,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: meta.title,
       description: meta.excerpt || '',
       images: meta.image?.src
-        ? [{ url: `https://poietic.site${meta.image.src}`, alt: meta.image.alt || meta.title }]
+        ? [{ url: `https://poietic.site/images/fragments/${meta.image.src}`, alt: meta.image.alt || meta.title }]
         : [],
     },
     twitter: {
       card: 'summary_large_image',
       title: meta.title,
       description: meta.excerpt || '',
-      images: meta.image?.src ? [`https://poietic.site${meta.image.src}`] : [],
+      images: meta.image?.src ? [`https://poietic.site/images/fragments/${meta.image.src}`] : [],
     },
   }
 }

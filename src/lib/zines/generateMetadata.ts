@@ -24,7 +24,7 @@ export async function generateMetadata({
       images: meta.image?.src
         ? [
             {
-              url: `${baseUrl}${meta.image.src}`,
+              url: `${baseUrl}/images/zines/${meta.image.src}`,
               alt: meta.image.alt || meta.title,
             },
           ]
@@ -34,7 +34,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: meta.title,
       description: meta.excerpt,
-      images: meta.image?.src ? [`${baseUrl}${meta.image.src}`] : undefined,
+      images: meta.image?.src ? [`${baseUrl}/images/zines/${meta.image.src}`] : undefined,
     },
   }
 }
