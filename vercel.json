@@ -3,9 +3,8 @@
   "trailingSlash": false,
   "functions": {
     "api/upload/route.ts": {
-      "runtime": "nodejs18.x",
-      "maxDuration": 10,
-      "memory": 512
+      "memory": 512,
+      "maxDuration": 10
     }
   }
 }
