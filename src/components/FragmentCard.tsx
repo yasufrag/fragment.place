@@ -20,7 +20,7 @@ export function FragmentCard({
         <Link href={`/fragments/${slug}`} className="block mb-4">
           <img
             src={image.src}
-            alt={image.alt || ''}
+            alt={image.alt ?? 'Fragment image'}
             className="article-card-image"
             loading="lazy"
           />
