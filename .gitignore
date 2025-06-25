@@ -30,3 +30,6 @@ coverage/
 *.sln
 *.swp
 *.swo
+
+# Upload API
+/uploads

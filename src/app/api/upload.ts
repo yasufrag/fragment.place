@@ -4,7 +4,7 @@ import path from 'path'
 import { stripExifAndConvertToJpg } from '@/lib/image/stripExif'
 import { logUpload } from '@/lib/logUpload'
 
-const UPLOAD_DIR = path.join(process.cwd(), 'public/images/fragments')
+const UPLOAD_DIR = path.join(process.cwd(), 'uploads', 'fragments')
 const MAX_IMAGES = 5
 const CLEANUP_AFTER_DAYS = 7
 const AUTH_SECRET = process.env.WEBHOOK_SECRET || ''
@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
     const filename = `${String(i + 1).padStart(3, '0')}.jpg`
     const fullPath = path.join(uploadPath, filename)
 
-    await stripExifAndConvertToJpg(buffer, fullPath) // ここでJPEG変換+Exif除去+保存まで実行
+    await stripExifAndConvertToJpg(buffer, fullPath)
     savedFiles.push(`/images/fragments/${slug}/${filename}`)
 
     await logUpload(`Upload completed for slug: ${slug}, total images: ${files.length}`)
