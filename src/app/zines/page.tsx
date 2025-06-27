@@ -10,8 +10,8 @@ export default function ZinesPage() {
     <div className="article-container">
       <MetaTag {...meta.zines.index} />
 
-      <h1 className="article-title">ZINEs</h1>
-      <p className="mb-10">
+      <h1>ZINEs</h1>
+      <p>
         Poetic documentation of life in serialized form.
       </p>
 

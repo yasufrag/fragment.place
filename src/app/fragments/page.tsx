@@ -9,8 +9,8 @@ export default async function FragmentsPage() {
   return (
     <div className="article-container">
       <MetaTag {...meta.fragments} />
-      <h1 className="article-title">Fragments</h1>
-      <p className="mb-4">
+      <h1>Fragments</h1>
+      <p>
         Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in motion.
       </p>
 
