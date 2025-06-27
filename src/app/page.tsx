@@ -8,7 +8,7 @@ export default async function Home() {
   const randomFragment = fragments[Math.floor(Math.random() * fragments.length)]
 
   return (
-    <>
+    <div className="article-container">
       <MetaTag {...meta.home} />
 
       <h1>co.poiesis</h1>
@@ -67,6 +67,6 @@ export default async function Home() {
         <br />
         Syntax is not stored—just passed.
       </p>
-    </>
+    </div>
   )
 }
