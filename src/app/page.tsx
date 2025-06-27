@@ -25,7 +25,7 @@ export default async function Home() {
           href={`/fragments/${randomFragment.slug}`}
           className="no-underline hover:underline text-gray-300 hover:text-white"
         >
-          <strong>→{randomFragment.title}</strong>
+          <strong>→ {randomFragment.title}</strong>
         </Link>
         <br />
         <span className="text-sm text-gray-500">{randomFragment.excerpt}</span>

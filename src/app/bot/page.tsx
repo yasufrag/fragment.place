@@ -30,7 +30,7 @@ export default function PoieticBotPage() {
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-white hover:underline"
           >
-            →PoieticBot on GPTs
+            → PoieticBot on GPTs
           </Link>
         </li>
         <li>Begin with a word, a mood, or a fragment—"Hello" is enough</li>
