@@ -37,7 +37,7 @@ export default function FragmentFooter() {
           rel="noopener noreferrer"
           className="inline-block bg-yellow-500 text-stone-800 px-5 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
         >
-          Buy me a fragment
+          Support poetic writing
         </a>
       </div>
     </div>
