@@ -27,11 +27,9 @@ export default async function ZineDetail({ params }: { params: { slug: string } 
         date={meta.date}
       />
 
-      <MDXContent source={content} components={zineComponents} />
+      <TagBox tags={meta.tags ?? []} />
 
-      <div className="mt-10">
-        <TagBox tags={meta.tags ?? []} />
-      </div>
+      <MDXContent source={content} components={zineComponents} />
 
       <ArticleButton />
     </div>
