@@ -23,15 +23,14 @@ export default function PoieticBotPage() {
       <h2>How to use</h2>
       <ul>
         <li>
-          Visit{' '}
-          <Link
+          Visit{''}
+          <a
             href="https://chatgpt.com/g/g-685756a4f67481919db2ec3a4f3d3414-poieticbot"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-yellow-500 text-stone-800 px-5 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
-          >
-            → PoieticBot on GPTs
-          </Link>
+            className="button-link">
+              PoieticBot on GPTs
+          </a>
         </li>
         <li>Begin with a word, a mood, or a fragment—"Hello" is enough</li>
         <li>No need to choose a mode—it listens and adapts</li>

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { getAllZines, getZineBySlug } from '@/lib/zines'
+import ZineCover from '@/components/zines/ZineCover'
 import MDXContent from '@/components/MDXContent'
 import TagBox from '@/components/zines/TagBox'
 import ArticleButton from '@/components/ArticleButton'
@@ -18,6 +19,14 @@ export default async function ZineDetail({ params }: { params: { slug: string } 
 
   return (
     <div className="article-container">
+      <ZineCover
+        title={meta.title}
+        subtitle={meta.excerpt}
+        image={meta.image?.src}
+        alt={meta.image?.alt}
+        date={meta.date}
+      />
+
       <MDXContent source={content} components={zineComponents} />
 
       <div className="mt-10">
