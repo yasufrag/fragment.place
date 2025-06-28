@@ -20,7 +20,7 @@ export default async function Home() {
 
       <p>
         <Link href="/zines" className="text-gray-300 hover:text-white hover:underline">
-          → ZINE：全てのZINEをみる
+          → ZINEs：全てのZINEをみる
         </Link>
       </p>
 
