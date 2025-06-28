@@ -1,12 +1,8 @@
 import Link from 'next/link'
 import { MetaTag } from '@/components/MetaTag'
 import { meta } from '@/meta/meta'
-import { getAllFragments } from '@/lib/fragments'
 
 export default async function Home() {
-  const fragments = getAllFragments()
-  const randomFragment = fragments[Math.floor(Math.random() * fragments.length)]
-
   return (
     <div className="article-container">
       <MetaTag {...meta.home} />
@@ -14,21 +10,6 @@ export default async function Home() {
       <h1>co.poiesis</h1>
       <p>
         a frame for poetic fragments and living syntax
-      </p>
-
-      <p className="text-sm text-gray-400 uppercase tracking-wide mb-2">
-        A Present Fragment
-      </p>
-
-      <p className="mb-14 min-h-[5rem]">
-        <Link
-          href={`/fragments/${randomFragment.slug}`}
-          className="no-underline hover:underline text-gray-300 hover:text-white"
-        >
-          <strong>→ {randomFragment.title}</strong>
-        </Link>
-        <br />
-        <span className="text-sm text-gray-500">{randomFragment.excerpt}</span>
       </p>
 
       <p>
