@@ -58,6 +58,14 @@ export const meta = {
     robots: 'index,follow',
   },
 
+  support: {
+    title: 'Support',
+    description: 'Support the quiet unfolding of fragments, poetic structure, and shared presence — a space for gentle contribution toward co.poiesis.',
+    url: '/support',
+    image: '/og.png',
+    robots: 'index,follow',
+},
+
   security: {
     title: 'Security',
     description: 'Our approach to ethical technology, data care, and co-creative safety.',
