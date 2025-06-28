@@ -18,7 +18,7 @@ export default function SupportPage() {
         href="https://www.buymeacoffee.com/poieticid"
         className="text-gray-300 hover:text-white hover:underline"
       >
-        → ☕ Buy me a fragment
+        → Buy me a fragment
       </Link>
     </div>
   );

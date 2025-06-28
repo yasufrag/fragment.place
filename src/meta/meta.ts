@@ -38,6 +38,7 @@ export const meta = {
       image: '/og.png',
       robots: 'index,follow',
     },
+
     items: {
       'refrigerator-syntax': {
         title: 'Refrigerator Syntax ZINE',
@@ -64,7 +65,7 @@ export const meta = {
     url: '/support',
     image: '/og.png',
     robots: 'index,follow',
-},
+  },
 
   security: {
     title: 'Security',
