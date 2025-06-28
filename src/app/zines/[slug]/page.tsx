@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import { getAllZines, getZineBySlug } from '@/lib/zines'
 import MDXContent from '@/components/MDXContent'
 import TagBox from '@/components/zines/TagBox'
-import YourSyntaxShare from '@/components/zines/YourSyntaxShare'
+import ArticleButton from '@/components/ArticleButton'
 import { zineComponents } from '@/components/zines'
 
 export async function generateStaticParams() {
@@ -24,9 +24,7 @@ export default async function ZineDetail({ params }: { params: { slug: string } 
         <TagBox tags={meta.tags ?? []} />
       </div>
 
-      <div className="mt-12">
-        <YourSyntaxShare defaultText="There was one last eggplant, waiting like a quiet punctuation mark..." />
-      </div>
+      <ArticleButton />
     </div>
   )
 }

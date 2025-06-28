@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import { getAllFragments, getFragmentBySlug } from '@/lib/fragments'
+import ArticleButton from '@/components/ArticleButton'
 import MDXContent from '@/components/MDXContent'
 
 export async function generateStaticParams() {
@@ -15,7 +16,7 @@ export default async function FragmentDetail({ params }: { params: { slug: strin
   const { meta, content } = result
 
   return (
-    <article className="article-container">
+    <div className="article-container">
       <h1 className="article-title">{meta.title}</h1>
 
       <p className="article-date">
@@ -42,6 +43,8 @@ export default async function FragmentDetail({ params }: { params: { slug: strin
       )}
 
       <MDXContent source={content} />
-    </article>
+
+      <ArticleButton />
+    </div>
   )
 }

@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function SupportPage() {
   return (
     <div className="article-container">
@@ -14,12 +12,14 @@ export default function SupportPage() {
         静かな営みの継続を支えていただける方へ、感謝をこめて。
       </p>
 
-      <Link
+      <a
         href="https://www.buymeacoffee.com/poieticid"
-        className="text-gray-300 hover:text-white hover:underline"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-yellow-500 text-stone-800 px-5 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
       >
-        → Buy me a fragment
-      </Link>
+        Buy me a fragment
+      </a>
     </div>
   );
 }
