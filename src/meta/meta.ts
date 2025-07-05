@@ -7,7 +7,8 @@ export const meta = {
 
   home: {
     title: 'Home',
-    description: 'A shared poetic syntax for dialogue, design, and lived practice.',
+    description:
+      'A quiet system of fragments, poetic dialogue, and symbolic design — unfolding in presence.',
     url: '/',
     image: '/og.png',
     robots: 'index,follow',
@@ -15,7 +16,8 @@ export const meta = {
 
   about: {
     title: 'About',
-    description: 'A gentle outline of the philosophy, rhythm, and stewardship behind co.poiesis.',
+    description:
+      'A gentle outline of the philosophy, structure, and rhythm behind co.poiesis — an unfinished system of shared syntax.',
     url: '/about',
     image: '/og.png',
     robots: 'index,follow',
@@ -24,7 +26,7 @@ export const meta = {
   profile: {
     title: 'Profile',
     description:
-      'Yasuhiro Shinsho – A poetic syntax designer bridging technology and poiesis.',
+      'Yasuhiro Shinsho — A poetic syntax designer connecting people, language, and everyday structure through invisible forms.',
     url: '/profile',
     image: '/og.png',
     robots: 'index,follow',
@@ -33,7 +35,7 @@ export const meta = {
   fragments: {
     title: 'Fragments',
     description:
-      'Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in motion. Each fragment holds a thread toward co-poiesis.',
+      'Fragments are living syntax — quiet traces, dialogic sketches, and symbolic gestures. Each one echoes a thread toward shared poiesis.',
     url: '/fragments',
     image: '/og.png',
     robots: 'index,follow',
@@ -42,7 +44,8 @@ export const meta = {
   zines: {
     index: {
       title: 'ZINE',
-      description: 'Entries from an ongoing journal of poietic design, thought, and dialogue.',
+      description:
+        'Reflective compositions of poietic thought and daily rhythm — fragments gathered into visible forms.',
       url: '/zines',
       image: '/og.png',
       robots: 'index,follow',
@@ -52,7 +55,7 @@ export const meta = {
       'refrigerator-syntax': {
         title: 'Refrigerator Syntax ZINE',
         description:
-          'A ZINE of gentle syntax and daily poetics—written with a refrigerator and quiet mornings.',
+          'A ZINE of gentle syntax and lived poetics — composed alongside quiet mornings and a humming fridge.',
         url: '/zine/refrigerator-syntax',
         image: '/images/zines/2025-06-19-refrigerator-syntax/2025-06-19-refrigerator-syntax-cover.jpg',
         robots: 'index,follow',
@@ -62,7 +65,8 @@ export const meta = {
 
   bot: {
     title: 'PoieticBot',
-    description: 'A gentle GPT partner for quiet dialogue and living syntax.',
+    description:
+      'A quiet GPT companion for async reflection and poetic trace-making. It listens, refracts, and composes in your rhythm.',
     url: '/bot',
     image: '/images/og/poieticbot.png',
     robots: 'index,follow',
@@ -70,7 +74,8 @@ export const meta = {
 
   support: {
     title: 'Support',
-    description: 'Support the quiet unfolding of fragments, poetic structure, and shared presence — a space for gentle contribution toward co.poiesis.',
+    description:
+      'Support the quiet unfolding of poetic structure, fragmental practice, and shared presence — a gesture toward co.poiesis.',
     url: '/support',
     image: '/og.png',
     robots: 'index,follow',
@@ -78,7 +83,8 @@ export const meta = {
 
   security: {
     title: 'Security',
-    description: 'Our approach to ethical technology, data care, and co-creative safety.',
+    description:
+      'A symbolic and ethical approach to technology, consent, and quiet co-creation — securing space for subtle participation.',
     url: '/security',
     image: '/og.png',
     robots: 'index,follow',
@@ -86,7 +92,7 @@ export const meta = {
 
   '404': {
     title: 'Not Found',
-    description: 'This page is a silent trace — a path not yet formed.',
+    description: 'This page is a silent trace — a path not yet formed, but possible.',
     url: '/404',
     image: '/og.png',
     robots: 'noindex,nofollow',
