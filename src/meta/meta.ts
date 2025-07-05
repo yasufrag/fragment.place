@@ -21,6 +21,15 @@ export const meta = {
     robots: 'index,follow',
   },
 
+  profile: {
+    title: 'Profile',
+    description:
+      'Yasuhiro Shinsho – A poetic syntax designer bridging technology and poiesis.',
+    url: '/profile',
+    image: '/og.png',
+    robots: 'index,follow',
+  },
+
   fragments: {
     title: 'Fragments',
     description:
