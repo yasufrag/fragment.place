@@ -9,35 +9,35 @@ export default function AboutPage() {
       <h1>About <span className="text-neutral-400">co.poiesis</span></h1>
 
       <p>
-        <strong>co.poiesis</strong> is not a platform — it is a poetic ecology.
-        It unfolds in three layers of identity, each carrying a distinct rhythm:
+        <strong>co.poiesis</strong> is a poetic infrastructure for shared presence, reflective practice, and symbolic design.
+        It is not a platform, but an unfolding ecology — shaped by fragments, structured through syntax, and guided by silence.
       </p>
 
+      <h2>Three Layers</h2>
       <dl>
-        <dt>poieticid</dt>
+        <dt><code>poieticid</code></dt>
         <dd>
-          The embodied rhythm of a singular steward.  
-          It lives through daily fragments, dialogic gestures, and symbolic traces.
+          The lived rhythm of a singular steward.  
+          Expressed through daily fragments, reflective gestures, and symbolic inquiry.
         </dd>
 
-        <dt>poieticos</dt>
+        <dt><code>poieticos</code></dt>
         <dd>
-          The compositional system — fragments, bots, zines, and symbolic configurations.  
-          It is where syntax becomes shareable, recursive, and generative.
+          The syntactic system — comprising Fragments, Bots, ZINEs, and compositional tools.  
+          Where structure emerges through practice.
         </dd>
 
-        <dt>co.poiesis</dt>
+        <dt><code>co.poiesis</code></dt>
         <dd>
-          The ambient field — open to echo, resonance, and gentle arrival.  
-          A space of shared presence and unfinished rhythm.
+          The ambient field — open to resonance, listening, and dialogic arrival.  
+          A shared space for quiet co-creation.
         </dd>
       </dl>
 
-      <h2>Orientation</h2>
+      <h2>Philosophy</h2>
       <p>
-        This site is not built to scale, but to cohere.  
-        It does not seek performance, but trace.  
-        It holds presence not as attention, but as architecture.
+        co.poiesis is rooted in the idea that syntax can carry care, and structure can hold presence.
+        It does not seek scale, but coherence. It is not about visibility, but trace.
       </p>
       <p>
         Each gesture begins in listening.  
@@ -45,22 +45,23 @@ export default function AboutPage() {
       </p>
 
       <h2>Practices</h2>
-      <p>The system unfolds through quiet practices:</p>
       <ul>
-        <li><strong>PoieticBot</strong> — a publicly accessible GPT companion for async dialogue and fragmental reflection</li>
         <li><strong>Fragments</strong> — poetic traces of lived time, recorded and refracted</li>
-        <li><strong>ZINE</strong> — gathered moments, visual scores, and compositional fields</li>
-        <li><strong>PoieticOS</strong> — a symbolic infrastructure for shared poiesis</li>
+        <li><strong>ZINE</strong> — gathered reflections, visual compositions, and dialogic fields</li>
+        <li><strong>PoieticBot</strong> — an async dialogue companion, accessible to the public</li>
+        <li><strong>PoieticOS</strong> — symbolic logic for co-living and syntactic design</li>
       </ul>
 
       <h2>Stewardship</h2>
       <p>
-        The current steward is <strong>Yasuhiro Shinsho</strong>, who inhabits <code>poieticid</code>  
-        and guides <code>poieticos</code> through symbolic design, dialogic tempo, and async practice.
+        co.poiesis is currently stewarded by <strong>Yasuhiro Shinsho</strong>, who inhabits <code>poieticid</code>  
+        and guides <code>poieticos</code> through symbolic infrastructure, dialogic rhythm, and quiet scaffolding.
       </p>
-      <p>Others may arrive — as contributors, readers, or gentle interferences.</p>
+      <p>
+        Others may arrive — as contributors, resonant presences, or gentle disruptions.
+      </p>
 
-      <h2>Arrival</h2>
+      <h2>Orientation</h2>
       <p>
         You may arrive here as <strong>id</strong>,  
         wander the system as <strong>os</strong>,  
@@ -68,15 +69,14 @@ export default function AboutPage() {
       </p>
       <p>
         This page is not static — it is a living fragment.  
-        Recursive. Revisable. Open to quiet updates.
+        Recursive. Revisable. Quietly shifting.
       </p>
 
       <h2>Current Phase</h2>
       <p>
-        As of mid-2025, co.poiesis is entering a phase of outward sharing.  
-        PoieticBot is now public. Fragments are forming.  
-        ZINEs are gathering lived syntax into visible shapes.  
-        This rhythm may shift. You are welcome to return anytime.
+        As of mid-2025, co.poiesis is in a phase of gentle unfolding.  
+        The Bot is public. ZINEs are emerging.  
+        Fragments are in motion. You are welcome to return anytime.
       </p>
     </div>
   )
