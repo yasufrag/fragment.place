@@ -39,7 +39,7 @@ export default function SupportPage() {
         you may offer a gesture below.
       </p>
 
-      <div className="my-6">
+      <div className="my-6 flex flex-col sm:flex-row gap-4">
         <a
           href="https://www.buymeacoffee.com/poieticid"
           target="_blank"
@@ -47,6 +47,14 @@ export default function SupportPage() {
           className="inline-block bg-yellow-500 text-stone-800 px-5 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
         >
           Support poetic practices
+        </a>
+        <a
+          href="https://ofuse.me/poieticid"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-500 text-white px-5 py-2 rounded duration-200 hover:bg-blue-600"
+        >
+          OFUSEで応援する
         </a>
       </div>
 
@@ -59,8 +67,8 @@ export default function SupportPage() {
 
       <h2>For Japanese Supporters</h2>
       <p>
-        日本語での支援導線は現在準備中です。  
-        OFUSEなどのプラットフォームを通じた導線を後日ご案内予定です。
+        日本語での支援には、クリエイター支援プラットフォーム「OFUSE」もご利用いただけます。  
+        感想や応援メッセージと共に、詩的構文の継続をそっと支えていただけたら嬉しいです。
       </p>
 
       <p className="text-sm text-neutral-500 mt-8">
