@@ -29,7 +29,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="text-xl hidden md:flex space-x-5">
+        <nav className="hidden md:flex space-x-4">
           {navItems.map(({ label, href }) => (
             <Link key={href} href={href} aria-current={pathname === href ? 'page' : undefined} className={linkClass(href)}>
               {label}
@@ -49,7 +49,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="text-xl flex flex-col px-4 pb-6 pt-2 space-y-3 md:hidden">
+        <nav className="flex flex-col px-4 pb-6 pt-2 space-y-3 md:hidden">
           {navItems.map(({ label, href }) => (
             <Link
               key={href}

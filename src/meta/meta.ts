@@ -14,37 +14,10 @@ export const meta = {
     robots: 'index,follow',
   },
 
-  about: {
-    title: 'About',
-    description:
-      'The philosophy, structure, and ecology behind co.poiesis — a poetic infrastructure for syntax, silence, and shared practice.',
-    url: '/about',
-    image: '/og.png',
-    robots: 'index,follow',
-  },
-
-  profile: {
-    title: 'Profile',
-    description:
-      'Yasuhiro Shinsho — Poetic syntax designer exploring the space between engineering, reflection, and quiet co-creation.',
-    url: '/profile',
-    image: '/og.png',
-    robots: 'index,follow',
-  },
-
-  faq: {
-    title: 'FAQ',
-    description:
-      'Poetic answers to quiet questions — reflections on co.poiesis, PoieticBot, fragments, and syntactic life design.',
-    url: '/faq',
-    image: '/og.png',
-    robots: 'index,follow',
-  },
-
   fragments: {
     title: 'Fragments',
     description:
-      'Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in motion. Each fragment reflects a living inquiry.',
+      'Fragments are poetic traces of lived time — reflective sketches, quiet syntax, and dialogic rhythm in motion.',
     url: '/fragments',
     image: '/og.png',
     robots: 'index,follow',
@@ -54,7 +27,7 @@ export const meta = {
     index: {
       title: 'ZINE',
       description:
-        'Poetic documentation of life in serialized form — gathered reflections, syntactic practice, and compositional rhythm.',
+        'Poetic documentation in serialized form — gathered reflections, symbolic structures, and co-poietic rhythm.',
       url: '/zines',
       image: '/og.png',
       robots: 'index,follow',
@@ -71,9 +44,9 @@ export const meta = {
       },
 
       'poieticos-intro': {
-        title: 'PoieticOSとは',
+        title: 'PoieticOS Intro',
         description:
-          'A ZINE of symbolic infrastructure and poetic systems — unfolding the philosophy and practice of co.poiesis through syntax and care.',
+          'An introduction to symbolic infrastructure — unfolding the philosophy and co-creative design of co.poiesis.',
         url: '/zine/poieticos-intro',
         image: '/images/zines/2025-07-07-poieticos-intro/2025-07-07-poieticos-intro-cover.jpg',
         robots: 'index,follow',
@@ -84,16 +57,52 @@ export const meta = {
   bot: {
     title: 'PoieticBot',
     description:
-      'A quiet GPT companion for asynchronous reflection and poetic co-syntax. It listens, refracts, and composes in resonance.',
+      'A GPT-based companion for asynchronous reflection and poetic journaling. Designed for fragments, not productivity.',
     url: '/bot',
     image: '/images/og/poieticbot.png',
+    robots: 'index,follow',
+  },
+
+  glossary: {
+    title: 'Glossary',
+    description:
+      'A poetic lexicon of co.poiesis — shared definitions for fragments, syntax, rhythms, and symbolic infrastructure.',
+    url: '/glossary',
+    image: '/og.png',
+    robots: 'index,follow',
+  },
+
+  faq: {
+    title: 'FAQ',
+    description:
+      'Poetic answers to quiet questions — reflections on Bot use, fragment saving, syntactic rhythm, and self-dialogue.',
+    url: '/faq',
+    image: '/og.png',
+    robots: 'index,follow',
+  },
+
+  about: {
+    title: 'About',
+    description:
+      'The philosophy and layered structure of co.poiesis — poetic infrastructure for reflection, silence, and co-creation.',
+    url: '/about',
+    image: '/og.png',
+    robots: 'index,follow',
+  },
+
+  profile: {
+    title: 'Profile',
+    description:
+      'Yasuhiro Shinsho — steward of co.poiesis. From engineering to poetic syntax, exploring the trace of symbolic living.',
+    url: '/profile',
+    image: '/og.png',
     robots: 'index,follow',
   },
 
   support: {
     title: 'Support',
     description:
-      'Support the quiet continuation of poetic practices, fragmental presence, and syntactic co-creation — a gesture toward shared rhythm.',
+      'Support the quiet continuation of fragments, co-poietic design, and symbolic reflection — a gesture toward rhythm.',
     url: '/support',
     image: '/og.png',
     robots: 'index,follow',
@@ -102,7 +111,7 @@ export const meta = {
   security: {
     title: 'Security',
     description:
-      'Ethical design and symbolic security — stewarding digital space with care, consent, and minimalism in co-poietic rhythm.',
+      'A minimalist philosophy of consent, care, and symbolic protection — safeguarding space in poietic infrastructure.',
     url: '/security',
     image: '/og.png',
     robots: 'index,follow',
@@ -111,7 +120,7 @@ export const meta = {
   '404': {
     title: 'Not Found',
     description:
-      'This page is a quiet trace — a path not yet formed, but open to arrival.',
+      'This page is a poetic trace — a path not yet formed, but open to resonance.',
     url: '/404',
     image: '/og.png',
     robots: 'noindex,nofollow',

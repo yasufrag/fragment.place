@@ -9,7 +9,7 @@ export default async function Home() {
 
       <h1>co.poiesis</h1>
       <p className="text-lg text-neutral-300 mb-4">
-        a quiet system of fragments, dialogue, and symbolic design
+        a poetic system of fragments, reflection, and symbolic design
       </p>
 
       <nav className="mb-8 space-y-2">
@@ -21,7 +21,7 @@ export default async function Home() {
 
         <p>
           <Link href="/zines" className="text-gray-300 hover:text-white hover:underline">
-            → ZINEs：詩的設計の記録と反射
+            → ZINEs：構文の束と静かな編集
           </Link>
         </p>
 
@@ -35,13 +35,19 @@ export default async function Home() {
             rel="noopener noreferrer"
             className="text-sm text-blue-300 hover:underline"
           >
-            (GPTで開く)
+            (Open in GPT)
           </a>
         </p>
 
         <p>
           <Link href="/faq" className="text-gray-300 hover:text-white hover:underline">
-            → FAQ：よくある問いと詩的応答
+            → FAQ：使い方と詩的なガイドライン
+          </Link>
+        </p>
+
+        <p>
+          <Link href="/glossary" className="text-gray-300 hover:text-white hover:underline">
+            → Glossary：用語の定義と詩的文脈
           </Link>
         </p>
 
@@ -59,15 +65,15 @@ export default async function Home() {
       </nav>
 
       <p className="text-sm text-gray-400 italic">
-        As of mid-2025, PoieticBot is public.  
-        ZINEs are emerging. Fragments continue to unfold.  
-        This rhythm is quiet — but ongoing.
+        As of mid-2025, PoieticBot is open to the public.  
+        ZINEs are unfolding. Fragments continue to emerge.  
+        This rhythm is quiet — but alive.
       </p>
 
       <p className="mt-20 text-sm text-gray-500 italic">
         This site is not a product.  
-        It is a poietic field — unfolding in fragments and presence.  
-        Syntax is not stored. It is passed, refracted, and held in rhythm.
+        It is a poietic field — composed of trace, attention, and shared syntax.  
+        Nothing is stored. Everything is held in rhythm.
       </p>
     </div>
   )
