@@ -13,7 +13,12 @@ export async function generateMetadata({
   const { meta } = zine
   const baseUrl = 'https://poietic.site'
 
+  const imageUrl = meta.image?.src?.startsWith('/')
+    ? `${baseUrl}${meta.image.src}`
+    : `${baseUrl}/images/zines/${meta.slug}/${meta.image?.src}`
+
   return {
+    metadataBase: new URL(baseUrl),
     title: meta.title,
     description: meta.excerpt,
     openGraph: {
@@ -24,7 +29,7 @@ export async function generateMetadata({
       images: meta.image?.src
         ? [
             {
-              url: `${baseUrl}/images/zines/${meta.image.src}`,
+              url: imageUrl,
               alt: meta.image.alt || meta.title,
             },
           ]
@@ -34,7 +39,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: meta.title,
       description: meta.excerpt,
-      images: meta.image?.src ? [`${baseUrl}/images/zines/${meta.image.src}`] : undefined,
+      images: meta.image?.src ? [imageUrl] : undefined,
     },
   }
 }
