@@ -15,8 +15,8 @@ export default function FragmentFooter() {
   }
 
   return (
-    <div className="pt-6 mt-12 flex flex-col sm:flex-row justify-between items-center gap-4 text-neutral-500">
-      <div className="flex gap-6 items-center">
+    <div className="pt-10 mt-16 flex flex-col items-center gap-4">
+      <div className="flex gap-6 items-center text-neutral-500">
         <button onClick={handleCopy} className="hover:underline">
           {copied ? 'Link copied!' : 'Copy link'}
         </button>
@@ -30,12 +30,12 @@ export default function FragmentFooter() {
         </a>
       </div>
 
-      <div className="flex flex-col sm:flex-row sm:gap-3 gap-2 w-full sm:w-auto mt-2 sm:mt-0">
+      <div className="w-full max-w-xs flex flex-col sm:flex-row sm:gap-3 gap-3">
         <a
           href="https://www.buymeacoffee.com/poieticid"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto text-center bg-yellow-500 text-stone-800 px-5 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
+          className="block w-full text-center bg-yellow-500 text-stone-800 px-5 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
         >
           Support poetic writing
         </a>
@@ -43,7 +43,7 @@ export default function FragmentFooter() {
           href="https://ofuse.me/poieticid"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto text-center bg-blue-500 text-white px-5 py-2 rounded duration-200 hover:bg-blue-600"
+          className="block w-full text-center bg-blue-500 text-white px-5 py-2 rounded duration-200 hover:bg-blue-600"
         >
           OFUSEで支援する
         </a>
