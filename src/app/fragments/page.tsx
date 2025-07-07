@@ -11,7 +11,14 @@ export default async function FragmentsPage() {
       <MetaTag {...meta.fragments} />
       <h1>Fragments</h1>
       <p>
-        Fragments are quiet signals — poetic traces, dialogic sketches, and evolving syntax in motion.
+        Fragments are quiet gestures —  
+        moments traced in language, held in rhythm, and offered without conclusion.  
+        Each one is a signal: of presence, of inquiry, of something just beginning.
+      </p>
+      <p>
+        They are not posts.  
+        They are bookmarks in lived time —  
+        refracted thoughts, poetic sketches, and syntactic markers of becoming.
       </p>
 
       <FragmentsListView fragments={fragments} />

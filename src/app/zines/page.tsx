@@ -12,7 +12,14 @@ export default function ZinesPage() {
 
       <h1>ZINEs</h1>
       <p>
-        Poetic documentation of life in serialized form.
+        ZINEs are gathered traces —  
+        bundles of fragments, quiet reflections, and syntactic compositions.  
+        Each one marks a threshold in lived rhythm: a pause, a gesture, a shared unfolding.
+      </p>
+      <p>
+        More than documentation, ZINEs are invitations —  
+        to read a life in syntax, to wander through layered thought,  
+        and to meet presence in poetic form.
       </p>
 
       <div className="card-grid">

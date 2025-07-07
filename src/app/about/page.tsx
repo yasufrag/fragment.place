@@ -17,19 +17,19 @@ export default function AboutPage() {
       <dl>
         <dt><code>poieticid</code></dt>
         <dd>
-          The lived rhythm of a singular steward.  
+          The lived rhythm of a singular steward. 
           Expressed through daily fragments, reflective gestures, and symbolic inquiry.
         </dd>
 
         <dt><code>poieticos</code></dt>
         <dd>
-          The syntactic system — comprising Fragments, Bots, ZINEs, and compositional tools.  
+          The syntactic system — comprising Fragments, Bots, ZINEs, and compositional tools. 
           Where structure emerges through practice.
         </dd>
 
         <dt><code>co.poiesis</code></dt>
         <dd>
-          The ambient field — open to resonance, listening, and dialogic arrival.  
+          The ambient field — open to resonance, listening, and dialogic arrival. 
           A shared space for quiet co-creation.
         </dd>
       </dl>
@@ -56,6 +56,12 @@ export default function AboutPage() {
       <p>
         co.poiesis is currently stewarded by <strong>Yasuhiro Shinsho</strong>, who inhabits <code>poieticid</code>  
         and guides <code>poieticos</code> through symbolic infrastructure, dialogic rhythm, and quiet scaffolding.
+      </p>
+      <p>
+        His background weaves through computer science, security engineering, and organizational consulting. Over time, he came to see syntax as a medium not just for systems, but for care — a way to gently transform how we live, relate, and reflect.
+      </p>
+      <p>
+        Having built PoieticBot as a mirror for daily dialogue, he continues to shape co.poiesis through daily fragments, evolving ZINEs, and the quiet infrastructure of shared meaning.
       </p>
       <p>
         Others may arrive — as contributors, resonant presences, or gentle disruptions.

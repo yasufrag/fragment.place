@@ -38,18 +38,36 @@ export default async function Home() {
             (GPTで開く)
           </a>
         </p>
+
+        <p>
+          <Link href="/faq" className="text-gray-300 hover:text-white hover:underline">
+            → FAQ：よくある問いと詩的応答
+          </Link>
+        </p>
+
+        <p>
+          <Link href="/about" className="text-gray-300 hover:text-white hover:underline">
+            → About：構文の思想と構造
+          </Link>
+        </p>
+
+        <p>
+          <Link href="/profile" className="text-gray-300 hover:text-white hover:underline">
+            → Profile：実践者の物語
+          </Link>
+        </p>
       </nav>
 
       <p className="text-sm text-gray-400 italic">
         As of mid-2025, PoieticBot is public.  
-        ZINEs are gathering. Fragments continue to arrive.  
-        This rhythm is quiet—but ongoing.
+        ZINEs are emerging. Fragments continue to unfold.  
+        This rhythm is quiet — but ongoing.
       </p>
 
       <p className="mt-20 text-sm text-gray-500 italic">
         This site is not a product.  
-        It is a field of poiesis — unfolding in fragments and presence.  
-        Syntax is not stored. It is passed, shared, and refracted.
+        It is a poietic field — unfolding in fragments and presence.  
+        Syntax is not stored. It is passed, refracted, and held in rhythm.
       </p>
     </div>
   )

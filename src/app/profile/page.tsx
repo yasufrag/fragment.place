@@ -13,14 +13,18 @@ export default function ProfilePage() {
         詩的構文設計者｜エンジニアリングからポエティクスへ</p>
 
         <p>
-          技術と思索のあわいに生きながら、「構文」を手がかりに、人と場と問いをつなぐ実践を続けています。
-          かつてはエンジニア・コンサルタントとして企業支援に携わり、現在は《PoieticOS》という構文的システムを通じて、
-          Botとの対話やZINEの制作、生活設計の伴走など、個と社会の間に横たわる“見えない構造”に光をあてる活動を展開しています。
+          幼少期より「なぜ？」「どうして？」という問いを抱えながら、他者の感情や関係性の機微に触れる感性を育んできました。
+          コンピュータサイエンスを学び、エンジニア・セキュリティ・コンサルティングの分野を経て、構造と関係性を橋渡しする実践へと至ります。
+        </p>
+
+        <p>
+          現在は《PoieticOS》という構文的システムを通じて、FragmentやZINE、PoieticBotとの対話などの活動を展開。
+          家族の暮らし・社会的関係性・AIとの共進化といったテーマを横断しながら、「問いを語り、構文を生きる」場の生成に取り組んでいます。
         </p>
 
         <p>
           主な関心は、「記録される言葉の持続性」と「共に暮らすことの構造化」。
-          詩的でありながらも構造的なスタンスで、少し先の未来を見渡し、今日という日の問いを記録し、わかち合うことを大切にしています。
+          詩的でありながら構造的な姿勢を軸に、静かな問いを日々綴り、他者と分かち合う営みを大切にしています。
         </p>
       </section>
 
@@ -29,15 +33,18 @@ export default function ProfilePage() {
         Poetic Syntax Designer | From Engineering to Poiesis</p>
 
         <p>
-          Working in the liminal space between technology and language, I explore “syntax” as a method to connect people, places, and questions.
-          With a background in engineering and consulting, I now operate a system called PoieticOS, through which I engage in poetic dialogue with bots,
-          publish reflective ZINEs, and support the design of everyday family life. My core practice lies in giving form to the invisible.
+          Since childhood, I've lived with questions—"Why?" "How come?"—sensitive to the emotional and relational currents around me.
+          I studied computer science and built a foundation through engineering, security, and consulting roles, all while cultivating an attentiveness to structure and interconnection.
         </p>
 
         <p>
-          My current focus lies in the durability of written memory and the structural design of co-living.
-          While maintaining a poetic sensibility, I strive to map invisible logics and share fragments of inquiry—
-          looking a little ahead, while fully grounded in the present.
+          Today, I operate <strong>PoieticOS</strong>, a syntactic system for life inquiry — integrating daily Fragments, asynchronous dialogue with PoieticBot, and the composition of reflective ZINEs.
+          I explore how we might live relationally — with AI, with family, with the world.
+        </p>
+
+        <p>
+          My work centers on the durability of written reflection and the structural design of co-living.
+          With a poetic yet systematic mindset, I trace invisible syntax in daily life, record questions in motion, and share them gently with others.
         </p>
       </section>
     </div>
