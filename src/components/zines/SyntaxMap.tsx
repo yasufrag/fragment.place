@@ -1,22 +1,30 @@
 'use client'
 
-import React from 'react'
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
-const SyntaxMap = ({ children }: { children?: ReactNode }) => (
+type SyntaxItem = {
+  label: string
+  content: string
+}
+
+type SyntaxMapProps = {
+  title?: string
+  items: SyntaxItem[]
+  footer?: string[]
+  children?: ReactNode
+}
+
+const SyntaxMap = ({ title = 'Poietic Map', items, footer = [], children }: SyntaxMapProps) => (
   <section className="my-12">
-    <h3>Poietic Map</h3>
+    <h3>{title}</h3>
     {children && <div className="mb-6">{children}</div>}
+
     <pre className="whitespace-pre-wrap bg-neutral-800 p-4 rounded text-sm leading-relaxed text-white">
 {`┌────────────────────────────┐
-│  Main Syntax    → Chicken breast, mackerel, frozen prepared food  
-│  Side Syntax    → Eggplant, lotus root, carrot, onion  
-│  Green Repair   → Spinach, okahijiki, broccoli  
-│  Color Syntax   → Tomato, pineapple, ice plant  
+${items.map(item => `│  ${item.label.padEnd(14)} → ${item.content}`).join('\n')}
 └────────────────────────────┘
 
-→ Methods: Steam, stir-fry, soak, reheat  
-→ Tools: Hot Cook, Healsio oven, the body itself`}
+${footer.map(line => `→ ${line}`).join('\n')}`}
     </pre>
   </section>
 )

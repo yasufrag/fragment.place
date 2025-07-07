@@ -69,6 +69,15 @@ export const meta = {
         image: '/images/zines/2025-06-19-refrigerator-syntax/2025-06-19-refrigerator-syntax-cover.jpg',
         robots: 'index,follow',
       },
+
+      'poieticos-intro': {
+        title: 'PoieticOSとは',
+        description:
+          'A ZINE of symbolic infrastructure and poetic systems — unfolding the philosophy and practice of co.poiesis through syntax and care.',
+        url: '/zine/poieticos-intro',
+        image: '/images/zines/2025-07-07-poieticos-intro/2025-07-07-poieticos-intro-cover.jpg',
+        robots: 'index,follow',
+      },
     },
   },
 

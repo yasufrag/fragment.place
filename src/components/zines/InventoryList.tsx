@@ -2,13 +2,22 @@
 
 import React from 'react'
 
-export const InventoryList = ({ frozen, refrigerated }: { frozen: string[]; refrigerated: string[] }) => (
+type Section = {
+  title: string
+  description?: string
+  items: string[]
+}
+
+export const InventoryList = ({ sections }: { sections: Section[] }) => (
   <section className="my-12 grid md:grid-cols-2 gap-8">
-    {[{ title: 'Frozen', items: frozen }, { title: 'Refrigerated', items: refrigerated }].map(({ title, items }) => (
+    {sections.map(({ title, description, items }) => (
       <div key={title}>
-        <h3>■ {title}</h3>
+        <h3 className="font-semibold">■ {title}</h3>
+        {description && <p className="text-sm text-neutral-400 mb-2">{description}</p>}
         <ul className="list-disc pl-4 space-y-1">
-          {items.map((item, i) => <li key={i}>{item}</li>)}
+          {items.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
         </ul>
       </div>
     ))}

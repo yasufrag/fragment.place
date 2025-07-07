@@ -22,167 +22,166 @@ meta:
 ---
 
 <PoeticBlock title="Prologue｜Waking at 4:30 AM">
-  <img
+  <PoeticImage
     src="/images/zines/2025-06-19-refrigerator-syntax/refrigerator-breakfast.jpg"
     alt="June 19, 2025 breakfast: toast, yogurt, banana, and oligosaccharide drink"
-    className="my-4 rounded"
+    caption="June 19, 2025 breakfast: toast, yogurt, banana, and oligosaccharide drink"
   />
-  <blockquote>
-    The world was still asleep.  
-    A cold draft, and a faint irritation on the left corner of my lips.  
-    Residual heat from a night of coding—  
-    perhaps it had settled there, quietly.  
-    I boiled water.  
+  <QuoteBlock>
+    The world was still asleep.
+    A cold draft, and a faint irritation on the left corner of my lips.
+    Residual heat from a night of coding—
+    perhaps it had settled there, quietly.
+    I boiled water.
     My stomach and the fridge door calmed down at the same time.
-  </blockquote>
+  </QuoteBlock>
 </PoeticBlock>
 
-<img
+<PoeticImage
   src="/images/zines/2025-06-19-refrigerator-syntax/refrigerator-inside.jpg"
   alt="Inside the refrigerator"
-  className="my-4 rounded"
+  caption="Inside the refrigerator"
 />
 
 <InventoryList
-  frozen={[
-    "Broccoli (small amount)",
-    "Spinach",
-    "Salted mackerel",
-    "Pineapple",
-    "Miso cutlet",
-    "Fried chicken",
-    "Spring rolls",
-    "Pork miso soup"
-  ]}
-  refrigerated={[
-    "Onions (many)",
-    "Carrots (many)",
-    "Tomato (1)",
-    "Cherry tomato (1)",
-    "Oyster mushrooms",
-    "Lotus root",
-    "Eggplants",
-    "Potatoes (many)",
-    "Okahijiki greens",
-    "Ice plant"
-  ]}
+  sections={[{
+    title: 'Frozen Items',
+    items: [
+      "Broccoli (small amount)",
+      "Spinach",
+      "Salted mackerel",
+      "Pineapple",
+      "Miso cutlet",
+      "Fried chicken",
+      "Spring rolls",
+      "Pork miso soup"
+    ]
+  }, {
+    title: 'Refrigerated Items',
+    items: [
+      "Onions (many)",
+      "Carrots (many)",
+      "Tomato (1)",
+      "Cherry tomato (1)",
+      "Oyster mushrooms",
+      "Lotus root",
+      "Eggplants",
+      "Potatoes (many)",
+      "Okahijiki greens",
+      "Ice plant"
+    ]
+  }]}
 />
 
-<PoeticBlock title="Fragment 1｜The Syntax of Miso Soup">
+<SyntaxBox title="Fragment 1｜The Syntax of Miso Soup">
+  [Oyster Mushroom and Onion Miso Soup Syntax]
 
-```text
-[Oyster Mushroom and Onion Miso Soup Syntax]
-
-- The broth came from memories in the freezer.
-- Onion, cut into half-moons. Let the sweetness read itself over time.
-- Mushrooms, torn by hand—syntax seeps better than with a knife.
-- Miso, added in just the amount of “that silence.”
-- When the steam rises, the answer has arrived.
-```
-
-</PoeticBlock>
+  - The broth came from memories in the freezer.
+  - Onion, cut into half-moons. Let the sweetness read itself over time.
+  - Mushrooms, torn by hand—syntax seeps better than with a knife.
+  - Miso, added in just the amount of “that silence.”
+  - When the steam rises, the answer has arrived.
+</SyntaxBox>
 
 <PoeticBlock title="Fragment 2｜Dialogue with the Past Through Leftovers">
-  <img
+  <PoeticImage
     src="/images/zines/2025-06-19-refrigerator-syntax/refrigerator-dinner.jpg"
     alt="Dinner plate with vegetables and chicken"
-    className="my-4 rounded"
+    caption="Dinner plate with vegetables and chicken"
   />
-  <blockquote>
-    The broccoli was still there.  
-    Spinach, frozen in time.  
-    The mackerel tasted like someone's voice.  
+  <QuoteBlock>
+    The broccoli was still there.
+    Spinach, frozen in time.
+    The mackerel tasted like someone's voice.
 
-    These were ingredients my family left behind.  
-    As if to say, "We were here, too."  
+    These were ingredients my family left behind.
+    As if to say, "We were here, too."
 
-    Food is perhaps a subtle transmission  
-    from the past into the present.  
+    Food is perhaps a subtle transmission
+    from the past into the present.
 
-    Life is not just stored inventory—  
+    Life is not just stored inventory—
     It is <strong>inscribed in stock.</strong>
-  </blockquote>
+  </QuoteBlock>
 </PoeticBlock>
 
 <PoeticBlock title="Fragment 3｜Naan, Candy, and Onion">
-  <img
+  <PoeticImage
     src="/images/zines/2025-06-19-refrigerator-syntax/curry-base-memory.jpg"
     alt="Curry base ingredients: onion, carrot, potato"
-    className="my-4 rounded"
+    caption="Curry base ingredients: onion, carrot, potato"
   />
-  <blockquote>
-    Onion, carrot, potato—  
-    the essential trio for curry.  
+  <QuoteBlock>
+    Onion, carrot, potato—
+    the essential trio for curry.
 
-    My little son loves curry.  
+    My little son loves curry.
 
-    I wonder how the uncle at the neighborhood Indian curry shop is doing.  
-    I want us to go there again, together.  
+    I wonder how the uncle at the neighborhood Indian curry shop is doing.
+    I want us to go there again, together.
 
-    He’d probably give my son a candy,  
-    and we’d walk home smiling.  
+    He’d probably give my son a candy,
+    and we’d walk home smiling.
 
-    As I slice onions, a few tears well up.  
+    As I slice onions, a few tears well up.
 
     But it’s not from pain.
-  </blockquote>
+  </QuoteBlock>
 </PoeticBlock>
 
 <DayLayout
-  morning={[
-    "Frozen pork miso soup",
-    "White rice (small portion)",
-    "Lightly boiled broccoli (with sesame & soy sauce)",
-    "Tomato + pineapple (punctuation marks)"
-  ]}
-  afternoon={[
-    "Grilled salted mackerel (Healsio)",
-    "Stir-fried carrot and onion",
-    "Spinach miso soup",
-    "Rice"
-  ]}
-  evening={[
-    "Steamed potatoes and eggplant",
-    "Oyster mushroom and onion omelet",
-    "Okahijiki greens with light seasoning"
-  ]}
+  morning={["Frozen pork miso soup", "White rice (small portion)", "Lightly boiled broccoli (with sesame & soy sauce)", "Tomato + pineapple (punctuation marks)"]}
+  afternoon={["Grilled salted mackerel (Healsio)", "Stir-fried carrot and onion", "Spinach miso soup", "Rice"]}
+  evening={["Steamed potatoes and eggplant", "Oyster mushroom and onion omelet", "Okahijiki greens with light seasoning"]}
 />
 
 <PoeticBlock title="Banana Syntax Box">
-  <img
+  <PoeticImage
     src="/images/zines/2025-06-19-refrigerator-syntax/banana-syntax-box.jpg"
     alt="Banana syntax box"
-    className="my-4 rounded"
+    caption="Banana syntax box"
   />
-  <blockquote>
-    A leftover box on the street.  
-    “Kindness Banana,” it says.  
+  <QuoteBlock>
+    A leftover box on the street.
+    “Kindness Banana,” it says.
 
-    My K2 Pro has a banana switch.  
-    My breakfast often includes a banana.  
+    My K2 Pro has a banana switch.
+    My breakfast often includes a banana.
 
-    There’s something about this quiet, comedic poetry  
+    There’s something about this quiet, comedic poetry
     that aligns with how I work.
-  </blockquote>
+  </QuoteBlock>
 </PoeticBlock>
 
-<SyntaxMap>
-  <img
+<SyntaxMap
+  title="Poietic Syntax Map"
+  items={[
+    { label: "Main Syntax", content: "Chicken breast, mackerel, frozen prepared food" },
+    { label: "Side Syntax", content: "Eggplant, lotus root, carrot, onion" },
+    { label: "Green Repair", content: "Spinach, okahijiki, broccoli" },
+    { label: "Color Syntax", content: "Tomato, pineapple, ice plant" }
+  ]}
+  footer={[
+    "Methods: Steam, stir-fry, soak, reheat",
+    "Tools: Hot Cook, Healsio oven, the body itself"
+  ]}
+>
+  <PoeticImage
     src="/images/zines/2025-06-19-refrigerator-syntax/syntaxmap-obsidian.jpg"
     alt="Obsidian screen showing refrigerator syntax map"
-    className="my-4 rounded"
+    caption="Obsidian screen showing refrigerator syntax map"
   />
 </SyntaxMap>
 
 <PoeticBlock title="Epilogue｜Where Life and Kitchen Begin to Blur">
-  <blockquote>
-    It was my first time living alone  
-    since my family went back to their hometown for a while.  
+  <QuoteBlock>
+    It was my first time living alone
+    since my family went back to their hometown for a while.
 
-    The boundary between my kitchen and my body  
-    began to loosen and dissolve.  
+    The boundary between my kitchen and my body
+    began to loosen and dissolve.
 
-    Perhaps this was the first boot sequence  
+    Perhaps this was the first boot sequence
     of an operating system that implements life as poem.
-  </blockquote>
+  </QuoteBlock>
 </PoeticBlock>
