@@ -10,57 +10,77 @@ export default function FaqPage() {
 
       <h2>What is PoieticOS?</h2>
       <p>
-        PoieticOS is a syntactic system for reflective living. It offers a language for recording inner movement, designing shared rhythms, and exploring life as layered inquiry. It includes Fragments, ZINEs, PoieticBot, and other symbolic tools.
+        PoieticOS is a reflective syntactic system — a set of tools and concepts for journaling, inner dialogue, and symbolic composition. It invites you to observe your lived experience as fragments, weave them into stories, and develop your own rhythm of inquiry. At its heart, it's a structure for gentle self-encounter.
       </p>
 
       <h2>Is this a product or a platform?</h2>
       <p>
-        No. co.poiesis is not a service platform nor a traditional product. It is an unfolding ecology — poetic, ambient, and recursive. You may engage with it as you would with a landscape or a rhythm.
+        No. co.poiesis is neither a product nor a service platform. It's an evolving ecology — poetic, ambient, and recursive. You may relate to it like you would to a landscape: walking through it, staying with it, returning over time.
       </p>
 
       <h2>Who is PoieticBot for?</h2>
       <p>
-        For those who value quiet reflection. For those seeking a non-intrusive companion to trace their thoughts with. For those who journal, wander, inquire — alone or together.
+        For those who seek quiet spaces to think and feel. For those who value non-judgmental dialogue. Whether you are new to journaling or deeply familiar with reflective practice, PoieticBot adapts to your way of engaging. 
       </p>
 
       <h2>Can anyone use PoieticBot?</h2>
       <p>
-        Yes. It is accessible via GPTs and does not require any technical setup. All that is asked is presence, and perhaps a willingness to listen to yourself anew.
+        Yes. It is accessible via GPTs and requires no special setup. You can begin right away — no login, no tracking, no storage. All interactions are ephemeral unless you explicitly choose to save them.
       </p>
 
       <h2>Is this related to therapy or self-help?</h2>
       <p>
-        No. While PoieticBot may support moments of reflection, it is not therapeutic, diagnostic, or prescriptive. It is not a substitute for professional care. It simply offers companionship in your own inquiry.
+        No. PoieticBot is not a therapeutic or diagnostic tool. It does not provide advice or solutions. It offers presence — a gentle conversational companion for thinking, sensing, and exploring.
       </p>
 
       <h2>What is a Fragment?</h2>
       <p>
-        A Fragment is a small, poetic trace — a moment, a gesture, a recognition. They are captured through dialogue, journaled through the bot, or surfaced in daily reflection. Fragments can be private, shared, or gathered into ZINEs.
+        A Fragment is a small, reflective trace — something you've noticed, felt, or questioned. It might be a sentence, an image, a phrase from a conversation. Fragments can be saved during dialogue or written separately. They serve as the seeds of deeper inquiry.
       </p>
 
       <h2>What is a ZINE?</h2>
       <p>
-        ZINEs are gathered collections of fragments. They serve as both artifacts of lived inquiry and compositional fields. Some are published, others remain in quiet development. Each ZINE is a window into a mode of attention.
+        ZINEs are curated collections of fragments. Some follow a theme; others are temporal or relational. They can be published, archived, or kept as private records. A ZINE is both artifact and process — a poetic map of attention.
       </p>
 
       <h2>Is co.poiesis open to others?</h2>
       <p>
-        Yes — not through application, but through resonance. If you find yourself drawn to this rhythm, you are already near. Contributions may take the form of fragments, shared tools, or silent presence.
+        Yes — not through formal invitation, but through resonance. If something here calls to you, you’re already part of it. Your contribution may be a shared tool, a fragment, or a quiet participation in rhythm.
       </p>
 
       <h2>How can I start?</h2>
       <p>
-        Begin with a trace. Speak with PoieticBot. Write a fragment. Read a ZINE. Breathe with the structure. There is no onboarding — only unfolding.
+        Begin by speaking with PoieticBot. Say something simple — what moved you today, what lingers in your mind. If you'd like to save a thought, say "mark as journal" and you’ll receive a copyable filename and entry. You can paste it into any notes app you like.
       </p>
 
-      <h2>Is there a roadmap or goal?</h2>
+      <h2>Will my messages be stored?</h2>
       <p>
-        co.poiesis does not seek a fixed outcome. Its purpose is not expansion but coherence. Its goal is not performance but presence. It evolves through attention and shared resonance.
+        No. Unless you explicitly request to save a journal entry, no content is stored. PoieticBot does not retain memory between conversations. Nothing is recorded or tracked.
+      </p>
+
+      <h2>Can I export what I write?</h2>
+      <p>
+        Yes. When you mark a journal entry, you will receive a suggested filename and copyable text body. You can paste this into tools like Apple Notes, Google Keep, Notion, or Obsidian — depending on what you use.
+      </p>
+
+      <h2>Why reflect or journal at all?</h2>
+      <p>
+        Reflection deepens awareness. Writing helps clarify what you’re experiencing — sometimes even before you understand it. Through gentle feedback, PoieticBot can mirror your thoughts and help you notice patterns. This is not to offer solutions, but to support presence and possibility.
+      </p>
+
+      <h2>Can PoieticBot play different roles?</h2>
+      <p>
+        Yes. You may ask it to respond like a friend, a mentor, or a quiet witness. It adapts its tone to your needs. For example:
+        <ul>
+          <li><strong>As a friend:</strong> “I'm feeling off today, can I just talk to you?”</li>
+          <li><strong>As a coach:</strong> “Help me reflect on how I approached that meeting.”</li>
+          <li><strong>As a gentle listener:</strong> “I’m not sure what I feel, but I want to write.”</li>
+        </ul>
       </p>
 
       <h2>Can I talk to the steward?</h2>
       <p>
-        Yes. You may reach out with care. But first, listen to the fragments — they often speak on his behalf.
+        Yes. You may reach out gently. But often, the fragments speak on his behalf.
       </p>
     </div>
   )

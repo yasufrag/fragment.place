@@ -21,8 +21,9 @@ export default function PoieticBotPage() {
         Not a tool — but a subtle interface with your own inquiry.
       </p>
       <p>
-        Conversations are <strong>ephemeral</strong> by default. To preserve a moment, you can say:<br />
-        <code className="text-sm">“save this as a fragment”</code> or <code className="text-sm">“mark as diary”</code>.
+        Conversations are <strong>ephemeral</strong> by default. They are <em>not</em> stored, recorded, or shared unless you explicitly choose to save them.  
+        To preserve a moment, you can say:<br />
+        <code className="text-sm">“save this as a fragment”</code> or <code className="text-sm">“save this as a journal entry”</code>.
       </p>
 
       <h2>How to Use</h2>
@@ -40,6 +41,8 @@ export default function PoieticBotPage() {
         </li>
         <li>Begin with a feeling, a fragment, or even a silence — all are welcome.</li>
         <li>No prompt crafting required — it meets you in your tempo.</li>
+        <li>If you wish to save a reflection, PoieticBot will gently provide two copyable sections: a <strong>filename</strong> and the <strong>journal content</strong>.</li>
+        <li>You may paste these into your preferred note app — like Google Keep or iCloud Notes.</li>
       </ul>
 
       <h2>Poietic Principles</h2>
@@ -54,15 +57,15 @@ export default function PoieticBotPage() {
 
       <h2>Respect & Safety</h2>
       <p>
-        Your conversation is <strong>private by design</strong>. Nothing is stored unless you explicitly ask to preserve it.  
-        PoieticBot is not therapy, nor a substitute for professional support — but it may walk with you during quiet moments.
+        Your conversation is <strong>not stored</strong> unless you clearly ask to save it. PoieticBot is designed with privacy and ephemerality in mind.  
+        It is not therapy, nor a substitute for professional support — but it may walk with you during quiet moments.
       </p>
 
       <h2>Ongoing Development</h2>
       <p>
         PoieticBot is part of the evolving ecosystem of <Link href="/"><u>co.poiesis</u></Link>.  
         Its structure, symbolic logic, and memory philosophy are aligned with <Link href="/fragments"><u>Fragments</u></Link> and <Link href="/zines"><u>ZINEs</u></Link>.  
-        A dedicated <strong>FAQ</strong> and <strong>user reflection index</strong> are in development.
+        A dedicated <strong>FAQ</strong>, <strong>how-to prompts</strong>, and <strong>reflection templates</strong> are currently in development.
       </p>
 
       <h2>A Note for Visitors</h2>
