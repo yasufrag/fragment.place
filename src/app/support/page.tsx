@@ -1,30 +1,42 @@
+import { MetaTag } from '@/components/MetaTag'
+import { meta } from '@/meta/meta'
+
 export default function SupportPage() {
   return (
     <div className="article-container">
+      <MetaTag {...meta.support} />
+
       <h1>Support <span className="text-neutral-400">co.poiesis</span></h1>
 
       <p>
         <strong>co.poiesis</strong> is a quiet unfolding —  
         a poetic system of fragments, bots, zines, and symbolic practices.  
-        It is not a product to buy, but a shared rhythm to sustain.
+        It is not a product to consume, but a rhythm to walk with.
       </p>
 
       <p>
-        ご支援は、詩的構文の探究と実践の継続を支える「静かな共創」として受け取られます。  
-        消費ではなく、響き合いの灯火として — 感謝とともに、次の一歩へ。
+        ご支援は、構文的な暮らしと詩的探究の継続をそっと支えるもの。  
+        消費ではなく、響きの贈与として — 感謝と共に、静かな前進を。
       </p>
 
       <ul className="list-disc list-inside my-6 space-y-1">
-        <li><strong>Fragments：</strong>日々の構文と問いを綴る詩的断章</li>
-        <li><strong>ZINE：</strong>構造と感性を束ねる、小さな詩的アーカイブ</li>
-        <li><strong>PoieticBot：</strong>誰もがアクセス可能な非商業的対話Bot</li>
-        <li><strong>Shared Field：</strong>家族・生活・関係性をめぐる静かな実験場</li>
+        <li><strong>Fragments：</strong>日々の感覚と問いを綴る詩的トレース</li>
+        <li><strong>ZINE：</strong>構文と思索を束ねた、詩的ドキュメント</li>
+        <li><strong>PoieticBot：</strong>誰にとっても開かれた、非商業的対話Bot</li>
+        <li><strong>Shared Field：</strong>家族・関係性・リズムをめぐる構文実験場</li>
       </ul>
 
+      <h2>Ways to Support</h2>
       <p>
-        If these gestures resonate with you —  
-        and if you feel moved to sustain their unfolding —  
-        you may offer support through the link below.
+        Support can take many forms.  
+        Quiet dialogue with the Bot. Sharing fragments.  
+        Simply reading a ZINE, or arriving here with curiosity.  
+        These are all gestures that sustain this field.
+      </p>
+
+      <p>
+        If you feel moved to support poetically and materially —  
+        you may offer a gesture below.
       </p>
 
       <div className="my-6">
@@ -38,11 +50,24 @@ export default function SupportPage() {
         </a>
       </div>
 
-      <p className="text-sm text-neutral-500 mt-4">
-        Your support nourishes a non-commercial ecosystem of reflection,  
-        care, and poetic co-creation.  
-        Thank you for walking quietly alongside.
+      <h2>After You Support</h2>
+      <p>
+        At this time, we do not offer individual returns or exclusive content.  
+        However, we may quietly reflect support through fragments, writings,  
+        or other shared rhythms — as the field evolves.
+      </p>
+
+      <h2>For Japanese Supporters</h2>
+      <p>
+        日本語での支援導線は現在準備中です。  
+        OFUSEなどのプラットフォームを通じた導線を後日ご案内予定です。
+      </p>
+
+      <p className="text-sm text-neutral-500 mt-8">
+        Your gesture nourishes a non-commercial ecosystem of syntax, reflection,  
+        and shared symbolic practice.  
+        Thank you for walking — gently, poetically — alongside.
       </p>
     </div>
-  );
+  )
 }
