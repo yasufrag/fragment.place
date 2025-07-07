@@ -28,6 +28,8 @@ export default function ProfilePage() {
         </p>
       </section>
 
+      <hr className="my-8 border-t border-neutral-700" />
+
       <section>
         <p><strong>Yasuhiro Shinsho</strong><br/>
         Poetic Syntax Designer | From Engineering to Poiesis</p>
