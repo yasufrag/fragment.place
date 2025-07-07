@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 /* ====== Base ====== */
-html,
+html {
+  @apply bg-black text-white;
+}
+
 body {
   @apply bg-black font-sans text-base text-white antialiased transition-colors duration-300 leading-relaxed tracking-wide;
 
