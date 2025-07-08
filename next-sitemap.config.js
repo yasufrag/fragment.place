@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://poietic.site',
+  siteUrl: 'https://fragment.place',
   generateRobotsTxt: true,
   sitemapSize: 5000,
   outDir: 'public',
