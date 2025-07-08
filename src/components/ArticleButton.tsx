@@ -30,7 +30,7 @@ export default function FragmentFooter() {
         </a>
       </div>
 
-      <div className="mt-5 w-full max-w-2xl flex flex-row items-center gap-3">
+      <div className="mt-5 w-full max-w-2xl flex flex-row items-center sm:flex-col gap-3">
         <a
           href="https://www.buymeacoffee.com/yasufrag"
           target="_blank"
