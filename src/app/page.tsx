@@ -15,19 +15,19 @@ export default async function Home() {
       <nav className="mb-8 space-y-2">
         <p>
           <Link href="/fragments" className="text-gray-300 hover:text-white hover:underline">
-            → Fragments：日々の構文と詩的トレース
+            Fragments：日々の構文と詩的トレース
           </Link>
         </p>
 
         <p>
           <Link href="/zines" className="text-gray-300 hover:text-white hover:underline">
-            → ZINEs：構文の束と静かな編集
+            ZINEs：構文の束と静かな編集
           </Link>
         </p>
 
         <p>
           <Link href="/bot" className="text-gray-300 hover:text-white hover:underline">
-            → FragmentBot：静かな対話のパートナー
+            FragmentBot：静かな対話のパートナー
           </Link>{' '}
           <a
             href="https://chatgpt.com/g/g-685756a4f67481919db2ec3a4f3d3414-poieticbot"
@@ -41,25 +41,25 @@ export default async function Home() {
 
         <p>
           <Link href="/faq" className="text-gray-300 hover:text-white hover:underline">
-            → FAQ：使い方と詩的なガイドライン
+            FAQ：使い方と詩的なガイドライン
           </Link>
         </p>
 
         <p>
           <Link href="/glossary" className="text-gray-300 hover:text-white hover:underline">
-            → Glossary：用語の定義と詩的文脈
+            Glossary：用語の定義と詩的文脈
           </Link>
         </p>
 
         <p>
           <Link href="/about" className="text-gray-300 hover:text-white hover:underline">
-            → About：構文の思想と構造
+            About：構文の思想と構造
           </Link>
         </p>
 
         <p>
           <Link href="/profile" className="text-gray-300 hover:text-white hover:underline">
-            → Profile：実践者の物語
+            Profile：実践者の物語
           </Link>
         </p>
       </nav>
