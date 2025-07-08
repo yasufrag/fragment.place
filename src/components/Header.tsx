@@ -25,7 +25,7 @@ export default function Header() {
       <div className="mx-auto max-w-5xl px-4 flex items-center justify-between py-5">
         <Link href="/" className="flex items-center space-x-3 no-underline hover:no-underline">
           <Logo className="h-9 w-9" role="presentation" />
-          <span className="text-2xl sm:text-3xl font-semibold tracking-tight">co.poiesis</span>
+          <span className="text-xl sm:text-2xl font-semibold tracking-tight">fragment.place</span>
         </Link>
 
         {/* Desktop Nav */}

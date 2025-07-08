@@ -1,8 +1,8 @@
 export const meta = {
   site: {
-    name: 'co.poiesis',
-    baseUrl: 'https://poietic.site',
-    defaultImage: 'https://poietic.site/og.png',
+    name: 'fragment.place',
+    baseUrl: 'https://fragment.place',
+    defaultImage: 'https://fragment.place/og.png',
   },
 
   home: {
@@ -27,7 +27,7 @@ export const meta = {
     index: {
       title: 'ZINE',
       description:
-        'Poetic documentation in serialized form — gathered reflections, symbolic structures, and co-poietic rhythm.',
+        'Poetic documentation in serialized form — gathered reflections, symbolic structures, and fragmental rhythm.',
       url: '/zines',
       image: '/og.png',
       robots: 'index,follow',
@@ -46,7 +46,7 @@ export const meta = {
       'poieticos-intro': {
         title: 'PoieticOS Intro',
         description:
-          'An introduction to symbolic infrastructure — unfolding the philosophy and co-creative design of co.poiesis.',
+          'An introduction to symbolic infrastructure — unfolding the philosophy and symbolic design behind fragment.place.',
         url: '/zine/poieticos-intro',
         image: '/images/zines/2025-07-07-poieticos-intro/2025-07-07-poieticos-intro-cover.jpg',
         robots: 'index,follow',
@@ -55,18 +55,18 @@ export const meta = {
   },
 
   bot: {
-    title: 'PoieticBot',
+    title: 'FragmentBot',
     description:
       'A GPT-based companion for asynchronous reflection and poetic journaling. Designed for fragments, not productivity.',
     url: '/bot',
-    image: '/images/og/poieticbot.png',
+    image: '/og.png',
     robots: 'index,follow',
   },
 
   glossary: {
     title: 'Glossary',
     description:
-      'A poetic lexicon of co.poiesis — shared definitions for fragments, syntax, rhythms, and symbolic infrastructure.',
+      'A poetic lexicon of fragment.place — shared definitions for fragments, syntax, rhythms, and symbolic infrastructure.',
     url: '/glossary',
     image: '/og.png',
     robots: 'index,follow',
@@ -84,7 +84,7 @@ export const meta = {
   about: {
     title: 'About',
     description:
-      'The philosophy and layered structure of co.poiesis — poetic infrastructure for reflection, silence, and co-creation.',
+      'The philosophy and layered structure of fragment.place — poetic infrastructure for reflection, silence, and co-creation.',
     url: '/about',
     image: '/og.png',
     robots: 'index,follow',
@@ -93,7 +93,7 @@ export const meta = {
   profile: {
     title: 'Profile',
     description:
-      'Yasuhiro Shinsho — steward of co.poiesis. From engineering to poetic syntax, exploring the trace of symbolic living.',
+      'Yasuhiro Shinsho — steward of fragment.place. From engineering to poetic syntax, exploring the trace of symbolic living.',
     url: '/profile',
     image: '/og.png',
     robots: 'index,follow',
@@ -102,7 +102,7 @@ export const meta = {
   support: {
     title: 'Support',
     description:
-      'Support the quiet continuation of fragments, co-poietic design, and symbolic reflection — a gesture toward rhythm.',
+      'Support the quiet continuation of fragments, poetic design, and symbolic reflection — a gesture toward rhythm.',
     url: '/support',
     image: '/og.png',
     robots: 'index,follow',
@@ -111,7 +111,7 @@ export const meta = {
   security: {
     title: 'Security',
     description:
-      'A minimalist philosophy of consent, care, and symbolic protection — safeguarding space in poietic infrastructure.',
+      'A minimalist philosophy of consent, care, and symbolic protection — safeguarding space in fragmental infrastructure.',
     url: '/security',
     image: '/og.png',
     robots: 'index,follow',

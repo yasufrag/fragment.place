@@ -7,9 +7,9 @@ export default async function Home() {
     <div className="article-container">
       <MetaTag {...meta.home} />
 
-      <h1>co.poiesis</h1>
+      <h1>fragment.place</h1>
       <p className="text-lg text-neutral-300 mb-4">
-        a poetic system of fragments, reflection, and symbolic design
+        a poetic system of fragments, reflection, and quiet design
       </p>
 
       <nav className="mb-8 space-y-2">
@@ -27,7 +27,7 @@ export default async function Home() {
 
         <p>
           <Link href="/bot" className="text-gray-300 hover:text-white hover:underline">
-            → PoieticBot：静かな対話のパートナー
+            → FragmentBot：静かな対話のパートナー
           </Link>{' '}
           <a
             href="https://chatgpt.com/g/g-685756a4f67481919db2ec3a4f3d3414-poieticbot"
@@ -65,7 +65,7 @@ export default async function Home() {
       </nav>
 
       <p className="text-sm text-gray-400 italic">
-        As of mid-2025, PoieticBot is open to the public.  
+        As of mid-2025, FragmentBot is open to the public.  
         ZINEs are unfolding. Fragments continue to emerge.  
         This rhythm is quiet — but alive.
       </p>

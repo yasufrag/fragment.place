@@ -6,10 +6,10 @@ export default function GlossaryPage() {
     <div className="article-container">
       <MetaTag {...meta.glossary} />
 
-      <h1>Glossary <span className="text-neutral-400">of poietic terms</span></h1>
+      <h1>Glossary <span className="text-neutral-400">of FragmentPractice</span></h1>
       <p>
-        This glossary gathers key terms used across <strong>co.poiesis</strong>, <strong>PoieticBot</strong>, and related practices.
-        It is designed for clarity across contexts — poetic, technical, and dialogic.
+        This glossary gathers key terms used across <strong>FragmentPractice</strong>, <strong>FragmentBot</strong>, and related reflective practices.
+        It is designed for clarity — across poetic, technical, and dialogic dimensions.
       </p>
 
       <h2>Fragment</h2>
@@ -26,7 +26,7 @@ export default function GlossaryPage() {
         Some are shared publicly; others remain in-process.
       </p>
 
-      <h2>PoieticBot</h2>
+      <h2>FragmentBot</h2>
       <p>
         A GPT-based companion for reflective conversation.  
         It supports journaling, noticing, and symbolic mirroring —  
@@ -34,11 +34,12 @@ export default function GlossaryPage() {
         Conversations are ephemeral unless saved by the user.
       </p>
 
-      <h2>PoieticOS</h2>
+      <h2>FragmentPractice</h2>
       <p>
-        A symbolic and syntactic infrastructure for co-living.  
-        It includes fragments, bots, ZINEs, and metadata logic.  
-        A recursive system for reflection, design, and poetic recordkeeping.
+        A reflective infrastructure and living method —  
+        for writing, noticing, and gently engaging experience.  
+        It includes fragments, bots, ZINEs, and symbolic gestures.  
+        An evolving practice of rhythm, relation, and record.
       </p>
 
       <h2>Journal</h2>
@@ -73,7 +74,7 @@ export default function GlossaryPage() {
 
       <h2>Field</h2>
       <p>
-        The shared, ambient space of co.poiesis.  
+        The shared, ambient space of FragmentPractice.  
         It includes fragments, readers, bot interactions, and symbolic presence —  
         even if not formally defined.
       </p>
@@ -81,7 +82,7 @@ export default function GlossaryPage() {
       <h2>Resonance</h2>
       <p>
         A quiet sense of alignment or recognition.  
-        To resonate with co.poiesis is to feel attuned — not enrolled.
+        To resonate with this practice is to feel attuned — not enrolled.
       </p>
 
       <h2>Ephemeral</h2>
@@ -99,7 +100,7 @@ export default function GlossaryPage() {
 
       <h2>Steward</h2>
       <p>
-        The quiet maintainer of the poietic field.  
+        The quiet maintainer of the reflective field.  
         Guides, listens, designs — but does not own.  
         A relational role shaped by rhythm, not hierarchy.
       </p>
@@ -107,7 +108,7 @@ export default function GlossaryPage() {
       <h2>Syntax</h2>
       <p>
         A connective and compositional structure.  
-        In co.poiesis, syntax is how fragments, attention, and meaning link together —  
+        In this practice, syntax is how fragments, attention, and meaning link together —  
         forming poetic logic through time.
       </p>
     </div>

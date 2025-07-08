@@ -9,11 +9,11 @@ type MetaTagProps = {
 }
 
 export const MetaTag = ({ title, description, url, image, robots }: MetaTagProps) => {
-  const siteName = 'co.poiesis'
-  const fullTitle = `${title} | co.poiesis – living syntax, shared in silence`
-  const metaDescription = description || 'co.poiesis is a poetic syntax unfolding in fragments.'
-  const canonicalURL = url || 'https://poietic.site'
-  const ogImage = image || 'https://poietic.site/og.png'
+  const siteName = 'fragment.place'
+  const fullTitle = `${title} | fragment.place – living syntax, shared in silence`
+  const metaDescription = description || 'fragment.place is a poetic syntax unfolding in fragments.'
+  const canonicalURL = url || 'https://fragment.place'
+  const ogImage = image || 'https://fragment.place/og.png'
   const robotsTag = robots || 'index,follow'
 
   return (
@@ -32,14 +32,14 @@ export const MetaTag = ({ title, description, url, image, robots }: MetaTagProps
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@poieticid" />
+      <meta name="twitter:site" content="@yasufrag" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={ogImage} />
 
       {/* Optional */}
       <meta name="robots" content={robotsTag} />
-      <meta name="author" content="co.poiesis" />
+      <meta name="author" content="fragment.place" />
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     </Head>
   )

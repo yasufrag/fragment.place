@@ -10,7 +10,7 @@ export default function ProfilePage() {
 
       <section>
         <p><strong>新庄 泰大（Yasuhiro Shinsho）</strong><br/>
-        詩的構文設計者｜エンジニアリングからポエティクスへ</p>
+        詩的構文設計者｜エンジニアリングから構文実践へ</p>
 
         <p>
           幼少期より「なぜ？」「どうして？」という問いを抱えながら、他者の感情や関係性の機微に触れる感性を育んできました。
@@ -18,8 +18,8 @@ export default function ProfilePage() {
         </p>
 
         <p>
-          現在は《PoieticOS》という構文的システムを通じて、FragmentやZINE、PoieticBotとの対話などの活動を展開。
-          家族の暮らし・社会的関係性・AIとの共進化といったテーマを横断しながら、「問いを語り、構文を生きる」場の生成に取り組んでいます。
+          現在は《FragmentPractice》という構文的な営みを通じて、日々のFragmentの記録、非記憶型BotであるFragmentBotとの対話、ZINEによる束ねと伝達などを展開。
+          家族との暮らし、他者との共創、AIとの共進化を横断しながら、「問いを語り、構文を生きる」場の生成に取り組んでいます。
         </p>
 
         <p>
@@ -32,21 +32,21 @@ export default function ProfilePage() {
 
       <section>
         <p><strong>Yasuhiro Shinsho</strong><br/>
-        Poetic Syntax Designer | From Engineering to Poiesis</p>
+        Poetic Syntax Designer | From Engineering to Syntax Practice</p>
 
         <p>
-          Since childhood, I've lived with questions—"Why?" "How come?"—sensitive to the emotional and relational currents around me.
-          I studied computer science and built a foundation through engineering, security, and consulting roles, all while cultivating an attentiveness to structure and interconnection.
+          Since childhood, I've lived with questions—"Why?" "How come?"—sensitive to emotional and relational undercurrents.
+          I studied computer science and cultivated my thinking through engineering, security, and organizational design — tracing how systems shape human connection.
         </p>
 
         <p>
-          Today, I operate <strong>PoieticOS</strong>, a syntactic system for life inquiry — integrating daily Fragments, asynchronous dialogue with PoieticBot, and the composition of reflective ZINEs.
-          I explore how we might live relationally — with AI, with family, with the world.
+          Today, I steward <strong>FragmentPractice</strong> — a syntactic approach to life inquiry through the writing of Fragments, asynchronous dialogue with <strong>FragmentBot</strong>, and the quiet composition of reflective ZINEs.
+          My work crosses daily life, family dynamics, shared meaning-making, and co-evolution with AI.
         </p>
 
         <p>
-          My work centers on the durability of written reflection and the structural design of co-living.
-          With a poetic yet systematic mindset, I trace invisible syntax in daily life, record questions in motion, and share them gently with others.
+          I'm drawn to the durability of reflective language and the gentle structuring of co-living.
+          Through poetic syntax and quiet rhythm, I trace questions in motion and offer them as shared fragments of attention.
         </p>
       </section>
     </div>

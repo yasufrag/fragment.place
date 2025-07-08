@@ -6,9 +6,9 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  metadataBase: new URL('https://poietic.site'),
-  title: 'Poietic Site',
-  description: 'PoieticOS: syntax as living infrastructure',
+  metadataBase: new URL('https://fragment.place'),
+  title: 'fragment.place',
+  description: 'FragmentPractice: syntax as living infrastructure',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

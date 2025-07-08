@@ -30,20 +30,20 @@ export default function FragmentFooter() {
         </a>
       </div>
 
-      <div className="w-full max-w-xs flex flex-col sm:flex-row sm:gap-3 gap-3">
+      <div className="w-full max-w-2xl flex flex-col sm:flex-row sm:gap-5 gap-3">
         <a
-          href="https://www.buymeacoffee.com/poieticid"
+          href="https://www.buymeacoffee.com/yasufrag"
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full text-center bg-yellow-500 text-stone-800 px-5 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
         >
-          Support poetic writing
+          Support fragment practices
         </a>
         <a
-          href="https://ofuse.me/poieticid"
+          href="https://ofuse.me/yasufrag"
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full text-center bg-blue-500 text-white px-5 py-2 rounded duration-200 hover:bg-blue-600"
+          className="block w-full text-center bg-blue-500 text-white px-2 py-2 rounded duration-200 hover:bg-blue-600"
         >
           OFUSEで支援する
         </a>

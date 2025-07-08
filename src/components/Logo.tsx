@@ -26,7 +26,7 @@ const Logo: FC<LogoProps> = ({ className = 'w-9 h-9', title = 'co.poiesis' }) =>
       fontWeight="bold"
       fontFamily="Satoshi, sans-serif"
     >
-      cp
+      fp
     </text>
   </svg>
 )
