@@ -11,7 +11,7 @@ export async function generateMetadata({
   if (!zine) return {}
 
   const { meta } = zine
-  const baseUrl = 'https://poietic.site'
+  const baseUrl = 'https://fragment.place'
 
   const imageUrl = meta.image?.src?.startsWith('/')
     ? `${baseUrl}${meta.image.src}`

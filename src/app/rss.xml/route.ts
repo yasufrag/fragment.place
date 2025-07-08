@@ -3,21 +3,21 @@ import { getAllFragments } from '@/lib/fragments'
 
 export async function GET() {
   const feed = new Feed({
-    title: 'Poietic Feed',
-    description: 'Poetic fragments in motion',
-    id: 'https://poietic.site/',
-    link: 'https://poietic.site/',
+    title: 'fragment.place Feed',
+    description: 'a fragment in motion',
+    id: 'https://fragment.place/',
+    link: 'https://fragment.place/',
     language: 'en',
-    favicon: 'https://poietic.site/favicon.ico',
+    favicon: 'https://fragment.place/favicon.ico',
     updated: new Date(),
-    generator: 'PoieticOS Feed Generator',
-    copyright: '© 2025 poieticid',
+    generator: 'fragment.place Feed Generator',
+    copyright: '© 2025 yasufrag',
     feedLinks: {
-      rss2: 'https://poietic.site/rss.xml',
+      rss2: 'https://fragment.place/rss.xml',
     },
     author: {
-      name: 'poieticid',
-      link: 'https://poietic.site',
+      name: 'yasufrag',
+      link: 'https://fragment.place',
     },
 })
 
@@ -26,8 +26,8 @@ export async function GET() {
   fragments.forEach((fragment) => {
     feed.addItem({
       title: fragment.title,
-      id: `https://poietic.site/fragments/${fragment.slug}`,
-      link: `https://poietic.site/fragments/${fragment.slug}`,
+      id: `https://fragment.place/fragments/${fragment.slug}`,
+      link: `https://fragment.place/fragments/${fragment.slug}`,
       date: new Date(fragment.date),
       description: fragment.excerpt,
     })

@@ -3,8 +3,8 @@ export function GET() {
 User-agent: *
 Allow: /
 
-Sitemap: https://poietic.site/sitemap.xml
-Sitemap: https://poietic.site/rss.xml
+Sitemap: https:/fragment.place/sitemap.xml
+Sitemap: https://fragment.place/rss.xml
   `.trim()
 
   return new Response(body, {
