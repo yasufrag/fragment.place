@@ -1,9 +1,9 @@
-import { getAllFragments } from '@/lib/fragments' // 実装に応じて調整
-import { getAllZines } from '@/lib/zines'         // 任意：ZINEを含める場合
-import { siteMetadata } from '@/lib/siteMetadata' // サイト共通設定
+import { getAllFragments } from '@/lib/fragments'
+import { getAllZines } from '@/lib/zines'
+import { siteMetadata } from '@/lib/siteMetadata'
 
 export async function GET() {
-  const baseUrl = siteMetadata.siteUrl || 'https://poietic.site'
+  const baseUrl = siteMetadata.siteUrl || 'https://fragment.place'
   const fragments = await getAllFragments()
   const zines = await getAllZines?.() || []
 
