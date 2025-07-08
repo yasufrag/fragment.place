@@ -51,7 +51,7 @@ export default function FragmentFooter() {
           href="https://kampa.me/t/vxk"
           target="_blank"
           rel="noopener noreferrer"
-          className="iblock w-full bg-orange-500 text-white px-5 py-2 rounded duration-200 hover:bg-orange-600"
+          className="block w-full text-center bg-orange-500 text-white px-2 py-2 rounded duration-200 hover:bg-orange-600"
         >
           Kampa!で支援する
         </a>
