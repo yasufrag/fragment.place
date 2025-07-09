@@ -2,6 +2,11 @@ import { getAllFragments } from '@/lib/fragments'
 import { getAllZines } from '@/lib/zines'
 import { siteMetadata } from '@/lib/siteMetadata'
 
+function isValidDate(date: any): boolean {
+  const d = new Date(date)
+  return !isNaN(d.getTime())
+}
+
 export async function GET() {
   const baseUrl = siteMetadata.siteUrl || 'https://fragment.place'
   const fragments = await getAllFragments()
@@ -27,10 +32,14 @@ export async function GET() {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map((url) => {
+    const lastmodTag =
+      'lastmod' in url && isValidDate(url.lastmod)
+        ? `<lastmod>${new Date(url.lastmod).toISOString()}</lastmod>`
+        : ''
     return `
   <url>
     <loc>${url.loc}</loc>
-    ${'lastmod' in url ? `<lastmod>${new Date(url.lastmod).toISOString()}</lastmod>` : ''}
+    ${lastmodTag}
     <priority>${url.priority}</priority>
   </url>`
   })

@@ -15,8 +15,8 @@ export default function FragmentFooter() {
   }
 
   return (
-    <div className="pt-10 mt-16 flex flex-col items-center gap-4">
-      <div className="flex gap-6 items-center text-neutral-500">
+    <div className="pt-10 mt-16 flex flex-col gap-4">
+      <div className="flex gap-6 text-neutral-500">
         <button onClick={handleCopy} className="hover:underline">
           {copied ? 'Link copied!' : 'Copy link'}
         </button>
@@ -30,12 +30,12 @@ export default function FragmentFooter() {
         </a>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-5">
+      <div className="flex flex-wrap items-center gap-5">
         <a
           href="https://www.buymeacoffee.com/yasufrag"
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-center bg-yellow-500 text-stone-800 px-2 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
+          className="min-w-[10rem] bg-yellow-500 text-stone-800 px-4 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
         >
           Support practices
         </a>
@@ -43,7 +43,7 @@ export default function FragmentFooter() {
           href="https://ofuse.me/yasufrag"
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-center bg-blue-500 text-white px-2 py-2 rounded duration-200 hover:bg-blue-600"
+          className="min-w-[10rem] bg-blue-500 text-white px-4 py-2 rounded duration-200 hover:bg-blue-600"
         >
           OFUSEで支援する
         </a>
@@ -51,7 +51,7 @@ export default function FragmentFooter() {
           href="https://kampa.me/t/vxk"
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-center bg-orange-500 text-white px-2 py-2 rounded duration-200 hover:bg-orange-600"
+          className="min-w-[10rem] bg-orange-500 text-white px-4 py-2 rounded duration-200 hover:bg-orange-600"
         >
           Kampa!で支援する
         </a>
