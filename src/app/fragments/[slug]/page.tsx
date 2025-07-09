@@ -27,18 +27,16 @@ export default async function FragmentDetail({ params }: { params: { slug: strin
         })}
       </p>
 
-      {meta.image?.src && (
+      {meta.image && (
         <figure className="article-figure">
           <img
-            src={meta.image.src}
-            alt={meta.image.alt ?? 'Fragment image'}
+            src={`/images/fragments/${meta.slug}/001.jpg`}
+            alt="Fragment image"
             className="article-image"
           />
-          {meta.image.caption && (
-            <figcaption className="article-caption">
-              {meta.image.caption}
-            </figcaption>
-          )}
+          <figcaption className="article-caption">
+            {meta.image_caption}
+          </figcaption>
         </figure>
       )}
 

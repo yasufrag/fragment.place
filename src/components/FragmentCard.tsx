@@ -9,25 +9,28 @@ export function FragmentCard({
   title,
   date,
   slug,
-  excerpt,
   tags = [],
+  excerpt,
   image,
   showImage = true,
 }: FragmentCardProps) {
   return (
     <div className="article-card">
-      {showImage && image?.src && (
+      {showImage && image && (
         <Link href={`/fragments/${slug}`} className="block mb-4">
           <img
-            src={image.src}
-            alt={image.alt ?? 'Fragment image'}
+            src={`/images/fragments/${slug}/001.jpg`}
+            alt="Fragment image"
             className="article-card-image"
             loading="lazy"
           />
         </Link>
       )}
 
-      <Link href={`/fragments/${slug}`} className="no-underline hover:underline text-gray-300 hover:text-white">
+      <Link
+        href={`/fragments/${slug}`}
+        className="no-underline hover:underline text-gray-300 hover:text-white"
+      >
         <h2 className="article-card-title">{title}</h2>
       </Link>
 
@@ -44,7 +47,7 @@ export function FragmentCard({
       {excerpt && <p className="article-card-excerpt">{excerpt}</p>}
 
       {tags.length > 0 && (
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mt-2">
           {tags.map((tag) => (
             <Link
               key={tag}

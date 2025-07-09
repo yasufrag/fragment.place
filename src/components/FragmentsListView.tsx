@@ -5,14 +5,13 @@ import { FragmentCard } from '@/components/FragmentCard'
 
 interface Fragment {
   title: string
-  excerpt: string
-  tags: string[]
-  slug: string
   date: string
-  image?: {
-    src: string
-    alt?: string
-  } | null
+  slug: string
+  tags: string[]
+  excerpt: string
+  image: boolean
+  image_alt?: string
+  image_caption?: string
 }
 
 interface Props {
@@ -28,8 +27,8 @@ export default function FragmentsListView({ fragments, perPage = 6 }: Props) {
     const q = query.toLowerCase()
     return (
       frag.title.toLowerCase().includes(q) ||
-      frag.excerpt.toLowerCase().includes(q) ||
-      frag.tags.some((tag) => tag.toLowerCase().includes(q))
+      frag.tags.some((tag) => tag.toLowerCase().includes(q)) ||
+      frag.excerpt.toLowerCase().includes(q)
     )
   })
 
@@ -55,7 +54,17 @@ export default function FragmentsListView({ fragments, perPage = 6 }: Props) {
 
       <div className="card-grid">
         {paginated.map((frag) => (
-          <FragmentCard key={frag.slug} {...frag} showImage />
+          <FragmentCard
+            key={frag.slug}
+            title={frag.title}
+            date={frag.date}
+            slug={frag.slug}
+            tags={frag.tags}
+            excerpt={frag.excerpt}
+            image={frag.image}
+            image_alt={frag.image_alt}
+            image_caption={frag.image_caption}
+          />
         ))}
       </div>
 

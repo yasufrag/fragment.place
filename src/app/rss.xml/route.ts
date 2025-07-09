@@ -1,5 +1,5 @@
 import { Feed } from 'feed'
-import { getAllFragments } from '@/lib/fragments'
+import { getAllFragments, getFragmentBySlug } from '@/lib/fragments'
 
 export async function GET() {
   const feed = new Feed({
@@ -19,7 +19,7 @@ export async function GET() {
       name: 'yasufrag',
       link: 'https://fragment.place',
     },
-})
+  })
 
   const fragments = await getAllFragments()
 

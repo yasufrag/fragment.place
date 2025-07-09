@@ -4,12 +4,7 @@ export type FragmentMeta = {
   slug: string
   tags: string[]
   excerpt: string
-  image?: {
-    src: string
-    alt?: string
-    caption?: string
-  } | null
-  shouldPublish?: boolean
-  hasImage?: boolean
-  shouldExportMdx?: boolean
+  image: boolean
+  image_alt?: string
+  image_caption?: string
 }

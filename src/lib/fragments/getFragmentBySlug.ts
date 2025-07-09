@@ -20,16 +20,9 @@ export async function getFragmentBySlug(
     slug,
     tags: Array.isArray(data.tags) ? data.tags : [],
     excerpt: data.excerpt || '',
-    shouldPublish: Boolean(data.shouldPublish),
-    shouldExportMdx: Boolean(data.shouldExportMdx),
-    hasImage: Boolean(data.image?.src),
-    image: data.image?.src
-      ? {
-          src: data.image.src,
-          alt: data.image.alt || '',
-          caption: data.image.caption || '',
-        }
-      : null,
+    image: !!data.image,
+    image_alt: data.image_alt || '',
+    image_caption: data.image_caption || '',
   }
 
   const mdxSource = await serialize(content, {
