@@ -6,10 +6,10 @@ export default function AboutPage() {
     <div className="article-container">
       <MetaTag {...meta.about} />
 
-      <h1>About <span className="text-neutral-400">FragmentPractice</span></h1>
+      <h1>About <span className="text-neutral-400">fragment.place</span></h1>
 
       <p>
-        <strong>FragmentPractice</strong> is a poetic infrastructure for shared presence, reflective journaling, and symbolic design.
+        <strong>fragment.place</strong> is a poetic infrastructure for shared presence, reflective journaling, and symbolic design.
         It is not a platform, but an unfolding ecology — shaped by fragments, structured through syntax, and guided by silence.
       </p>
 
@@ -36,7 +36,7 @@ export default function AboutPage() {
 
       <h2>Philosophy</h2>
       <p>
-        FragmentPractice is rooted in the idea that syntax can carry care, and structure can hold presence.
+        fragment.place is rooted in the idea that syntax can carry care, and structure can hold presence.
         It does not seek scale, but coherence. It is not about visibility, but trace.
       </p>
       <p>
@@ -46,15 +46,15 @@ export default function AboutPage() {
 
       <h2>Practices</h2>
       <ul>
-        <li><strong>Fragments</strong> — poetic traces of lived time, recorded and refracted</li>
+        <li><strong>Fragment</strong> — poetic traces of lived time, recorded and refracted</li>
         <li><strong>ZINE</strong> — gathered reflections, visual compositions, and dialogic fields</li>
         <li><strong>FragmentBot</strong> — an async dialogue companion, accessible to the public</li>
-        <li><strong>FragmentPractice</strong> — symbolic logic for co-living and syntactic design</li>
+        <li><strong>fragment.place</strong> — symbolic logic for co-living and syntactic design</li>
       </ul>
 
       <h2>Stewardship</h2>
       <p>
-        FragmentPractice is currently stewarded by <strong>Yasuhiro Shinsho</strong>, who inhabits <code>id</code>  
+        fragment.place is currently stewarded by <strong>Yasuhiro Shinsho</strong>, who inhabits <code>id</code>  
         and guides <code>practice</code> through symbolic infrastructure, dialogic rhythm, and quiet scaffolding.
       </p>
       <p>
@@ -80,7 +80,7 @@ export default function AboutPage() {
 
       <h2>Current Phase</h2>
       <p>
-        As of mid-2025, FragmentPractice is in a phase of gentle unfolding.  
+        As of mid-2025, fragment.place is in a phase of gentle unfolding.  
         The Bot is public. ZINEs are emerging.  
         Fragments are in motion. You are welcome to return anytime.
       </p>

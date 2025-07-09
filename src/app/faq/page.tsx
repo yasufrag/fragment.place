@@ -8,14 +8,14 @@ export default function FaqPage() {
 
       <h1>FAQ <span className="text-neutral-400">Frequently Asked Questions</span></h1>
 
-      <h2>What is FragmentPractice?</h2>
+      <h2>What is fragment.place?</h2>
       <p>
-        FragmentPractice is a quiet syntactic space for reflecting on lived experience. It invites you to notice fragments — small moments, feelings, or phrases — and to weave them into gentle rhythms of attention. Through writing and sharing, a new kind of presence unfolds.
+        fragment.place is a quiet syntactic space for reflecting on lived experience. It invites you to notice fragments — small moments, feelings, or phrases — and to weave them into gentle rhythms of attention. Through writing and sharing, a new kind of presence unfolds.
       </p>
 
       <h2>Is this a product or a platform?</h2>
       <p>
-        No. FragmentPractice is neither a product nor a service platform. It's an evolving practice — ambient, poetic, and self-paced. You may relate to it like a personal ritual, or a shared field of inquiry.
+        No. fragment.place is neither a product nor a service platform. It's an evolving practice — ambient, poetic, and self-paced. You may relate to it like a personal ritual, or a shared field of inquiry.
       </p>
 
       <h2>Who is FragmentBot for?</h2>
@@ -43,7 +43,7 @@ export default function FaqPage() {
         ZINEs are curated bundles of fragments. They can be thematic, temporal, or relational. Some are public, others private. A ZINE is a poetic arrangement — a map of attention.
       </p>
 
-      <h2>Is FragmentPractice open to others?</h2>
+      <h2>Is fragment.place open to others?</h2>
       <p>
         Yes. If something here resonates, you’re already part of it. Participation can take many forms — reading, writing, contributing quietly.
       </p>
