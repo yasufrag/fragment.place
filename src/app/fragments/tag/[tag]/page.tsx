@@ -20,7 +20,7 @@ export default function FragmentTagPage({ params }: { params: { tag: string } })
     <div className="article-container">
       <MetaTag
         title={`Tag: #${tag} | Fragments`}
-        description={`Fragments tagged with #${tag} in Poietic Publishing.`}
+        description={`Fragments tagged with #${tag} — reflective traces within fragment.place.`}
         url={`/fragments/tag/${params.tag}`}
         image="/og.png"
         robots="index,follow"

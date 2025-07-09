@@ -54,6 +54,15 @@ export const meta = {
     },
   },
 
+  practices: {
+    title: 'Practices',
+    description:
+      'How people use FragmentPractice — from quiet prompts to symbolic OS design. A range of gentle rhythms.',
+    url: '/practices',
+    image: '/og.png',
+    robots: 'index,follow',
+  },
+
   bot: {
     title: 'FragmentBot',
     description:

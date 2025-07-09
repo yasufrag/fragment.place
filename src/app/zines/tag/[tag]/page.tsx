@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { tag: string } }): Promise<Metadata> {
   const decodedTag = decodeURIComponent(params.tag)
   const title = `Tag: #${decodedTag} | ZINE`
-  const description = `ZINEs tagged with #${decodedTag} in Poietic Publishing.`
+  const description = `ZINEs tagged with #${decodedTag} — reflective traces within fragment.place.`
 
   return {
     title,
@@ -34,7 +34,7 @@ export default function ZineTagPage({ params }: { params: { tag: string } }) {
     <div className="article-container">
       <MetaTag
         title={`Tag: #${tag} | ZINE`}
-        description={`ZINEs tagged with #${tag} in Poietic Publishing.`}
+        description={`ZINEs tagged with #${tag} — reflective traces within fragment.place.`}
         url={`/zines/tag/${params.tag}`}
         image="/og.png"
         robots="index,follow"
