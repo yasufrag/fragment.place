@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 export default function FragmentFooter() {
   const pathname = usePathname()
-  const fullUrl = `https://poietic.site${pathname}`
+  const fullUrl = `https://fragment.place${pathname}`
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {

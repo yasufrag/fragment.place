@@ -22,8 +22,8 @@ export default async function ZineDetail({ params }: { params: { slug: string } 
       <ZineCover
         title={meta.title}
         subtitle={meta.excerpt}
-        image={meta.image?.src}
-        alt={meta.image?.alt}
+        image={meta.image ? `/images/zines/${meta.slug}/cover.jpg` : undefined}
+        alt={meta.image_alt}
         date={meta.date}
       />
 

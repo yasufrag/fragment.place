@@ -7,15 +7,14 @@ export async function generateMetadata({
   params: { slug: string }
 }): Promise<Metadata> {
   const zine = await getZineBySlug(params.slug)
-
   if (!zine) return {}
 
   const { meta } = zine
   const baseUrl = 'https://fragment.place'
 
-  const imageUrl = meta.image?.src?.startsWith('/')
-    ? `${baseUrl}${meta.image.src}`
-    : `${baseUrl}/images/zines/${meta.slug}/${meta.image?.src}`
+  const imageUrl = meta.image
+    ? `${baseUrl}/images/zines/${meta.slug}/cover.jpg`
+    : undefined
 
   return {
     metadataBase: new URL(baseUrl),
@@ -26,11 +25,11 @@ export async function generateMetadata({
       description: meta.excerpt,
       type: 'article',
       url: `${baseUrl}/zines/${meta.slug}`,
-      images: meta.image?.src
+      images: imageUrl
         ? [
             {
               url: imageUrl,
-              alt: meta.image.alt || meta.title,
+              alt: meta.image_alt || meta.title,
             },
           ]
         : undefined,
@@ -39,7 +38,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: meta.title,
       description: meta.excerpt,
-      images: meta.image?.src ? [imageUrl] : undefined,
+      images: imageUrl ? [imageUrl] : undefined,
     },
   }
 }

@@ -20,13 +20,9 @@ export async function getZineBySlug(
     slug,
     excerpt: data.excerpt ?? '',
     tags: Array.isArray(data.tags) ? data.tags : [],
-    image: data.image?.src
-      ? {
-          src: data.image.src,
-          alt: data.image.alt ?? '',
-          caption: data.image.caption ?? '',
-        }
-      : null,
+    image: data.image === true,
+    image_alt: typeof data.image_alt === 'string' ? data.image_alt : '',
+    image_caption: typeof data.image_caption === 'string' ? data.image_caption : '',
   }
 
   const mdxSource = await serialize(content, {

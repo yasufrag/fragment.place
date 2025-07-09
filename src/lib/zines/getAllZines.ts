@@ -20,22 +20,19 @@ export function getAllZines(): ZineMeta[] {
         const fileContent = fs.readFileSync(filePath, 'utf8')
         const { data, content } = matter(fileContent)
 
-        const image =
-          typeof data.image === 'object' && data.image?.src
-            ? {
-                src: data.image.src,
-                alt: data.image.alt || '',
-                caption: data.image.caption || '',
-              }
-            : null
+        const image = data.image === true
+        const image_alt = typeof data.image_alt === 'string' ? data.image_alt : ''
+        const image_caption = typeof data.image_caption === 'string' ? data.image_caption : ''
 
         const meta: ZineMeta = {
           title: data.title || 'Untitled',
           date: data.date || '',
+          slug,
           tags: Array.isArray(data.tags) ? data.tags : [],
           excerpt: data.excerpt || extractExcerpt(content),
-          slug,
           image,
+          image_alt,
+          image_caption,
         }
 
         return meta

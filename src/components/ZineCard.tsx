@@ -1,14 +1,14 @@
 import type { ZineMeta } from '@/lib/zines/types'
 import Link from 'next/link'
 
-export function ZineCard({ title, date, slug, excerpt, tags = [], image }: ZineMeta) {
+export function ZineCard({ title, date, slug, excerpt, tags = [], image, image_alt, image_caption }: ZineMeta) {
   return (
     <div className="article-card">
-      {image?.src && (
+      {image && (
         <Link href={`/zines/${slug}`} className="block mb-4">
           <img
-            src={image.src}
-            alt={image.alt || ''}
+            src={`/images/zines/${slug}/cover.jpg`}
+            alt={image_alt || ''}
             className="article-card-image"
             loading="lazy"
           />

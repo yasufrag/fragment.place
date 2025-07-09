@@ -1,10 +1,10 @@
 import { getAllZines } from '@/lib/zines'
-import { ZineCard } from '@/components/ZineCard'
 import { MetaTag } from '@/components/MetaTag'
 import { meta } from '@/meta/meta'
+import ZinesListView from '@/components/ZinesListView'
 
-export default function ZinesPage() {
-  const zines = getAllZines()
+export default async function ZinesPage() {
+  const zines = await getAllZines()
 
   return (
     <div className="article-container">
@@ -22,11 +22,7 @@ export default function ZinesPage() {
         and to meet presence in poetic form.
       </p>
 
-      <div className="card-grid">
-        {zines.map((zine) => (
-          <ZineCard key={zine.slug} {...zine} />
-        ))}
-      </div>
+      <ZinesListView zines={zines} />
     </div>
   )
 }
