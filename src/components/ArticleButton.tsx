@@ -30,12 +30,12 @@ export default function FragmentFooter() {
         </a>
       </div>
 
-      <div className="flex flex-wrap items-center gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-xl">
         <a
           href="https://www.buymeacoffee.com/yasufrag"
           target="_blank"
           rel="noopener noreferrer"
-          className="min-w-[8rem] bg-yellow-500 text-stone-800 px-4 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
+          className="w-full text-center bg-yellow-500 text-stone-800 px-2 py-2 rounded duration-200 hover:bg-yellow-600 hover:text-stone-800"
         >
           Support practices
         </a>
@@ -43,7 +43,7 @@ export default function FragmentFooter() {
           href="https://ofuse.me/yasufrag"
           target="_blank"
           rel="noopener noreferrer"
-          className="min-w-[8rem] bg-blue-500 text-white px-4 py-2 rounded duration-200 hover:bg-blue-600"
+          className="w-full text-center bg-blue-500 text-white px-2 py-2 rounded duration-200 hover:bg-blue-600"
         >
           OFUSEで支援する
         </a>
@@ -51,7 +51,7 @@ export default function FragmentFooter() {
           href="https://kampa.me/t/vxk"
           target="_blank"
           rel="noopener noreferrer"
-          className="min-w-[8rem] bg-orange-500 text-white px-4 py-2 rounded duration-200 hover:bg-orange-600"
+          className="w-full text-center bg-orange-500 text-white px-２ py-2 rounded duration-200 hover:bg-orange-600 sm:col-span-2 md:col-span-1"
         >
           Kampa!で支援する
         </a>
