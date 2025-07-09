@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-neutral-700 bg-black/60 backdrop-blur-md">
-      <div className="mx-auto max-w-5xl px-4 flex items-center justify-between py-5">
+      <div className="mx-auto max-w-5xl px-4 flex items-center justify-between py-4">
         <Link href="/" className="flex items-center space-x-3 no-underline hover:no-underline">
           <Logo className="h-9 w-9" role="presentation" />
         </Link>
