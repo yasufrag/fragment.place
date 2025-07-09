@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://poietic.site
+Host: https://fragment.place
 
 # Sitemaps
-Sitemap: https://poietic.site/sitemap.xml
+Sitemap: https://fragment.place/sitemap.xml
