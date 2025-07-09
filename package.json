@@ -1,5 +1,5 @@
 {
-  "name": "poietic.site",
+  "name": "fragment.place",
   "version": "0.1.0",
   "private": true,
   "description": "A poetic framework for fragments, zines, and quiet dialogue.",
@@ -7,12 +7,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/poieticid/poietic.site"
+    "url": "https://github.com/yasufrag/fragment.place"
   },
   "bugs": {
-    "url": "https://github.com/poieticid/poietic.site/issues"
+    "url": "https://github.com/yasufrag/fragment.place/issues"
   },
-  "homepage": "https://poietic.site",
+  "homepage": "https://fragment.place",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
