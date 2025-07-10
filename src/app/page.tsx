@@ -11,8 +11,24 @@ export const metadata = createPageMetadata({
 export default async function Home() {
   return (
     <div className="article-container">
-
       <h1>fragment.place</h1>
+
+      {/* 英語による静かな概要セクション（DevDay等 外部向け） */}
+      <section className="text-sm text-neutral-400 mb-8 leading-relaxed">
+        <p>
+          <strong>FragmentPractice</strong> is a quiet system for writing fragments,  
+          bundling them into poetic ZINEs, and reflecting through asynchronous dialogue.  
+          Built on MDX, symbolic rhythm, and gentle infrastructure.
+        </p>
+        <p className="mt-2">
+          Not a platform — a trace.  
+          Not stored — just passed.
+        </p>
+        <p className="mt-2 text-xs">
+          → <Link href="/about" className="underline hover:text-white">Learn more</Link>
+        </p>
+      </section>
+
       <p className="text-lg text-neutral-300 mb-4">
         言葉にならない問いを Fragment として綴る、静かな構文の場。
       </p>
