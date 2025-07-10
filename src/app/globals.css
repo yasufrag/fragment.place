@@ -66,7 +66,7 @@ em {
 
 /* ====== Code & Preformatted ====== */
 code {
-  @apply rounded bg-gray-800 px-1.5 py-0.5 font-mono text-pink-400;
+  @apply rounded bg-gray-800 px-1.5 py-0.5 font-mono text-fuchsia-400;
 }
 
 pre {
@@ -187,5 +187,5 @@ li {
 
 /* ====== Button-style Links ====== */
 .button-link {
-  @apply inline-block mx-3 bg-pink-500 text-white px-3 py-2 rounded-md text-sm font-semibold shadow hover:bg-pink-600 transition-colors duration-200;
+  @apply inline-block mx-3 bg-fuchsia-500 text-white px-3 py-2 rounded-md text-sm font-semibold shadow hover:bg-fuchsia-600 transition-colors duration-200;
 }
