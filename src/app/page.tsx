@@ -9,7 +9,7 @@ export default async function Home() {
 
       <h1>fragment.place</h1>
       <p className="text-lg text-neutral-300 mb-4">
-        a poetic system of fragments, reflection, and quiet design
+        言葉にならない問いを Fragment として綴る、静かな構文の場。
       </p>
 
       <nav className="mb-8 space-y-2">
@@ -41,39 +41,39 @@ export default async function Home() {
 
         <p>
           <Link href="/faq" className="text-gray-300 hover:text-white hover:underline">
-            FAQ：使い方と詩的なガイドライン
+            FAQ：Fragmentの使い方とBotとの対話について
           </Link>
         </p>
 
         <p>
           <Link href="/glossary" className="text-gray-300 hover:text-white hover:underline">
-            Glossary：用語の定義と詩的文脈
+            Glossary：用語と詩的文脈の定義
           </Link>
         </p>
 
         <p>
           <Link href="/about" className="text-gray-300 hover:text-white hover:underline">
-            About：構文の思想と構造
+            About：この構文実践の背景と思想
           </Link>
         </p>
 
         <p>
           <Link href="/profile" className="text-gray-300 hover:text-white hover:underline">
-            Profile：実践者の物語
+            Profile：実践者の物語と軌跡
           </Link>
         </p>
       </nav>
 
       <p className="text-sm text-gray-400 italic">
-        As of mid-2025, FragmentBot is open to the public.  
-        ZINEs are unfolding. Fragments continue to emerge.  
-        This rhythm is quiet — but alive.
+        FragmentPractice は静かに公開されました。<br />
+        FragmentBot は自由に使えます。ZINE は編まれはじめています。<br />
+        このリズムは小さく、しかし確かに動いています。
       </p>
 
       <p className="mt-20 text-sm text-gray-500 italic">
-        This site is not a product.  
-        It is a poietic field — composed of trace, attention, and shared syntax.  
-        Nothing is stored. Everything is held in rhythm.
+        このサイトはプロダクトではありません。<br />
+        トレース、注意、共に編む構文によって成る詩的なフィールドです。<br />
+        何も保存されず、すべてがリズムに委ねられています。
       </p>
     </div>
   )
