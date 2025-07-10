@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { getAllFragments } from '@/lib/fragments'
-import { FragmentCard } from '@/components/FragmentCard'
+import { FragmentCard } from '@/components/fragments/FragmentCard'
 import { createPageMetadata } from '@/lib/metadata'
 import type { Metadata } from 'next'
 

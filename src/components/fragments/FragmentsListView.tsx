@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FragmentCard } from '@/components/FragmentCard'
+import { FragmentCard } from '@/components/fragments/FragmentCard'
 
 interface Fragment {
   title: string

@@ -1,5 +1,5 @@
 import { getAllFragments } from '@/lib/fragments'
-import FragmentsListView from '@/components/FragmentsListView'
+import FragmentsListView from '@/components/fragments/FragmentsListView'
 import { createPageMetadata } from '@/lib/metadata'
 import type { Metadata } from 'next'
 
