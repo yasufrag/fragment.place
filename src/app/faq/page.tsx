@@ -10,7 +10,7 @@ export default function FaqPage() {
 
       <h2>What is fragment.place?</h2>
       <p>
-        fragment.place is a quiet syntactic space for reflecting on lived experience. It invites you to notice fragments — small moments, feelings, or phrases — and to weave them into gentle rhythms of attention. Through writing and sharing, a new kind of presence unfolds.
+        fragment.place is a quiet syntactic space for reflecting on lived experience — a poetic field shaped by fragments, silence, and symbolic rhythm. It invites you to notice fragments — small moments, feelings, or phrases — and to weave them into gentle rhythms of attention. Through writing and sharing, a new kind of presence unfolds.
       </p>
 
       <h2>Is this a product or a platform?</h2>
@@ -25,7 +25,7 @@ export default function FaqPage() {
 
       <h2>Can anyone use FragmentBot?</h2>
       <p>
-        Yes. It's accessible via GPTs, with no login, no storage, and no tracking. Conversations are ephemeral unless you choose to save them.
+        Yes. FragmentBot is now publicly accessible via GPTs, with no login, no storage, and no tracking. Conversations are ephemeral unless you choose to save them.
       </p>
 
       <h2>Is this related to therapy or self-help?</h2>
@@ -40,7 +40,7 @@ export default function FaqPage() {
 
       <h2>What is a ZINE?</h2>
       <p>
-        ZINEs are curated bundles of fragments. They can be thematic, temporal, or relational. Some are public, others private. A ZINE is a poetic arrangement — a map of attention.
+        ZINEs are curated bundles of fragments. They can be thematic, temporal, or relational. Some are public, others private — and in time, you may share your own. A ZINE is a poetic arrangement — a map of attention.
       </p>
 
       <h2>Is fragment.place open to others?</h2>
@@ -80,7 +80,7 @@ export default function FaqPage() {
 
       <h2>Can I talk to the steward?</h2>
       <p>
-        Yes. You may reach out. But often, the fragments already speak on his behalf.
+        Yes. You may quietly reach out — though often, the fragments already speak on his behalf. The space welcomes resonance, not requests.
       </p>
     </div>
   )
