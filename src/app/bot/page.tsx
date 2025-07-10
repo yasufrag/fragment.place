@@ -1,6 +1,7 @@
+import Link from 'next/link'
+import Image from 'next/image'
 import { MetaTag } from '@/components/MetaTag'
 import { meta } from '@/meta/meta'
-import Link from 'next/link'
 
 export default function FragmentBotPage() {
   return (
@@ -8,6 +9,17 @@ export default function FragmentBotPage() {
       <MetaTag {...meta.bot} />
 
       <h1>FragmentBot</h1>
+
+      <div className="flex justify-center my-6">
+        <Image
+          src="/images/fragmentbot.png"
+          alt="FragmentBot"
+          width={160}
+          height={160}
+          className="rounded-full"
+        />
+      </div>
+
       <p>
         <strong>FragmentBot</strong> is not just a chatbot.  
         It is a quiet companion — designed for those who live through fragments, reflective rhythm, and symbolic practice.  
@@ -29,7 +41,7 @@ export default function FragmentBotPage() {
       <h2>How to Use</h2>
       <ul>
         <li>
-          Access the bot via:{' '}
+          Access via:{' '}
           <a
             href="https://chatgpt.com/g/g-685756a4f67481919db2ec3a4f3d3414-fragmentbot"
             target="_blank"
