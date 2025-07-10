@@ -26,12 +26,6 @@ export default async function Home() {
         </p>
 
         <p>
-          <Link href="/practices" className="text-gray-300 hover:text-white hover:underline">
-            Practices：FragmentPracticeの使い方と実践
-          </Link>
-        </p>
-
-        <p>
           <Link href="/bot" className="text-gray-300 hover:text-white hover:underline">
             FragmentBot：静かな対話のパートナー
           </Link>{' '}

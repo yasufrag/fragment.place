@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { MetaTag } from '@/components/MetaTag'
 import { meta } from '@/meta/meta'
 
@@ -7,6 +8,16 @@ export default function ProfilePage() {
       <MetaTag {...meta.profile} />
 
       <h1>Profile</h1>
+
+      <div className="flex justify-center my-6">
+        <Image
+          src="/images/profile.png"
+          alt="Yasuhiro Shinsho"
+          width={160}
+          height={160}
+          className="rounded-full"
+        />
+      </div>
 
       <section>
         <p><strong>新庄 泰大（Yasuhiro Shinsho）</strong><br/>
