@@ -46,14 +46,14 @@ export default function FragmentBotPage() {
       <ul>
         <li>
           Access via:{' '}
-          <a
+          <Link
             href="https://chatgpt.com/g/g-685756a4f67481919db2ec3a4f3d3414-fragmentbot"
             target="_blank"
             rel="noopener noreferrer"
             className="button-link"
           >
             FragmentBot on GPTs
-          </a>
+          </Link>
         </li>
         <li>Begin with a feeling, a trace, or even a silence — all are welcome.</li>
         <li>No prompt crafting needed — it meets you in your tempo.</li>
