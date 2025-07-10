@@ -24,7 +24,7 @@ export default function SupportPage() {
       </p>
 
       <ul className="list-disc list-inside my-6 space-y-1">
-        <li><strong>Fragments：</strong>日々の感覚と問いを綴る詩的トレース</li>
+        <li><strong>Fragment：</strong>日々の感覚と問いを綴る詩的トレース</li>
         <li><strong>ZINE：</strong>構文と思索を束ねた、詩的ドキュメント</li>
         <li><strong>FragmentBot：</strong>誰にとっても開かれた、非商業的対話Bot</li>
         <li><strong>Shared Field：</strong>家族・関係性・リズムをめぐる構文実験場</li>
