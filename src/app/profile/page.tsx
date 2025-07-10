@@ -1,12 +1,16 @@
 import Image from 'next/image'
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata = createPageMetadata({
+  title: 'Profile',
+  description:
+    'Yasuhiro Shinsho — a poetic syntax designer exploring reflective writing, dialogic bots, and shared presence through FragmentPractice.',
+  path: '/profile',
+})
 
 export default function ProfilePage() {
   return (
     <div className="article-container">
-      <MetaTag {...meta.profile} />
-
       <h1>Profile</h1>
 
       <div className="flex justify-center my-6">

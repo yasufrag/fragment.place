@@ -1,15 +1,21 @@
 import { getAllZines } from '@/lib/zines'
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
 import ZinesListView from '@/components/ZinesListView'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'ZINEs',
+  description:
+    'ZINEs are gathered traces — fragments, reflections, and syntactic compositions within fragment.place.',
+  path: '/zines',
+  image: '/og.png',
+})
 
 export default async function ZinesPage() {
   const zines = await getAllZines()
 
   return (
     <div className="article-container">
-      <MetaTag {...meta.zines.index} />
-
       <h1>ZINEs</h1>
       <p>
         ZINEs are gathered traces —  

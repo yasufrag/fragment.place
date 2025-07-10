@@ -1,13 +1,17 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata = createPageMetadata({
+  title: 'FragmentBot',
+  description:
+    'FragmentBot is a quiet companion for reflective journaling, poetic fragments, and symbolic dialogue — part of the living rhythm of FragmentPractice.',
+  path: '/bot',
+})
 
 export default function FragmentBotPage() {
   return (
     <div className="article-container">
-      <MetaTag {...meta.bot} />
-
       <h1>FragmentBot</h1>
 
       <div className="flex justify-center my-6">

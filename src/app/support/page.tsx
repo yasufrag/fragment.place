@@ -1,11 +1,15 @@
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata = createPageMetadata({
+  title: 'Support',
+  description:
+    'Ways to support fragment.place — a non-commercial space for fragments, bots, and poetic structure. Offer a gesture, read a ZINE, or walk quietly with us.',
+  path: '/support',
+})
 
 export default function SupportPage() {
   return (
     <div className="article-container">
-      <MetaTag {...meta.support} />
-
       <h1>Support <span className="text-neutral-400">fragment.place</span></h1>
 
       <p>

@@ -1,7 +1,30 @@
 import { notFound } from 'next/navigation'
 import { getAllFragments } from '@/lib/fragments'
 import { FragmentCard } from '@/components/FragmentCard'
-import { MetaTag } from '@/components/MetaTag'
+import { createPageMetadata } from '@/lib/metadata'
+import type { Metadata } from 'next'
+
+export async function generateMetadata(
+  { params }: { params: { tag: string } }
+): Promise<Metadata> {
+  const tag = decodeURIComponent(params.tag)
+  const fragments = getAllFragments()
+  const tagged = fragments.filter((f) => f.tags?.includes(tag))
+
+  if (!tagged.length) {
+    return {
+      title: `Tag Not Found | Fragments`,
+      description: `No fragments found with tag #${tag}.`,
+      robots: 'noindex',
+    }
+  }
+
+  return createPageMetadata({
+    title: `Tag: #${tag}`,
+    description: `Fragments tagged with #${tag} — reflective traces within fragment.place.`,
+    path: `/fragments/tag/${encodeURIComponent(tag)}`,
+  })
+}
 
 export async function generateStaticParams() {
   const fragments = getAllFragments()
@@ -18,14 +41,6 @@ export default function FragmentTagPage({ params }: { params: { tag: string } })
 
   return (
     <div className="article-container">
-      <MetaTag
-        title={`Tag: #${tag} | Fragments`}
-        description={`Fragments tagged with #${tag} — reflective traces within fragment.place.`}
-        url={`/fragments/tag/${params.tag}`}
-        image="/og.png"
-        robots="index,follow"
-      />
-
       <h1 className="article-title">Tag: #{tag}</h1>
       <p>
         Showing all fragments tagged with <strong>#{tag}</strong>.

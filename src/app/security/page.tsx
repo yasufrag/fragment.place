@@ -1,11 +1,15 @@
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata = createPageMetadata({
+  title: 'Security',
+  description:
+    'The ethical, infrastructural, and symbolic commitments of fragment.place — designed with minimal data, no tracking, and dialogic integrity.',
+  path: '/security',
+})
 
 export default function SecurityPage() {
   return (
     <div className="article-container">
-      <MetaTag {...meta.security} />
-
       <h1>Security &amp; Ethical Commitment</h1>
 
       <p>

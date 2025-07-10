@@ -1,11 +1,15 @@
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata = createPageMetadata({
+  title: 'Glossary',
+  description:
+    'Key terms and poetic definitions used in FragmentPractice — including fragments, ZINEs, syntax, and ephemeral presence.',
+  path: '/glossary',
+})
 
 export default function GlossaryPage() {
   return (
     <div className="article-container">
-      <MetaTag {...meta.glossary} />
-
       <h1>Glossary <span className="text-neutral-400">of FragmentPractice</span></h1>
       <p>
         This glossary gathers key terms used across <strong>FragmentPractice</strong>, <strong>FragmentBot</strong>, and related reflective practices.

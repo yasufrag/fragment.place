@@ -1,6 +1,5 @@
 import { getAllFragments } from '@/lib/fragments'
 import { getAllZines } from '@/lib/zines'
-import { siteMetadata } from '@/lib/siteMetadata'
 
 function isValidDate(date: any): boolean {
   const d = new Date(date)
@@ -8,7 +7,8 @@ function isValidDate(date: any): boolean {
 }
 
 export async function GET() {
-  const baseUrl = siteMetadata.siteUrl || 'https://fragment.place'
+  const baseUrl = 'https://fragment.place'
+
   const fragments = await getAllFragments()
   const zines = await getAllZines?.() || []
 

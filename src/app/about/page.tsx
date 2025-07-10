@@ -1,11 +1,15 @@
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata = createPageMetadata({
+  title: 'About',
+  description:
+    'The philosophy and layered structure of fragment.place — poetic infrastructure for reflection, silence, and co-creation.',
+  path: '/about',
+})
 
 export default function AboutPage() {
   return (
     <div className="article-container">
-      <MetaTag {...meta.about} />
-
       <h1>About <span className="text-neutral-400">fragment.place</span></h1>
 
       <p>

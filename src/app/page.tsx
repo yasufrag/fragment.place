@@ -1,11 +1,16 @@
 import Link from 'next/link'
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata = createPageMetadata({
+  title: 'fragment.place – fragments, rhythm, and reflective syntax',
+  description:
+    '言葉にならない問いを Fragment として綴る、静かな構文の場。Fragments, ZINEs, and FragmentBot — poetic infrastructure for reflective presence.',
+  path: '/',
+})
 
 export default async function Home() {
   return (
     <div className="article-container">
-      <MetaTag {...meta.home} />
 
       <h1>fragment.place</h1>
       <p className="text-lg text-neutral-300 mb-4">

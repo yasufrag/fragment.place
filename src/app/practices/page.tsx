@@ -1,13 +1,14 @@
-import { Metadata } from 'next'
+import { createPageMetadata } from '@/lib/metadata'
 import PracticeGroup from '@/components/practices/PracticeGroup'
 import PracticeCard from '@/components/practices/PracticeCard'
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Practices',
   description: 'How people use FragmentPractice in their daily lives.',
-}
+  path: '/practices',
+})
 
-export default function UseCasesPage() {
+export default function PracticesPage() {
   return (
     <div className="article-container">
       <div>

@@ -1,11 +1,15 @@
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
+import { createPageMetadata } from '@/lib/metadata'
+
+export const metadata = createPageMetadata({
+  title: 'FAQ',
+  description:
+    'Frequently asked questions about FragmentPractice — what it is, how to use FragmentBot, and how to begin with fragments and reflective journaling.',
+  path: '/faq',
+})
 
 export default function FaqPage() {
   return (
     <div className="article-container">
-      <MetaTag {...meta.faq} />
-
       <h1>FAQ <span className="text-neutral-400">Frequently Asked Questions</span></h1>
 
       <h2>What is fragment.place?</h2>

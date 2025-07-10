@@ -3,7 +3,7 @@ export function GET() {
 User-agent: *
 Allow: /
 
-Sitemap: https:/fragment.place/sitemap.xml
+Sitemap: https://fragment.place/sitemap.xml
 Sitemap: https://fragment.place/rss.xml
   `.trim()
 

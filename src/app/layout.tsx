@@ -10,15 +10,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://fragment.place'),
   title: {
     default: 'fragment.place',
-    template: '%s | fragment.place – living syntax, shared in silence',
+    template: '%s | fragment.place',
   },
-  description: 'FragmentPractice: syntax as living infrastructure',
+  description: 'A quiet system of fragments, poetic dialogue, and symbolic design.',
   openGraph: {
     siteName: 'fragment.place',
     type: 'website',
-    title: 'fragment.place',
-    description: 'FragmentPractice: syntax as living infrastructure',
-    url: 'https://fragment.place',
     images: [
       {
         url: 'https://fragment.place/og.png',
@@ -31,8 +28,6 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     site: '@yasufrag',
-    title: 'fragment.place',
-    description: 'FragmentPractice: syntax as living infrastructure',
     images: ['https://fragment.place/og.png'],
   },
   robots: {

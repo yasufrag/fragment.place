@@ -1,14 +1,20 @@
 import { getAllFragments } from '@/lib/fragments'
-import { MetaTag } from '@/components/MetaTag'
-import { meta } from '@/meta/meta'
 import FragmentsListView from '@/components/FragmentsListView'
+import { createPageMetadata } from '@/lib/metadata'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = createPageMetadata({
+  title: 'Fragments',
+  description:
+    'Fragments are poetic gestures — moments traced in language, held in rhythm, and offered without conclusion.',
+  path: '/fragments',
+})
 
 export default async function FragmentsPage() {
   const fragments = await getAllFragments()
 
   return (
     <div className="article-container">
-      <MetaTag {...meta.fragments} />
       <h1>Fragments</h1>
       <p>
         Fragments are quiet gestures —  
