@@ -5,7 +5,11 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["next", "next/core-web-vitals", "plugin:prettier/recommended"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:prettier/recommended"
+  ],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": [
@@ -18,5 +22,24 @@
         "printWidth": 80
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.mdx"],
+      "parser": "@babel/eslint-parser",
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+            "parser": "mdx",
+            "semi": false,
+            "singleQuote": true,
+            "tabWidth": 2,
+            "trailingComma": "es5",
+            "printWidth": 80
+          }
+        ]
+      }
+    }
+  ]
 }
