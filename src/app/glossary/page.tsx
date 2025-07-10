@@ -10,7 +10,7 @@ export const metadata = createPageMetadata({
 export default function GlossaryPage() {
   return (
     <div className="article-container">
-      <h1>Glossary <span className="text-neutral-400">of FragmentPractice</span></h1>
+      <h1>Glossary of <span className="text-neutral-400">FragmentPractice</span></h1>
       <p>
         This glossary gathers key terms used across <strong>FragmentPractice</strong>, <strong>FragmentBot</strong>, and related reflective practices.
         It is designed for clarity — across poetic, technical, and dialogic dimensions.
