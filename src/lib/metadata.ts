@@ -21,7 +21,7 @@ export function createPageMetadata({
   robots = 'index,follow',
 }: MetadataParams): Metadata {
   const fullUrl = `${BASE_URL}${path}`
-  const fullTitle = `${title} | fragment.place`
+  const fullTitle = `${title}`
 
   return {
     title: fullTitle,
